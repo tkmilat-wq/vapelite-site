@@ -8,7 +8,10 @@ gamme de produits filtrable avec choix des coloris, section sombre animée au d�
 boutique et pied de page sombre. Le reste du site est blanc, gris clair et noir pour mettre les
 produits en avant. Éléments issus de la **charte graphique Vapelite France** :
 
-- **Couleur de référence** : bleu `#2c5794` (RVB 44 87 148 · Pantone P 105-7C · CMJN 84/57/0/22), utilisé pour le logo.
+- **Couleur de référence** : bleu `#2c5794` (RVB 44 87 148 · Pantone P 105-7C · CMJN 84/57/0/22).
+  À la demande de la Maison, le logo du site est décliné en **bleu Klein `#002fa7`**
+  (`assets/logo-vapelite-klein.svg`), la même couleur que les boutons et la bannière ;
+  la version de la charte reste disponible dans `assets/logo-vapelite.svg`.
 - **Logotype** : extrait en vectoriel de la charte, sans modification — version bleue sur fond clair,
   réserve blanche sur fond bleu. Placé en haut à gauche, largeur ≥ 20 mm.
 - **Typographie** : Museo Sans Rounded (titres 900/1000, texte 300–700). La police étant sous licence
@@ -63,7 +66,8 @@ redimensionnées et compressées en WebP avec repli JPEG.
 | `mentions-legales.html` | Mentions légales (à compléter) |
 | `styles.css` | Tokens de la charte et mise en page |
 | `script.js` | Slider, parallaxe, filtres, coloris, animation au défilement, menu mobile, vérification d'âge |
-| `assets/logo-vapelite.svg` / `logo-vapelite-blanc.svg` | Logotype couleur / négatif |
+| `assets/logo-vapelite-klein.svg` | Logotype bleu Klein (utilisé sur le site) |
+| `assets/logo-vapelite.svg` / `logo-vapelite-blanc.svg` | Logotype bleu charte / négatif |
 | `assets/symbole-vapelite.svg` | Symbole « V » seul |
 | `assets/motif.svg` | Motif de marque |
 | `assets/favicon.svg` | Favicon |
