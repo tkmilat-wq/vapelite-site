@@ -1,63 +1,40 @@
 /* ==========================================================================
-   Vapelite — Vieux-Port, Marseille
-   Langage éditorial : canvas crème, typo display condensée rose,
-   texte vert forêt, beaucoup de vide.
+   Vapelite France — Vieux-Port, Marseille
+   Charte graphique : bleu de référence #2c5794 (Pantone P 105-7C),
+   typographie arrondie (Museo Sans Rounded, substitut Nunito),
+   logo en haut à gauche. Mise en page éditoriale : grands titres, beaucoup de vide.
    ========================================================================== */
 
-/* Polices auto-hébergées (SIL Open Font License) */
+/* Nunito variable auto-hébergée (SIL Open Font License), substitut libre de Museo Sans Rounded */
 @font-face {
-  font-family: "Anton";
-  src: url("assets/fonts/anton-latin-400-normal.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("assets/fonts/inter-latin-400-normal.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("assets/fonts/inter-latin-500-normal.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Inter";
-  src: url("assets/fonts/inter-latin-700-normal.woff2") format("woff2");
-  font-weight: 700;
+  font-family: "Nunito";
+  src: url("assets/fonts/nunito-latin-wght-normal.woff2") format("woff2-variations"),
+       url("assets/fonts/nunito-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 1000;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  /* Couleurs */
-  --color-lipstick-magenta: #db3c8a;
-  --color-forest-ink: #00522d;
-  --color-blush-cream: #fce5df;
-  --color-warm-chalk: #fff8f6;
-  --color-charcoal-black: #000000;
-  --color-lilac-mist: #d1cfe4;
-  --color-bubblegum: #f29ebd;
-  --color-cotton-pink: #e878b2;
+  /* Couleurs — bleu de référence de la charte et ses teintes */
+  --bleu: #2c5794;          /* RVB 44 87 148 — logo, titres, texte */
+  --bleu-nuit: #1e3d69;     /* survols, contraste renforcé */
+  --bleu-moyen: #8fa7cc;    /* titres intermédiaires */
+  --bleu-pale: #dfe5ef;     /* motif, titres « écho », séparateurs */
+  --bleu-brume: #f2f5fa;    /* surfaces douces */
+  --blanc: #ffffff;
 
-  /* Familles */
-  --font-display: "Anton", "Tungsten", "Antonio", Impact, "Arial Narrow", sans-serif;
-  --font-text: "Clash Grotesk", "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Familles : Museo Sans Rounded si disponible (licence Adobe Fonts), sinon Nunito */
+  --font: "Museo Sans Rounded", "Nunito", ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Échelle display (fluide) */
-  --display-xl: clamp(88px, 19vw, 280px);
-  --display-lg: clamp(64px, 11vw, 160px);
-  --display-md: clamp(46px, 7vw, 104px);
-  --display-sm: clamp(40px, 4.5vw, 64px);
-  --display-leading: 0.88;
+  --display-xl: clamp(44px, 12.5vw, 200px);
+  --display-lg: clamp(34px, 9.6vw, 140px);
+  --display-md: clamp(30px, 6vw, 92px);
+  --display-sm: clamp(36px, 4.2vw, 60px);
+  --display-leading: 0.92;
 
   /* Échelle texte */
-  --text-micro: 10px;
   --text-label: 12px;
   --text-caption: 14px;
   --text-body-sm: 16px;
@@ -73,11 +50,12 @@
   --gutter: clamp(20px, 4vw, 60px);
 
   /* Rayons */
-  --radius-tags: 9999px;
-  --radius-buttons: 10px;
+  --radius-pill: 9999px;
+  --radius-buttons: 12px;
 
   --page-max-width: 1440px;
-  --dot-size: 50px;
+  --dot-size: 52px;
+  --logo-width: clamp(96px, 11vw, 150px); /* ≥ 20 mm, taille minimale de la charte */
 }
 
 /* --------------------------------------------------------------------------
@@ -95,11 +73,12 @@ html {
 
 body {
   margin: 0;
-  background: var(--color-warm-chalk);
-  color: var(--color-forest-ink);
-  font-family: var(--font-text);
+  background: var(--blanc);
+  color: var(--bleu);
+  font-family: var(--font);
   font-size: var(--text-body-sm);
-  line-height: 1.2;
+  font-weight: 400;
+  line-height: 1.3;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -109,15 +88,16 @@ body.is-locked { overflow: hidden; }
 h1, h2, h3, p, ul, ol, dl, dd { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
 a { color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
 button { font: inherit; }
 
 ::selection {
-  background: var(--color-lipstick-magenta);
-  color: var(--color-warm-chalk);
+  background: var(--bleu);
+  color: var(--blanc);
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-lipstick-magenta);
+  outline: 3px solid var(--bleu-moyen);
   outline-offset: 4px;
 }
 
@@ -127,11 +107,22 @@ button { font: inherit; }
   top: 16px;
   z-index: 100;
   padding: 10px 16px;
-  background: var(--color-forest-ink);
-  color: var(--color-warm-chalk);
+  background: var(--bleu);
+  color: var(--blanc);
   border-radius: var(--radius-buttons);
 }
 .skip-link:focus { left: 16px; }
+
+.nowrap { white-space: nowrap; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
 
 /* --------------------------------------------------------------------------
    Typographie
@@ -139,81 +130,83 @@ button { font: inherit; }
 
 .display {
   display: block;
-  font-family: var(--font-display);
-  font-weight: 400; /* Anton est déjà ultra-noir : pas de gras synthétique */
-  font-synthesis: none;
+  font-family: var(--font);
+  font-weight: 1000;
   line-height: var(--display-leading);
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: var(--color-lipstick-magenta);
+  color: var(--bleu);
 }
 .display--xl { font-size: var(--display-xl); }
 .display--lg { font-size: var(--display-lg); }
 .display--md { font-size: var(--display-md); }
 .display--sm { font-size: var(--display-sm); }
 
-.is-bubblegum { color: var(--color-bubblegum); }
-.is-blush { color: var(--color-blush-cream); }
+.is-mid { color: var(--bleu-moyen); }
+.is-pale { color: var(--bleu-pale); }
 
 .label {
   font-size: var(--text-caption);
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-forest-ink);
+  color: var(--bleu);
   margin-bottom: var(--spacing-20);
 }
 
 .body {
   font-size: clamp(17px, 1.4vw, var(--text-body));
-  line-height: 1.3;
+  line-height: 1.4;
   max-width: 60ch;
 }
-.body + .body { margin-top: 1em; }
+.body + .body { margin-top: 0.8em; }
 
 .body-sm {
   font-size: var(--text-body-sm);
-  line-height: 1.3;
+  line-height: 1.35;
   margin-top: var(--spacing-8);
+  color: var(--bleu-nuit);
   opacity: 0.8;
 }
 
 .link {
-  font-weight: 500;
-  text-decoration: none;
-  background-image: linear-gradient(var(--color-lipstick-magenta), var(--color-lipstick-magenta));
-  background-size: 0 2px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s ease, color 0.2s ease;
+  font-weight: 700;
+  text-decoration: underline 2px transparent;
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.2s ease, color 0.2s ease;
 }
-.link:hover {
-  color: var(--color-lipstick-magenta);
-  background-size: 100% 2px;
-}
+.link:hover { text-decoration-color: currentColor; }
 
 /* --------------------------------------------------------------------------
-   Les deux points : menu et marque
+   Logo et bouton menu
    -------------------------------------------------------------------------- */
+
+/* Logo en haut à gauche, avec sa zone d'exclusion (marges ≥ hauteur du « V ») */
+.brand {
+  position: absolute;
+  top: clamp(24px, 3vw, 44px);
+  left: var(--gutter);
+  z-index: 10;
+  width: var(--logo-width);
+}
 
 .dot {
   position: fixed;
-  top: 20px;
+  top: 24px;
+  right: 24px;
   z-index: 60;
   display: grid;
   place-items: center;
   width: var(--dot-size);
   height: var(--dot-size);
   border: 0;
-  border-radius: var(--radius-tags);
-  background: var(--color-lipstick-magenta);
-  color: var(--color-charcoal-black);
+  border-radius: var(--radius-pill);
+  background: var(--bleu);
+  color: var(--blanc);
   cursor: pointer;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, background-color 0.2s ease;
 }
-.dot:hover { transform: scale(1.08); }
-.dot--menu { left: 20px; }
-.dot--brand { right: 20px; }
+.dot:hover { transform: scale(1.08); background: var(--bleu-nuit); }
 
 .dot__bars {
   display: grid;
@@ -243,41 +236,45 @@ button { font: inherit; }
   flex-direction: column;
   justify-content: flex-end;
   padding: 100px var(--gutter) var(--gutter);
-  background: var(--color-blush-cream);
+  background: var(--bleu-brume);
   opacity: 0;
   transition: opacity 0.3s ease;
+  overflow-y: auto;
 }
 .menu[hidden] { display: none; }
 .menu.is-open { opacity: 1; }
 
+.menu__logo {
+  position: absolute;
+  top: clamp(24px, 3vw, 44px);
+  left: var(--gutter);
+  width: var(--logo-width);
+}
+
 .menu__list a {
   display: block;
-  font-family: var(--font-display);
-  font-size: clamp(56px, 12vw, 150px);
-  line-height: var(--display-leading);
+  font-size: clamp(38px, 8.5vw, 120px);
+  font-weight: 1000;
+  line-height: 1;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-bubblegum);
+  color: var(--bleu-moyen);
   transition: color 0.2s ease, transform 0.3s ease;
 }
 .menu__list a:hover,
 .menu__list a:focus-visible {
-  color: var(--color-lipstick-magenta);
+  color: var(--bleu);
   transform: translateX(12px);
 }
-.menu__foot {
-  margin-top: var(--spacing-60);
-}
-.menu__foot a { white-space: nowrap;
-  font-size: var(--text-body-sm);
-}
+.menu__foot { margin-top: var(--spacing-60); }
+.menu__foot a { white-space: nowrap; }
 
 /* --------------------------------------------------------------------------
    Layout des sections
    -------------------------------------------------------------------------- */
 
-main,
-.footer {
+main {
   max-width: var(--page-max-width);
   margin: 0 auto;
 }
@@ -295,16 +292,15 @@ main,
   flex-direction: column;
   justify-content: space-between;
   gap: var(--spacing-60);
-  padding: 100px var(--gutter) var(--gutter);
+  padding: 110px var(--gutter) var(--gutter);
 }
 .hero__intro {
   align-self: flex-end;
-  max-width: 420px;
+  max-width: 460px;
 }
-.hero__title .display--xl { font-size: clamp(96px, min(27vw, 33vh), 400px); }
-.hero .reveal:nth-child(2) { transition-delay: 0.1s; }
-.hero .reveal:nth-child(3) { transition-delay: 0.2s; }
-.hero__title .display + .display { margin-top: 0.04em; }
+.hero__title .display--xl { font-size: clamp(44px, min(14vw, 24vh), 220px); }
+.hero__title .display + .display { margin-top: 0.02em; }
+.hero .reveal:nth-child(3) { transition-delay: 0.12s; }
 
 /* 01 — Boutique */
 .split {
@@ -323,11 +319,11 @@ main,
 }
 .tag {
   padding: 7px 15px;
-  border-radius: var(--radius-tags);
-  background: var(--color-blush-cream);
-  color: var(--color-forest-ink);
+  border-radius: var(--radius-pill);
+  background: var(--bleu-pale);
+  color: var(--bleu);
   font-size: var(--text-caption);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .echo {
@@ -335,8 +331,23 @@ main,
   text-align: right;
 }
 
-/* 02 — Rayons */
-.rayons { border-top: 2px solid var(--color-blush-cream); }
+/* 02 — Valeurs */
+.valeur {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 260px);
+  gap: var(--spacing-20);
+  align-items: end;
+  padding: 18px 0;
+}
+.valeur .display { font-size: clamp(32px, 7.4vw, 108px); }
+.valeur__desc {
+  font-size: var(--text-body-sm);
+  line-height: 1.4;
+  padding-bottom: 0.6em;
+}
+
+/* 03 — Rayons */
+.rayons { border-top: 2px solid var(--bleu-pale); }
 
 .rayon {
   display: grid;
@@ -344,51 +355,52 @@ main,
   gap: var(--spacing-20);
   align-items: end;
   padding: 28px 0 22px;
-  border-bottom: 2px solid var(--color-blush-cream);
+  border-bottom: 2px solid var(--bleu-pale);
 }
 .rayon__num {
   font-size: var(--text-caption);
-  font-weight: 700;
+  font-weight: 800;
   align-self: start;
   padding-top: 6px;
 }
 .rayon__name {
-  color: var(--color-bubblegum);
+  color: var(--bleu-moyen);
   transition: color 0.25s ease, transform 0.35s ease;
 }
 .rayon:hover .rayon__name {
-  color: var(--color-lipstick-magenta);
+  color: var(--bleu);
   transform: translateX(10px);
 }
 .rayon__desc {
   font-size: var(--text-body-sm);
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 /* Ruban */
 .ribbon {
   overflow: hidden;
   margin: var(--spacing-120) 0 var(--spacing-60);
-  border-block: 2px solid var(--color-blush-cream);
-  padding: 18px 0 12px;
+  padding: 22px 0;
+  background: var(--bleu);
 }
 .ribbon__track {
   display: flex;
-  gap: 0.35em;
+  gap: 0.4em;
   width: max-content;
-  font-family: var(--font-display);
   font-size: var(--display-md);
-  line-height: var(--display-leading);
+  font-weight: 1000;
+  line-height: 1;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: var(--color-bubblegum);
-  animation: ribbon 38s linear infinite;
+  color: var(--blanc);
+  animation: ribbon 40s linear infinite;
 }
-.ribbon__track span:nth-child(4n + 1) { color: var(--color-lipstick-magenta); }
+.ribbon__track span:nth-child(even) { color: var(--bleu-moyen); }
 @keyframes ribbon {
   to { transform: translateX(-50%); }
 }
 
-/* 03 — Conseil */
+/* 04 — Conseil */
 .steps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -400,11 +412,11 @@ main,
 .step__title {
   margin: var(--spacing-20) 0 var(--spacing-12);
   font-size: clamp(22px, 2vw, 30px);
-  font-weight: 700;
+  font-weight: 900;
 }
 
-/* 04 — Accès */
-.section--acces { padding-bottom: var(--spacing-140); }
+/* 05 — Accès */
+.section--acces { padding-bottom: var(--spacing-120); }
 
 .acces {
   display: grid;
@@ -413,6 +425,8 @@ main,
   margin-top: var(--spacing-60);
 }
 .acces__block .label { margin-bottom: var(--spacing-12); }
+.acces__block .body + .body { margin-top: 0.3em; }
+.acces__block .link { overflow-wrap: anywhere; }
 
 .hours div {
   display: flex;
@@ -420,11 +434,11 @@ main,
   gap: 16px;
   max-width: 300px;
   padding: 6px 0;
-  border-bottom: 1px solid var(--color-blush-cream);
+  border-bottom: 1px solid var(--bleu-pale);
   font-size: clamp(17px, 1.4vw, var(--text-body));
 }
 .hours dt { font-weight: 400; }
-.hours dd { font-weight: 500; }
+.hours dd { font-weight: 800; }
 
 .go {
   display: inline-flex;
@@ -438,49 +452,67 @@ main,
   place-items: center;
   width: 72px;
   height: 72px;
-  border-radius: var(--radius-tags);
-  background: var(--color-lipstick-magenta);
-  color: var(--color-charcoal-black);
+  border-radius: var(--radius-pill);
+  background: var(--bleu);
+  color: var(--blanc);
   transition: transform 0.3s ease;
 }
 .go__text {
-  font-family: var(--font-display);
   font-size: var(--display-sm);
+  font-weight: 1000;
   line-height: 1;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
-  color: var(--color-lipstick-magenta);
+  color: var(--bleu);
 }
 .go:hover .go__dot { transform: rotate(45deg); }
 
+/* Motif de marque (V répétés, bleu pâle) */
+.motif {
+  height: clamp(140px, 18vw, 240px);
+  background: url("assets/motif.svg") 0 0 / clamp(90px, 9vw, 130px) auto repeat;
+}
+
 /* --------------------------------------------------------------------------
-   Footer
+   Footer — logo en réserve blanche sur fond bleu
    -------------------------------------------------------------------------- */
 
 .footer {
-  max-width: none;
-  background: var(--color-forest-ink);
-  color: var(--color-warm-chalk);
+  background: var(--bleu);
+  color: var(--blanc);
   padding: var(--spacing-60) var(--gutter) var(--gutter);
-  overflow: hidden;
 }
-.footer__mark {
-  font-family: var(--font-display);
-  font-size: clamp(90px, 24vw, 360px);
-  line-height: var(--display-leading);
-  text-transform: uppercase;
-  color: var(--color-cotton-pink);
-  margin-left: -0.03em;
+.footer__top,
+.footer__grid {
+  max-width: calc(var(--page-max-width) - 2 * var(--gutter));
+  margin: 0 auto;
+}
+.footer__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--spacing-60);
+  flex-wrap: wrap;
+}
+.footer__logo { width: clamp(140px, 16vw, 220px); }
+.footer__mission {
+  max-width: 22ch;
+  font-size: clamp(24px, 2.6vw, 38px);
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: right;
 }
 .footer__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--spacing-60);
   margin-top: var(--spacing-60);
+  padding-top: var(--spacing-20);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
   font-size: var(--text-caption);
-  line-height: 1.4;
+  line-height: 1.5;
 }
 .footer__grid p:last-child { text-align: right; }
-.footer .link:hover { color: var(--color-bubblegum); }
 
 /* --------------------------------------------------------------------------
    Vérification de l'âge
@@ -493,10 +525,20 @@ main,
   display: flex;
   align-items: flex-end;
   padding: var(--gutter);
-  background: var(--color-warm-chalk);
+  background: var(--blanc);
+  overflow-y: auto;
 }
 .age[hidden] { display: none; }
-.age__inner { max-width: 720px; }
+.age__logo {
+  position: absolute;
+  top: clamp(24px, 3vw, 44px);
+  left: var(--gutter);
+  width: var(--logo-width);
+}
+.age__inner {
+  max-width: 720px;
+  padding-top: 160px;
+}
 .age .body { margin-top: var(--spacing-20); }
 
 .age__actions {
@@ -506,26 +548,26 @@ main,
   margin-top: var(--spacing-60);
 }
 .btn {
-  padding: 14px 24px;
-  border-radius: var(--radius-buttons);
+  padding: 14px 26px;
+  border-radius: var(--radius-pill);
   font-size: var(--text-body-sm);
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .btn--solid {
-  border: 2px solid var(--color-lipstick-magenta);
-  background: var(--color-lipstick-magenta);
-  color: var(--color-warm-chalk);
+  border: 2px solid var(--bleu);
+  background: var(--bleu);
+  color: var(--blanc);
 }
-.btn--solid:hover { background: var(--color-forest-ink); border-color: var(--color-forest-ink); }
+.btn--solid:hover { background: var(--bleu-nuit); border-color: var(--bleu-nuit); }
 .btn--ghost {
-  border: 2px solid var(--color-bubblegum);
+  border: 2px solid var(--bleu-pale);
   background: transparent;
-  color: var(--color-forest-ink);
+  color: var(--bleu);
 }
-.btn--ghost:hover { background: var(--color-blush-cream); }
-.age__denied { margin-top: var(--spacing-20); color: var(--color-lipstick-magenta); opacity: 1; }
+.btn--ghost:hover { background: var(--bleu-brume); }
+.age__denied { margin-top: var(--spacing-20); opacity: 1; font-weight: 700; }
 
 /* --------------------------------------------------------------------------
    Apparition au défilement
@@ -557,24 +599,25 @@ main,
   .steps { grid-template-columns: 1fr; gap: var(--spacing-60); }
   .step:nth-child(n) { margin-top: 0; }
   .acces { grid-template-columns: 1fr 1fr; }
+  .valeur { grid-template-columns: 1fr; gap: var(--spacing-8); }
 }
 
 @media (max-width: 640px) {
-  :root { --dot-size: 46px; }
-  .dot { top: 16px; }
-  .dot--menu { left: 16px; }
-  .dot--brand { right: 16px; }
+  :root { --dot-size: 48px; }
+  .dot { top: 20px; right: 16px; }
 
   .section { padding-top: var(--spacing-120); }
-  .hero__intro { align-self: flex-start; margin-top: 20px; }
+  .hero { padding-top: 150px; }
+  .hero__intro { align-self: flex-start; }
 
   .rayon {
-    grid-template-columns: 28px minmax(0, 1fr);
+    grid-template-columns: 24px minmax(0, 1fr);
     align-items: start;
   }
   .rayon__desc { grid-column: 2; }
 
   .acces { grid-template-columns: 1fr; gap: 40px; }
+  .footer__mission { text-align: left; }
   .footer__grid { grid-template-columns: 1fr; gap: 24px; }
   .footer__grid p:last-child { text-align: left; }
   .echo { margin-top: var(--spacing-60); }
@@ -584,7 +627,11 @@ main,
    Mentions légales
    -------------------------------------------------------------------------- */
 
-.legal { max-width: var(--page-max-width); margin: 0 auto; }
-.legal h1 { line-height: 1.12; } /* laisse la place aux capitales accentuées */
+.legal {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+  padding-top: 200px;
+}
+.legal h1 { line-height: 1.05; }
 .legal__body { margin-top: var(--spacing-60); }
 .legal__body .step__title { margin-top: var(--spacing-60); }

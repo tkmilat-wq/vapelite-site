@@ -1,26 +1,36 @@
-# Vapelite — site vitrine
+# Vapelite France — site vitrine
 
-Site vitrine statique de **Vapelite**, boutique de cigarettes électroniques au Vieux-Port de Marseille.
+Site vitrine statique de **Vapelite France**, boutique de cigarettes électroniques au Vieux-Port de Marseille.
 
-Direction artistique inspirée d'un style « magazine » : canvas crème `#fff8f6`, typographie display
-condensée rose `#db3c8a`, texte vert forêt `#00522d`, deux boutons ronds dans les coins et beaucoup de vide.
+Mise en page éditoriale (grands titres, beaucoup de vide, navigation minimale) appliquée à la
+**charte graphique Vapelite France** :
+
+- **Couleur de référence** : bleu `#2c5794` (RVB 44 87 148 · Pantone P 105-7C · CMJN 84/57/0/22),
+  décliné en teintes `#1e3d69`, `#8fa7cc`, `#dfe5ef`, `#f2f5fa` sur fond blanc.
+- **Logotype** : extrait en vectoriel de la charte, sans modification — version bleue sur fond clair,
+  réserve blanche sur fond bleu. Placé en haut à gauche, largeur ≥ 20 mm.
+- **Typographie** : Museo Sans Rounded (titres 900/1000, texte 300–700). La police étant sous licence
+  commerciale, le site utilise **Nunito** (libre, arrondie, graisses 200 à 1000) auto-hébergée ; si
+  Museo Sans Rounded est disponible (licence Adobe Fonts), elle est utilisée en priorité.
+- **Motif** : le « V » du logo répété en bleu pâle.
 
 ## Structure
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Page unique : hero, boutique, rayons, conseil, accès, footer, vérification d'âge |
+| `index.html` | Page unique : hero, boutique, valeurs, rayons, conseil, accès, footer, vérification d'âge |
 | `mentions-legales.html` | Mentions légales (à compléter) |
-| `styles.css` | Tokens de design et mise en page |
+| `styles.css` | Tokens de la charte et mise en page |
 | `script.js` | Menu plein écran, vérification d'âge, apparition au défilement |
+| `assets/logo-vapelite.svg` / `logo-vapelite-blanc.svg` | Logotype couleur / négatif |
+| `assets/symbole-vapelite.svg` | Symbole « V » seul |
+| `assets/motif.svg` | Motif de marque |
 | `assets/favicon.svg` | Favicon |
+| `assets/fonts/` | Nunito variable (SIL Open Font License) |
 
-Polices : **Anton** (Google Fonts, substitut de Beni) pour les titres, **Clash Grotesk** (Fontshare) pour le
-texte, avec **Inter** en repli.
+Aucune ressource externe n'est chargée (pas de Google Fonts, pas de traceur).
 
 ## Lancer en local
-
-Aucun build nécessaire :
 
 ```bash
 npx serve .
@@ -30,13 +40,15 @@ python3 -m http.server 8000
 
 ## À compléter avant la mise en ligne
 
-Les coordonnées ci-dessous sont des **valeurs provisoires** à remplacer :
+Valeurs provisoires à remplacer :
 
-- Adresse exacte (`Quai du Port, 13002 Marseille`) — `index.html` (menu, section « Nous trouver », footer, JSON-LD)
+- Adresse exacte (`Quai du Port, 13002 Marseille`) — `index.html` (menu, « Nous trouver », footer, JSON-LD) et `mentions-legales.html`
 - Téléphone (`04 91 00 00 00` / `+33491000000`)
-- Horaires d'ouverture (section « Nous trouver » et `openingHours` du JSON-LD)
+- Horaires d'ouverture (« Nous trouver » et `openingHours` du JSON-LD)
 - Lien Instagram
-- Informations légales dans `mentions-legales.html` (raison sociale, SIRET, hébergeur…)
+- Informations légales dans `mentions-legales.html` (forme juridique, SIRET, hébergeur…)
+
+L'e-mail `contact@vapelite-france.fr` et le domaine `vapelite-france.fr` proviennent de la charte.
 
 ## Rappel réglementaire
 
