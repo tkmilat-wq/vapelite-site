@@ -218,6 +218,19 @@
   window.addEventListener("resize", updateSpotlight);
   updateSpotlight();
 
+  /* ---------- Photo de l'intérieur : léger zoom au défilement ---------- */
+
+  const inside = document.querySelector(".inside");
+  if (inside && !reduceMotion) {
+    const zoom = () => {
+      const rect = inside.getBoundingClientRect();
+      const z = 1 - Math.min(1, Math.max(0, rect.bottom / (window.innerHeight + rect.height)));
+      inside.style.setProperty("--z", z.toFixed(3));
+    };
+    window.addEventListener("scroll", () => requestAnimationFrame(zoom), { passive: true });
+    zoom();
+  }
+
   /* ---------- Apparition au défilement (en cascade) ---------- */
 
   const items = [...document.querySelectorAll(".reveal")];
