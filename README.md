@@ -15,9 +15,32 @@ produits en avant. Éléments issus de la **charte graphique Vapelite France** :
   Museo Sans Rounded est disponible (licence Adobe Fonts), elle est utilisée en priorité.
 - **Motif** : le « V » du logo répété en bleu pâle (`assets/motif.svg`, disponible pour de futurs usages).
 
-Les appareils sont des **illustrations SVG** (sprite en haut de `index.html`) dont les couleurs se règlent
-par variables CSS (`--body`, `--liquid`, `--accent`, `--cap`). Les produits affichés sont des exemples
-génériques : à remplacer par les vrais produits et photos de la boutique.
+## Produits présentés
+
+| Marque | Modèle | Caractéristiques affichées (versions européennes, pods 2 ml) |
+|---|---|---|
+| OXVA | Xlim Pro 3 | écran couleur 1,05", 1500 mAh, 5–30 W |
+| OXVA | Xlim Pro 2 | écran couleur 0,56", 1300 mAh, 5–30 W |
+| OXVA | Xlim SE | 900 mAh, jusqu'à 25 W, tirage automatique |
+| Aspire | Pixo | écran couleur tactile, 1100 mAh, 5–30 W |
+| Aspire | Pixo Max | 2600 mAh, jusqu'à 35 W (3 modes), remplissage haut ou côté |
+
+Les appareils sont pour l'instant des **illustrations SVG** inspirées des modèles (sprite en haut de
+`index.html`, couleurs réglables par variables CSS `--body`, `--liquid`, `--accent`). Les coloris des
+pastilles sont indicatifs : à ajuster selon le stock.
+
+### Remplacer une illustration par la photo officielle
+
+1. Déposer la photo détourée (fond transparent, format `.webp` ou `.png`) dans `assets/produits/`,
+   par exemple `assets/produits/oxva-xlim-pro-3.webp`. Utiliser les visuels fournis par le fabricant
+   ou le distributeur, avec leur accord.
+2. Dans `index.html`, dans la carte du produit, remplacer la ligne `<svg class="device" …>…</svg>` par :
+
+   ```html
+   <img src="assets/produits/oxva-xlim-pro-3.webp" alt="OXVA Xlim Pro 3" loading="lazy">
+   ```
+
+   La mise en forme (taille, ombre, animation au survol) s'applique automatiquement.
 
 ## Structure
 
