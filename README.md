@@ -1,6 +1,7 @@
 # Vapelite France — site vitrine
 
-Site vitrine statique de **Vapelite France**, boutique de cigarettes électroniques au Vieux-Port de Marseille.
+Site vitrine statique de **Vapelite France**, maison de la vape au Vieux-Port de Marseille.
+Sur le site, le lieu est appelé **« la Maison »** (et non « la boutique ») pour un ton plus chaleureux et plus haut de gamme.
 
 Vitrine produits animée : bannière **bleu Klein** (`#002fa7`, couleur de la boutique) en slider,
 gamme de produits filtrable avec choix des coloris, section sombre animée au défilement, valeurs,
