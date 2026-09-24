@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vapelite France — Cigarettes électroniques au Vieux-Port, Marseille</title>
-  <meta name="description" content="Vapelite France, boutique de cigarettes électroniques et e-liquides au Vieux-Port de Marseille. Matériel, e-liquides, DIY, accessoires et conseils personnalisés.">
-  <meta name="theme-color" content="#2c5794">
+  <meta name="description" content="Vapelite France, boutique de cigarettes électroniques au Vieux-Port de Marseille : pods, kits, e-liquides, accessoires et conseils personnalisés.">
+  <meta name="theme-color" content="#002fa7">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vapelite-france.fr/">
   <meta property="og:title" content="Vapelite France — Vieux-Port, Marseille">
-  <meta property="og:description" content="Boutique de cigarettes électroniques au Vieux-Port. Matériel, e-liquides et conseils.">
+  <meta property="og:description" content="Pods, kits, e-liquides et conseils dans notre boutique du Vieux-Port.">
   <meta property="og:locale" content="fr_FR">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -40,210 +40,569 @@
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <!-- Logo en haut à gauche (charte), menu en rond dans le coin opposé -->
-  <a class="brand" href="#top" aria-label="Vapelite France — accueil">
-    <img src="assets/logo-vapelite.svg" alt="Vapelite France" width="248" height="175">
-  </a>
-  <button class="dot dot--menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
-    <span class="dot__bars" aria-hidden="true"><span></span><span></span><span></span></span>
-  </button>
+  <!-- ==================================================================
+       Illustrations des appareils (couleurs pilotées par variables CSS :
+       --body, --mouth, --liquid, --accent, --cap)
+       ================================================================== -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="g-shade" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#fff" stop-opacity=".42"/>
+        <stop offset=".16" stop-color="#fff" stop-opacity=".14"/>
+        <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+        <stop offset=".84" stop-color="#000" stop-opacity=".14"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".38"/>
+      </linearGradient>
+      <linearGradient id="g-glass" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#fff" stop-opacity=".7"/>
+        <stop offset=".22" stop-color="#fff" stop-opacity=".18"/>
+        <stop offset=".6" stop-color="#fff" stop-opacity=".04"/>
+        <stop offset="1" stop-color="#fff" stop-opacity=".45"/>
+      </linearGradient>
+      <linearGradient id="g-liquid" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".18"/>
+      </linearGradient>
+      <linearGradient id="g-metal" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#7d8490"/>
+        <stop offset=".3" stop-color="#f3f5f8"/>
+        <stop offset=".62" stop-color="#b9bfc8"/>
+        <stop offset="1" stop-color="#666d78"/>
+      </linearGradient>
+    </defs>
 
-  <nav class="menu" id="menu" aria-label="Menu principal" hidden>
-    <img class="menu__logo" src="assets/logo-vapelite.svg" alt="" width="248" height="175">
-    <p class="label">Menu</p>
-    <ul class="menu__list">
-      <li><a href="#boutique">La boutique</a></li>
-      <li><a href="#valeurs">Nos valeurs</a></li>
-      <li><a href="#rayons">Au rayon</a></li>
-      <li><a href="#conseil">Conseil</a></li>
-      <li><a href="#acces">Nous trouver</a></li>
-    </ul>
-    <p class="menu__foot">Quai du Port, 13002 Marseille · <a class="link" href="tel:+33491000000">04 91 00 00 00</a></p>
-  </nav>
+    <!-- Pod compact -->
+    <symbol id="d-pod" viewBox="0 0 120 320">
+      <path d="M40 10h40a8 8 0 0 1 8 8v34H32V18a8 8 0 0 1 8-8z" fill="var(--mouth,#1b1e24)"/>
+      <path d="M40 10h40a8 8 0 0 1 8 8v34H32V18a8 8 0 0 1 8-8z" fill="url(#g-shade)"/>
+      <rect x="26" y="46" width="68" height="84" rx="16" fill="#dfe6ee" fill-opacity=".6"/>
+      <rect class="liquid" x="32" y="76" width="56" height="48" rx="10" fill="var(--liquid,#ff7a59)"/>
+      <rect x="32" y="76" width="56" height="48" rx="10" fill="url(#g-liquid)"/>
+      <rect x="56" y="56" width="8" height="42" rx="4" fill="#fff" fill-opacity=".45"/>
+      <rect x="26" y="46" width="68" height="84" rx="16" fill="url(#g-glass)"/>
+      <rect x="20" y="122" width="80" height="190" rx="28" fill="var(--body,#1d2027)"/>
+      <rect x="20" y="122" width="80" height="190" rx="28" fill="url(#g-shade)"/>
+      <rect class="led" x="55" y="168" width="10" height="38" rx="5" fill="var(--accent,#39d0ff)"/>
+      <rect x="46" y="272" width="28" height="4" rx="2" fill="#fff" fill-opacity=".28"/>
+      <rect x="48" y="306" width="24" height="4" rx="2" fill="#000" fill-opacity=".35"/>
+    </symbol>
+
+    <!-- Pod slim -->
+    <symbol id="d-slim" viewBox="0 0 90 320">
+      <path d="M33 8h24a6 6 0 0 1 6 6v32H27V14a6 6 0 0 1 6-6z" fill="var(--mouth,#1b1e24)"/>
+      <path d="M33 8h24a6 6 0 0 1 6 6v32H27V14a6 6 0 0 1 6-6z" fill="url(#g-shade)"/>
+      <rect x="22" y="40" width="46" height="72" rx="12" fill="#dfe6ee" fill-opacity=".6"/>
+      <rect class="liquid" x="27" y="66" width="36" height="40" rx="8" fill="var(--liquid,#8b5cf6)"/>
+      <rect x="27" y="66" width="36" height="40" rx="8" fill="url(#g-liquid)"/>
+      <rect x="22" y="40" width="46" height="72" rx="12" fill="url(#g-glass)"/>
+      <rect x="18" y="104" width="54" height="208" rx="27" fill="var(--body,#b69cff)"/>
+      <rect x="18" y="104" width="54" height="208" rx="27" fill="url(#g-shade)"/>
+      <rect class="led" x="18" y="122" width="54" height="4" fill="var(--accent,#fff)" fill-opacity=".9"/>
+      <rect x="39" y="164" width="12" height="28" rx="6" fill="#000" fill-opacity=".2"/>
+    </symbol>
+
+    <!-- Kit box + clearomiseur -->
+    <symbol id="d-box" viewBox="0 0 170 320">
+      <path d="M66 8h38a8 8 0 0 1 8 8v30H58V16a8 8 0 0 1 8-8z" fill="var(--mouth,#1b1e24)"/>
+      <path d="M66 8h38a8 8 0 0 1 8 8v30H58V16a8 8 0 0 1 8-8z" fill="url(#g-shade)"/>
+      <rect x="50" y="42" width="70" height="16" rx="5" fill="url(#g-metal)"/>
+      <rect x="54" y="56" width="62" height="70" rx="6" fill="#dfe6ee" fill-opacity=".55"/>
+      <rect class="liquid" x="58" y="80" width="54" height="44" rx="4" fill="var(--liquid,#3ddc97)"/>
+      <rect x="58" y="80" width="54" height="44" rx="4" fill="url(#g-liquid)"/>
+      <rect x="80" y="56" width="10" height="62" fill="#fff" fill-opacity=".4"/>
+      <rect x="54" y="56" width="62" height="70" rx="6" fill="url(#g-glass)"/>
+      <rect x="50" y="124" width="70" height="14" rx="5" fill="url(#g-metal)"/>
+      <rect x="70" y="137" width="30" height="9" fill="url(#g-metal)"/>
+      <rect x="18" y="144" width="134" height="168" rx="20" fill="var(--body,#5a6170)"/>
+      <rect x="18" y="144" width="134" height="168" rx="20" fill="url(#g-shade)"/>
+      <rect x="36" y="168" width="72" height="50" rx="8" fill="#0b0e13"/>
+      <text x="46" y="199" fill="var(--accent,#39d0ff)" font-family="Nunito, sans-serif" font-weight="900" font-size="20">40W</text>
+      <rect x="46" y="206" width="44" height="4" rx="2" fill="var(--accent,#39d0ff)" fill-opacity=".55"/>
+      <circle cx="56" cy="238" r="7" fill="#000" fill-opacity=".25"/>
+      <circle cx="88" cy="238" r="7" fill="#000" fill-opacity=".25"/>
+      <rect class="led" x="128" y="168" width="10" height="66" rx="5" fill="var(--accent,#39d0ff)"/>
+      <rect x="36" y="262" width="72" height="30" rx="8" fill="#000" fill-opacity=".12"/>
+    </symbol>
+
+    <!-- Flacon d'e-liquide -->
+    <symbol id="d-bottle" viewBox="0 0 120 320">
+      <path d="M56 22l3-16h2l3 16z" fill="var(--cap,#1b1e24)"/>
+      <rect x="40" y="20" width="40" height="72" rx="8" fill="var(--cap,#1b1e24)"/>
+      <rect x="40" y="20" width="40" height="72" rx="8" fill="url(#g-shade)"/>
+      <g fill="#fff" fill-opacity=".14"><rect x="46" y="28" width="3" height="56"/><rect x="54" y="28" width="3" height="56"/><rect x="62" y="28" width="3" height="56"/><rect x="70" y="28" width="3" height="56"/></g>
+      <rect x="46" y="90" width="28" height="14" fill="var(--cap,#1b1e24)"/>
+      <path class="liquid" d="M22 128q0-24 24-24h28q24 0 24 24v164a16 16 0 0 1-16 16H38a16 16 0 0 1-16-16z" fill="var(--liquid,#ff5a5f)"/>
+      <path d="M22 128q0-24 24-24h28q24 0 24 24v164a16 16 0 0 1-16 16H38a16 16 0 0 1-16-16z" fill="url(#g-shade)"/>
+      <rect x="22" y="168" width="76" height="104" fill="#fff"/>
+      <rect x="32" y="184" width="40" height="9" rx="2" fill="#0e1116"/>
+      <rect x="32" y="199" width="56" height="5" rx="2" fill="#0e1116" fill-opacity=".3"/>
+      <rect x="32" y="209" width="44" height="5" rx="2" fill="#0e1116" fill-opacity=".3"/>
+      <circle cx="74" cy="248" r="13" fill="var(--liquid,#ff5a5f)"/>
+      <rect x="22" y="168" width="76" height="104" fill="url(#g-shade)" opacity=".6"/>
+    </symbol>
+
+    <!-- Accu -->
+    <symbol id="d-battery" viewBox="0 0 90 320">
+      <rect x="33" y="26" width="24" height="12" rx="3" fill="url(#g-metal)"/>
+      <rect x="18" y="36" width="54" height="272" rx="12" fill="var(--body,#1d2027)"/>
+      <rect x="18" y="118" width="54" height="70" fill="var(--accent,#ff6b5b)"/>
+      <rect x="30" y="140" width="30" height="8" rx="2" fill="#fff" fill-opacity=".8"/>
+      <rect x="30" y="154" width="20" height="5" rx="2" fill="#fff" fill-opacity=".5"/>
+      <rect x="18" y="36" width="54" height="272" rx="12" fill="url(#g-shade)"/>
+      <rect x="18" y="292" width="54" height="16" rx="8" fill="url(#g-metal)"/>
+    </symbol>
+
+    <!-- Résistance -->
+    <symbol id="d-coil" viewBox="0 0 90 320">
+      <rect x="35" y="40" width="20" height="44" rx="4" fill="url(#g-metal)"/>
+      <rect x="22" y="80" width="46" height="176" rx="8" fill="url(#g-metal)"/>
+      <rect x="30" y="112" width="30" height="46" rx="6" fill="#e9c9a0"/>
+      <g stroke="#9a6a3a" stroke-opacity=".6" stroke-width="2"><path d="M30 122h30M30 132h30M30 142h30M30 152h30"/></g>
+      <rect x="30" y="178" width="30" height="46" rx="6" fill="#e9c9a0"/>
+      <g stroke="#9a6a3a" stroke-opacity=".6" stroke-width="2"><path d="M30 188h30M30 198h30M30 208h30M30 218h30"/></g>
+      <rect x="26" y="252" width="38" height="8" fill="var(--accent,#39d0ff)"/>
+      <rect x="30" y="258" width="30" height="30" rx="4" fill="url(#g-metal)"/>
+    </symbol>
+  </svg>
+
+  <!-- ==================================================================
+       En-tête
+       ================================================================== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="header__logo" href="#top" aria-label="Vapelite France — accueil">
+        <img src="assets/logo-vapelite.svg" alt="Vapelite France" width="248" height="175">
+      </a>
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="#produits">Produits</a></li>
+          <li><a href="#pod">Bien choisir</a></li>
+          <li><a href="#valeurs">Pourquoi nous</a></li>
+          <li><a href="#boutique">La boutique</a></li>
+        </ul>
+        <a class="btn btn--klein nav__cta" href="#boutique">Nous trouver</a>
+      </nav>
+      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
   <main id="contenu">
 
-    <!-- 00 — Hero -->
-    <section class="hero" id="top">
-      <div class="hero__intro reveal">
-        <p class="label"><span class="nowrap">Cigarettes électroniques</span> · <span class="nowrap">E-liquides</span> · <span class="nowrap">Conseil</span></p>
-        <p class="body">Une boutique de vape à taille humaine, les pieds dans le Vieux-Port. On vous accueille, on vous écoute, on vous oriente.</p>
+    <!-- ================================================================
+         Bannière bleu Klein — slider
+         ================================================================ -->
+    <section class="hero" id="top" aria-roledescription="carrousel" aria-label="À la une">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__rings"><span></span><span></span><span></span></div>
+        <p class="hero__word">Vieux-Port</p>
       </div>
-      <h1 class="hero__title">
-        <span class="visually-hidden">Vapelite France, boutique de vape au</span>
-        <span class="display display--xl reveal">Vieux-Port</span>
-        <span class="display display--xl is-pale reveal">Marseille</span>
-      </h1>
-    </section>
 
-    <!-- 01 — La boutique -->
-    <section class="section" id="boutique">
-      <p class="label reveal">01 — La boutique</p>
-      <h2 class="display display--lg reveal">La vape,<br>en confiance.</h2>
-      <div class="split">
-        <div class="split__text reveal">
-          <p class="body">Vapelite France est une boutique spécialisée dans la vape, installée sur le Vieux-Port. Notre mission&nbsp;: accompagner celles et ceux qui veulent tourner la page de la cigarette, avec du matériel de qualité et des solutions adaptées à chacun.</p>
-          <p class="body">Première visite ou vapoteur·se confirmé·e, on prend le temps de comprendre ce que vous cherchez, sans jargon ni vente forcée.</p>
+      <div class="slides">
+        <!-- Slide 1 -->
+        <article class="slide is-active" aria-roledescription="diapositive" aria-label="1 sur 3">
+          <div class="slide__text">
+            <p class="kicker">Boutique Vapelite · Vieux-Port, Marseille</p>
+            <h1 class="slide__title">Le pod,<br>tout simplement.</h1>
+            <p class="slide__lead">Compact, léger, prêt en deux minutes. On vous le montre en boutique et vous repartez en sachant l’utiliser.</p>
+            <div class="slide__actions">
+              <a class="btn btn--white" href="#produits">Voir les pods</a>
+              <a class="btn btn--ghost-white" href="#boutique">Venir en boutique</a>
+            </div>
+          </div>
+          <div class="slide__visual">
+            <div class="stage" data-parallax>
+              <div class="vapor" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              <svg class="device device--hero" viewBox="0 0 120 320" style="--body:#f2f4f7;--mouth:#1b1e24;--liquid:#ff7a59;--accent:#39d0ff" role="img" aria-label="Pod compact blanc"><use href="#d-pod"/></svg>
+              <svg class="device device--back" viewBox="0 0 120 320" style="--body:#1d2027;--mouth:#1b1e24;--liquid:#3ddc97;--accent:#ff6b5b" aria-hidden="true"><use href="#d-pod"/></svg>
+              <span class="stage__shadow" aria-hidden="true"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="slide" aria-roledescription="diapositive" aria-label="2 sur 3">
+          <div class="slide__text">
+            <p class="kicker">Pour les vapoteurs confirmés</p>
+            <h2 class="slide__title">Plus d’autonomie.<br>Plus de réglages.</h2>
+            <p class="slide__lead">Box, clearomiseurs, reconstructible : du matériel choisi pour durer, et des conseils pour le régler au plus juste.</p>
+            <div class="slide__actions">
+              <a class="btn btn--white" href="#produits" data-filter-link="kits">Voir les kits</a>
+              <a class="btn btn--ghost-white" href="#pod">Bien choisir</a>
+            </div>
+          </div>
+          <div class="slide__visual">
+            <div class="stage" data-parallax>
+              <div class="vapor" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              <svg class="device device--hero device--wide" viewBox="0 0 170 320" style="--body:#2b2f38;--mouth:#1b1e24;--liquid:#3ddc97;--accent:#39d0ff" role="img" aria-label="Kit box avec clearomiseur"><use href="#d-box"/></svg>
+              <span class="stage__shadow" aria-hidden="true"></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Slide 3 -->
+        <article class="slide" aria-roledescription="diapositive" aria-label="3 sur 3">
+          <div class="slide__text">
+            <p class="kicker">Fruités · Gourmands · Classiques · Frais</p>
+            <h2 class="slide__title">Des e-liquides<br>made in France.</h2>
+            <p class="slide__lead">Une large sélection de saveurs et de taux de nicotine, en majorité fabriqués en France.</p>
+            <div class="slide__actions">
+              <a class="btn btn--white" href="#produits" data-filter-link="liquides">Voir les e-liquides</a>
+              <a class="btn btn--ghost-white" href="#boutique">Venir en boutique</a>
+            </div>
+          </div>
+          <div class="slide__visual">
+            <div class="stage stage--trio" data-parallax>
+              <svg class="device device--bottle b1" viewBox="0 0 120 320" style="--liquid:#ffb000;--cap:#1b1e24" aria-hidden="true"><use href="#d-bottle"/></svg>
+              <svg class="device device--bottle b2" viewBox="0 0 120 320" style="--liquid:#ff5a5f;--cap:#1b1e24" role="img" aria-label="Flacons d’e-liquide"><use href="#d-bottle"/></svg>
+              <svg class="device device--bottle b3" viewBox="0 0 120 320" style="--liquid:#3ddc97;--cap:#1b1e24" aria-hidden="true"><use href="#d-bottle"/></svg>
+              <span class="stage__shadow" aria-hidden="true"></span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="hero__controls">
+        <button class="hero__arrow" type="button" data-dir="-1" aria-label="Diapositive précédente">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="hero__dots" role="tablist" aria-label="Choisir une diapositive">
+          <button type="button" role="tab" aria-selected="true" aria-label="Diapositive 1"><span></span></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Diapositive 2"><span></span></button>
+          <button type="button" role="tab" aria-selected="false" aria-label="Diapositive 3"><span></span></button>
         </div>
-        <ul class="tags reveal" aria-label="En boutique">
-          <li class="tag">Kits débutants</li>
-          <li class="tag">Pods</li>
-          <li class="tag">E-liquides</li>
-          <li class="tag">Sels de nicotine</li>
-          <li class="tag">DIY</li>
-          <li class="tag">Reconstructible</li>
-          <li class="tag">Entretien &amp; SAV</li>
-        </ul>
+        <button class="hero__arrow" type="button" data-dir="1" aria-label="Diapositive suivante">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
-      <p class="display display--md is-pale echo reveal" aria-hidden="true">En confiance.</p>
     </section>
 
-    <!-- 02 — Nos valeurs -->
-    <section class="section" id="valeurs">
-      <p class="label reveal">02 — Nos valeurs</p>
-      <ul class="valeurs">
-        <li class="valeur reveal">
-          <h3 class="display display--lg">Intégrité</h3>
-          <p class="valeur__desc">On vous conseille ce qui vous convient, pas ce qui rapporte le plus.</p>
-        </li>
-        <li class="valeur reveal">
-          <h3 class="display display--lg is-mid">Transparence</h3>
-          <p class="valeur__desc">Des produits dont on connaît l’origine, des prix clairs, des réponses franches.</p>
-        </li>
-        <li class="valeur reveal">
-          <h3 class="display display--lg">Confiance</h3>
-          <p class="valeur__desc">Une relation qui dure&nbsp;: vous revenez, on se souvient de vous et de votre matériel.</p>
-        </li>
-        <li class="valeur reveal">
-          <h3 class="display display--lg is-mid">Sérieux</h3>
-          <p class="valeur__desc">Des produits conformes, une équipe formée, un suivi après l’achat.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- 03 — Au rayon -->
-    <section class="section" id="rayons">
-      <p class="label reveal">03 — Au rayon</p>
-      <ul class="rayons">
-        <li class="rayon reveal">
-          <span class="rayon__num">A</span>
-          <h3 class="display display--md rayon__name">Kits &amp; pods</h3>
-          <p class="rayon__desc">Des kits prêts à l’emploi pour démarrer, des pods compacts pour la poche, des box pour aller plus loin.</p>
-        </li>
-        <li class="rayon reveal">
-          <span class="rayon__num">B</span>
-          <h3 class="display display--md rayon__name">E-liquides</h3>
-          <p class="rayon__desc">Fruités, gourmands, classiques, frais. Plusieurs taux de nicotine et formats, fabrication française en majorité.</p>
-        </li>
-        <li class="rayon reveal">
-          <span class="rayon__num">C</span>
-          <h3 class="display display--md rayon__name">DIY</h3>
-          <p class="rayon__desc">Bases, arômes concentrés, boosters et flacons pour préparer vos recettes vous-même.</p>
-        </li>
-        <li class="rayon reveal">
-          <span class="rayon__num">D</span>
-          <h3 class="display display--md rayon__name">Résistances</h3>
-          <p class="rayon__desc">Résistances et cartouches de rechange pour les principales marques, fil et coton pour le reconstructible.</p>
-        </li>
-        <li class="rayon reveal">
-          <span class="rayon__num">E</span>
-          <h3 class="display display--md rayon__name">Accessoires</h3>
-          <p class="rayon__desc">Accus, chargeurs, drip tips, étuis, cordons&nbsp;: tout ce qui fait durer votre matériel.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Ruban typographique -->
-    <div class="ribbon" aria-hidden="true">
-      <div class="ribbon__track">
-        <span>Fruités</span><span>•</span><span>Gourmands</span><span>•</span><span>Classiques</span><span>•</span><span>Frais</span><span>•</span><span>Sels de nicotine</span><span>•</span>
-        <span>Fruités</span><span>•</span><span>Gourmands</span><span>•</span><span>Classiques</span><span>•</span><span>Frais</span><span>•</span><span>Sels de nicotine</span><span>•</span>
+    <!-- Ruban défilant -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Pods</span><b>•</b><span>Kits</span><b>•</b><span>E-liquides</span><b>•</b><span>Sels de nicotine</span><b>•</b><span>DIY</span><b>•</b><span>Accessoires</span><b>•</b><span>Conseil</span><b>•</b>
+        <span>Pods</span><b>•</b><span>Kits</span><b>•</b><span>E-liquides</span><b>•</b><span>Sels de nicotine</span><b>•</b><span>DIY</span><b>•</b><span>Accessoires</span><b>•</b><span>Conseil</span><b>•</b>
       </div>
     </div>
 
-    <!-- 04 — Conseil -->
-    <section class="section" id="conseil">
-      <p class="label reveal">04 — Conseil</p>
-      <h2 class="display display--lg reveal">On prend<br>le temps.</h2>
-      <ol class="steps">
-        <li class="step reveal">
-          <span class="display display--sm is-mid">01</span>
-          <h3 class="step__title">On écoute</h3>
-          <p class="body">Vos habitudes, ce que vous aimez, ce que vous voulez éviter. Le bon matériel dépend de vous, pas de la vitrine.</p>
+    <!-- Atouts -->
+    <section class="perks" aria-label="Nos engagements">
+      <ul class="perks__list">
+        <li class="perk reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span><strong>Conseil personnalisé</strong>On prend le temps de vous écouter</span>
         </li>
-        <li class="step reveal">
-          <span class="display display--sm is-mid">02</span>
-          <h3 class="step__title">On vous montre</h3>
-          <p class="body">Prise en main, remplissage, réglages&nbsp;: vous repartez en sachant utiliser votre matériel, pas seulement avec un sac.</p>
+        <li class="perk reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><strong>Produits conformes</strong>Normes françaises et européennes</span>
         </li>
-        <li class="step reveal">
-          <span class="display display--sm is-mid">03</span>
-          <h3 class="step__title">On reste là</h3>
-          <p class="body">Une question, une fuite, un réglage qui cloche&nbsp;? Repassez nous voir, on regarde ensemble.</p>
+        <li class="perk reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-.4-.4-2.1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span><strong>SAV en boutique</strong>Réglages, pannes, entretien</span>
         </li>
-      </ol>
+        <li class="perk reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span><strong>Au Vieux-Port</strong>Métro 1, à deux pas des quais</span>
+        </li>
+      </ul>
     </section>
 
-    <!-- 05 — Nous trouver -->
-    <section class="section section--acces" id="acces">
-      <p class="label reveal">05 — Nous trouver</p>
-      <h2 class="display display--xl reveal">Vieux-<br>Port.</h2>
-      <div class="acces">
-        <div class="acces__block reveal">
-          <p class="label">Adresse</p>
-          <p class="body">Quai du Port<br>13002 Marseille</p>
-          <p class="body-sm">Métro 1 — Vieux-Port</p>
+    <!-- ================================================================
+         Gamme
+         ================================================================ -->
+    <section class="section products" id="produits">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow reveal">En boutique</p>
+          <h2 class="section__title reveal">Nos produits</h2>
         </div>
-        <div class="acces__block reveal">
-          <p class="label">Horaires</p>
-          <dl class="hours">
-            <div><dt>Lundi – samedi</dt><dd>10h – 19h30</dd></div>
-            <div><dt>Dimanche</dt><dd>Fermé</dd></div>
-          </dl>
-        </div>
-        <div class="acces__block reveal">
-          <p class="label">Contact</p>
-          <p class="body"><a class="link" href="tel:+33491000000">04 91 00 00 00</a></p>
-          <p class="body"><a class="link" href="mailto:contact@vapelite-france.fr">contact@vapelite-france.fr</a></p>
-          <p class="body"><a class="link" href="https://www.instagram.com/" rel="noopener">Instagram</a></p>
+        <div class="filters reveal" role="group" aria-label="Filtrer les produits">
+          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">Tout</button>
+          <button class="chip" type="button" data-filter="pods" aria-pressed="false">Pods</button>
+          <button class="chip" type="button" data-filter="kits" aria-pressed="false">Kits</button>
+          <button class="chip" type="button" data-filter="liquides" aria-pressed="false">E-liquides</button>
+          <button class="chip" type="button" data-filter="accessoires" aria-pressed="false">Accessoires</button>
         </div>
       </div>
-      <a class="go reveal" href="https://www.google.com/maps/search/?api=1&amp;query=Vapelite+Vieux-Port+Marseille" rel="noopener" target="_blank">
-        <span class="go__dot" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-        <span class="go__text">Itinéraire</span>
-      </a>
+
+      <ul class="grid">
+        <li class="card reveal" data-cat="pods" style="--tint:#fff1ec">
+          <span class="badge">Idéal pour débuter</span>
+          <div class="card__visual">
+            <svg class="device" viewBox="0 0 120 320" style="--body:#1d2027;--liquid:#ff7a59;--accent:#39d0ff" aria-hidden="true"><use href="#d-pod"/></svg>
+          </div>
+          <div class="card__body">
+            <p class="card__cat">Pod</p>
+            <h3 class="card__name">Pod compact</h3>
+            <p class="card__desc">Tirage serré, sans réglage, cartouche remplissable.</p>
+            <div class="swatches" role="radiogroup" aria-label="Coloris">
+              <button type="button" role="radio" aria-checked="true" aria-label="Noir" style="--c:#1d2027" data-body="#1d2027" data-tint="#fff1ec"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Argent" style="--c:#c9ced6" data-body="#d9dde3" data-tint="#f1f3f6"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Corail" style="--c:#ff6b5b" data-body="#ff6b5b" data-tint="#fff0ee"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Menthe" style="--c:#3ddc97" data-body="#3ddc97" data-tint="#eafbf3"></button>
+            </div>
+          </div>
+        </li>
+
+        <li class="card reveal" data-cat="pods" style="--tint:#f3efff">
+          <span class="badge badge--new">Nouveau</span>
+          <div class="card__visual">
+            <svg class="device" viewBox="0 0 90 320" style="--body:#b69cff;--liquid:#8b5cf6;--accent:#fff" aria-hidden="true"><use href="#d-slim"/></svg>
+          </div>
+          <div class="card__body">
+            <p class="card__cat">Pod</p>
+            <h3 class="card__name">Pod slim</h3>
+            <p class="card__desc">Format stylo, discret, se glisse dans une poche.</p>
+            <div class="swatches" role="radiogroup" aria-label="Coloris">
+              <button type="button" role="radio" aria-checked="true" aria-label="Lilas" style="--c:#b69cff" data-body="#b69cff" data-tint="#f3efff"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Ciel" style="--c:#5ac8fa" data-body="#5ac8fa" data-tint="#ebf7fe"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Noir" style="--c:#1d2027" data-body="#1d2027" data-tint="#eef0f3"></button>
+            </div>
+          </div>
+        </li>
+
+        <li class="card reveal" data-cat="kits" style="--tint:#edf0f4">
+          <span class="badge">Confirmé</span>
+          <div class="card__visual">
+            <svg class="device device--wide" viewBox="0 0 170 320" style="--body:#5a6170;--liquid:#3ddc97;--accent:#39d0ff" aria-hidden="true"><use href="#d-box"/></svg>
+          </div>
+          <div class="card__body">
+            <p class="card__cat">Kit</p>
+            <h3 class="card__name">Kit box</h3>
+            <p class="card__desc">Écran, puissance réglable, clearomiseur grande contenance.</p>
+            <div class="swatches" role="radiogroup" aria-label="Coloris">
+              <button type="button" role="radio" aria-checked="true" aria-label="Gunmetal" style="--c:#5a6170" data-body="#5a6170" data-tint="#edf0f4"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Noir" style="--c:#1d2027" data-body="#1d2027" data-tint="#eef0f3"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Rouge" style="--c:#e0313b" data-body="#e0313b" data-tint="#fdecee"></button>
+            </div>
+          </div>
+        </li>
+
+        <li class="card reveal" data-cat="kits" style="--tint:#eaf6fd">
+          <span class="badge">Polyvalent</span>
+          <div class="card__visual">
+            <svg class="device" viewBox="0 0 90 320" style="--body:#1d2027;--liquid:#39d0ff;--accent:#39d0ff" aria-hidden="true"><use href="#d-slim"/></svg>
+          </div>
+          <div class="card__body">
+            <p class="card__cat">Kit</p>
+            <h3 class="card__name">Kit tube</h3>
+            <p class="card__desc">Batterie intégrée, tirage direct ou indirect selon la résistance.</p>
+            <div class="swatches" role="radiogroup" aria-label="Coloris">
+              <button type="button" role="radio" aria-checked="true" aria-label="Noir" style="--c:#1d2027" data-body="#1d2027" data-tint="#eaf6fd"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Acier" style="--c:#c9ced6" data-body="#c9ced6" data-tint="#f1f3f6"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Or" style="--c:#d4a94f" data-body="#d4a94f" data-tint="#fbf4e6"></button>
+            </div>
+          </div>
+        </li>
+
+        <li class="card reveal" data-cat="liquides" style="--tint:#fff4de">
+          <div class="card__visual">
+            <svg class="device" viewBox="0 0 120 320" style="--liquid:#ffb000;--cap:#1b1e24" aria-hidden="true"><use href="#d-bottle"/></svg>
+          </div>
+          <div class="card__body">
+            <p class="card__cat">E-liquide</p>
+            <h3 class="card__name">Fruités</h3>
+            <p class="card__desc">Fruits rouges, agrumes, fruits exotiques. Frais ou non.</p>
+          </div>
+        </li>
+
+        <li class="card reveal" data-cat="liquides" style="--tint:#f6ede6">
+          <div class="card__visual">
+            <svg class="device" viewBox="0 0 120 320" style="--liquid:#b07142;--cap:#1b1e24" aria-hidden="true"><use href="#d-bottle"/></svg>
+          </div>
+          <div class="card__body">
+            <p class="card__cat">E-liquide</p>
+            <h3 class="card__name">Gourmands</h3>
+            <p class="card__desc">Pâtisseries, caramel, vanille, céréales.</p>
+          </div>
+        </li>
+
+        <li class="card reveal" data-cat="liquides" style="--tint:#eafbf3">
+          <span class="badge">Sels de nicotine</span>
+          <div class="card__visual">
+            <svg class="device" viewBox="0 0 120 320" style="--liquid:#3ddc97;--cap:#f2f4f7" aria-hidden="true"><use href="#d-bottle"/></svg>
+          </div>
+          <div class="card__body">
+            <p class="card__cat">E-liquide</p>
+            <h3 class="card__name">Classiques &amp; menthes</h3>
+            <p class="card__desc">Saveurs tabac blond ou brun, menthe glaciale ou douce.</p>
+          </div>
+        </li>
+
+        <li class="card reveal" data-cat="accessoires" style="--tint:#fff0ee">
+          <div class="card__visual card__visual--duo">
+            <svg class="device" viewBox="0 0 90 320" style="--body:#1d2027;--accent:#ff6b5b" aria-hidden="true"><use href="#d-battery"/></svg>
+            <svg class="device" viewBox="0 0 90 320" style="--accent:#39d0ff" aria-hidden="true"><use href="#d-coil"/></svg>
+          </div>
+          <div class="card__body">
+            <p class="card__cat">Accessoires</p>
+            <h3 class="card__name">Accus &amp; résistances</h3>
+            <p class="card__desc">Accus, chargeurs, résistances et cartouches pour les principales marques.</p>
+          </div>
+        </li>
+      </ul>
+      <p class="products__note reveal">Sélection indicative : la gamme évolue en permanence, passez nous voir pour les nouveautés.</p>
     </section>
 
-    <!-- Motif de marque -->
-    <div class="motif" aria-hidden="true"></div>
+    <!-- ================================================================
+         Bien choisir — section sombre animée au défilement
+         ================================================================ -->
+    <section class="spotlight" id="pod">
+      <div class="spotlight__sticky">
+        <div class="spotlight__inner">
+          <div class="spotlight__visual">
+            <div class="spotlight__glow" aria-hidden="true"></div>
+            <svg class="device spotlight__device" viewBox="0 0 120 320" style="--body:#e9ecf1;--liquid:#ff7a59;--accent:#39d0ff" aria-hidden="true"><use href="#d-pod"/></svg>
+          </div>
+          <div class="spotlight__text">
+            <p class="eyebrow eyebrow--light">Bien choisir</p>
+            <h2 class="section__title section__title--light">Ce qu’on regarde<br>avec vous.</h2>
+            <ol class="feats">
+              <li class="feat is-active">
+                <span class="feat__num">01</span>
+                <div><h3>Le tirage</h3><p>Serré comme une cigarette ou plus aérien : c’est le premier critère, on vous fait essayer.</p></div>
+              </li>
+              <li class="feat">
+                <span class="feat__num">02</span>
+                <div><h3>Le remplissage</h3><p>Cartouche remplissable ou pré-remplie, remplissage par le haut ou sur le côté.</p></div>
+              </li>
+              <li class="feat">
+                <span class="feat__num">03</span>
+                <div><h3>L’autonomie</h3><p>Batterie intégrée ou accu amovible, recharge USB-C : selon votre rythme de la journée.</p></div>
+              </li>
+              <li class="feat">
+                <span class="feat__num">04</span>
+                <div><h3>Le bon e-liquide</h3><p>Taux de nicotine, sels ou nicotine classique, saveur : on ajuste avec vous.</p></div>
+              </li>
+            </ol>
+            <div class="spotlight__bar" aria-hidden="true"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         Valeurs (charte graphique)
+         ================================================================ -->
+    <section class="section values" id="valeurs">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow reveal">Pourquoi Vapelite</p>
+          <h2 class="section__title reveal">Une boutique de confiance.</h2>
+        </div>
+        <p class="section__lead reveal">Nos valeurs sont basées sur l’intégrité, la transparence, la confiance et le sérieux, en soutien à une communauté sans tabac.</p>
+      </div>
+      <ul class="values__grid">
+        <li class="value reveal"><span class="value__num">01</span><h3>Intégrité</h3><p>On vous conseille ce qui vous convient, pas ce qui rapporte le plus.</p></li>
+        <li class="value reveal"><span class="value__num">02</span><h3>Transparence</h3><p>Des produits dont on connaît l’origine, des prix clairs, des réponses franches.</p></li>
+        <li class="value reveal"><span class="value__num">03</span><h3>Confiance</h3><p>Une relation qui dure : vous revenez, on se souvient de vous et de votre matériel.</p></li>
+        <li class="value reveal"><span class="value__num">04</span><h3>Sérieux</h3><p>Des produits conformes, une équipe formée, un suivi après l’achat.</p></li>
+      </ul>
+    </section>
+
+    <!-- ================================================================
+         La boutique
+         ================================================================ -->
+    <section class="section shop" id="boutique">
+      <div class="shop__grid">
+        <div class="shop__visual reveal" aria-hidden="true">
+          <svg class="storefront" viewBox="0 0 420 320">
+            <rect width="420" height="320" fill="#f1e7d8"/>
+            <g fill="#e2d4bf"><rect x="60" y="22" width="60" height="50" rx="3"/><rect x="180" y="22" width="60" height="50" rx="3"/><rect x="300" y="22" width="60" height="50" rx="3"/></g>
+            <g fill="#6f8fb8"><rect x="66" y="28" width="22" height="38"/><rect x="92" y="28" width="22" height="38"/><rect x="186" y="28" width="22" height="38"/><rect x="212" y="28" width="22" height="38"/><rect x="306" y="28" width="22" height="38"/><rect x="332" y="28" width="22" height="38"/></g>
+            <rect x="30" y="92" width="360" height="228" fill="#002fa7"/>
+            <rect x="30" y="92" width="360" height="46" fill="#001f73"/>
+            <text x="210" y="124" text-anchor="middle" fill="#fff" font-family="Nunito, sans-serif" font-weight="900" font-size="24" letter-spacing="6">VAPELITE</text>
+            <rect x="54" y="158" width="210" height="140" rx="4" fill="#dce8ff"/>
+            <rect x="54" y="158" width="210" height="140" rx="4" fill="url(#g-glass)"/>
+            <g fill="#002fa7" fill-opacity=".25"><rect x="54" y="214" width="210" height="4"/><rect x="54" y="262" width="210" height="4"/></g>
+            <svg x="74" y="166" width="22" height="48" viewBox="0 0 120 320" style="--body:#1d2027;--liquid:#ff7a59"><use href="#d-pod"/></svg>
+            <svg x="102" y="170" width="16" height="44" viewBox="0 0 90 320" style="--body:#b69cff;--liquid:#8b5cf6"><use href="#d-slim"/></svg>
+            <svg x="124" y="176" width="36" height="38" viewBox="0 0 170 320" style="--body:#5a6170;--liquid:#3ddc97"><use href="#d-box"/></svg>
+            <svg x="166" y="166" width="22" height="48" viewBox="0 0 120 320" style="--body:#ff6b5b;--liquid:#ffb000"><use href="#d-pod"/></svg>
+            <svg x="196" y="170" width="16" height="44" viewBox="0 0 90 320" style="--body:#5ac8fa;--liquid:#39d0ff"><use href="#d-slim"/></svg>
+            <svg x="220" y="166" width="22" height="48" viewBox="0 0 120 320" style="--body:#f2f4f7;--liquid:#3ddc97"><use href="#d-pod"/></svg>
+            <svg x="72" y="222" width="18" height="40" viewBox="0 0 120 320" style="--liquid:#ffb000"><use href="#d-bottle"/></svg>
+            <svg x="94" y="222" width="18" height="40" viewBox="0 0 120 320" style="--liquid:#ff5a5f"><use href="#d-bottle"/></svg>
+            <svg x="116" y="222" width="18" height="40" viewBox="0 0 120 320" style="--liquid:#3ddc97"><use href="#d-bottle"/></svg>
+            <svg x="138" y="222" width="18" height="40" viewBox="0 0 120 320" style="--liquid:#b07142"><use href="#d-bottle"/></svg>
+            <svg x="160" y="222" width="18" height="40" viewBox="0 0 120 320" style="--liquid:#8b5cf6"><use href="#d-bottle"/></svg>
+            <svg x="182" y="222" width="18" height="40" viewBox="0 0 120 320" style="--liquid:#39d0ff"><use href="#d-bottle"/></svg>
+            <svg x="204" y="222" width="18" height="40" viewBox="0 0 120 320" style="--liquid:#ff7a59"><use href="#d-bottle"/></svg>
+            <svg x="226" y="222" width="18" height="40" viewBox="0 0 120 320" style="--liquid:#ffb000"><use href="#d-bottle"/></svg>
+            <rect x="290" y="158" width="76" height="162" rx="4" fill="#001a5c"/>
+            <rect x="298" y="168" width="60" height="70" rx="3" fill="#dce8ff" fill-opacity=".85"/>
+            <rect x="346" y="250" width="6" height="26" rx="3" fill="#fff"/>
+            <text x="328" y="206" text-anchor="middle" fill="#002fa7" font-family="Nunito, sans-serif" font-weight="900" font-size="12">OUVERT</text>
+            <rect x="0" y="312" width="420" height="8" fill="#cbbfae"/>
+          </svg>
+        </div>
+        <div class="shop__info">
+          <p class="eyebrow reveal">La boutique</p>
+          <h2 class="section__title reveal">Venez nous voir<br>au Vieux-Port.</h2>
+          <p class="section__lead reveal">Toute la gamme est à découvrir en boutique. On vous montre, on vous fait essayer, on vous explique.</p>
+          <dl class="info reveal">
+            <div><dt>Adresse</dt><dd>Quai du Port, 13002 Marseille<br><span class="muted">Métro 1 — Vieux-Port</span></dd></div>
+            <div><dt>Horaires</dt><dd>Lundi – samedi : 10h – 19h30<br><span class="muted">Dimanche : fermé</span></dd></div>
+            <div><dt>Contact</dt><dd><a class="link" href="tel:+33491000000">04 91 00 00 00</a><br><a class="link" href="mailto:contact@vapelite-france.fr">contact@vapelite-france.fr</a></dd></div>
+          </dl>
+          <div class="shop__actions reveal">
+            <a class="btn btn--klein" href="https://www.google.com/maps/search/?api=1&amp;query=Vapelite+Vieux-Port+Marseille" target="_blank" rel="noopener">Itinéraire</a>
+            <a class="btn btn--outline" href="tel:+33491000000">Appeler</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- ==================================================================
+       Pied de page
+       ================================================================== -->
   <footer class="footer">
-    <div class="footer__top">
-      <img class="footer__logo" src="assets/logo-vapelite-blanc.svg" alt="Vapelite France" width="248" height="175">
-      <p class="footer__mission">Une communauté sans tabac, avec intégrité, transparence, confiance et sérieux.</p>
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-vapelite-blanc.svg" alt="Vapelite France" width="248" height="175">
+        <p>Boutique de cigarettes électroniques au Vieux-Port de Marseille.</p>
+      </div>
+      <nav class="footer__col" aria-label="Produits">
+        <p class="footer__title">Produits</p>
+        <a href="#produits" data-filter-link="pods">Pods</a>
+        <a href="#produits" data-filter-link="kits">Kits</a>
+        <a href="#produits" data-filter-link="liquides">E-liquides</a>
+        <a href="#produits" data-filter-link="accessoires">Accessoires</a>
+      </nav>
+      <nav class="footer__col" aria-label="Vapelite">
+        <p class="footer__title">Vapelite</p>
+        <a href="#pod">Bien choisir</a>
+        <a href="#valeurs">Nos valeurs</a>
+        <a href="#boutique">La boutique</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </nav>
+      <div class="footer__col">
+        <p class="footer__title">Contact</p>
+        <p>Quai du Port<br>13002 Marseille</p>
+        <a href="tel:+33491000000">04 91 00 00 00</a>
+        <a href="mailto:contact@vapelite-france.fr">contact@vapelite-france.fr</a>
+      </div>
     </div>
-    <div class="footer__grid">
-      <p>Vapelite France — Boutique de cigarettes électroniques<br>Quai du Port, 13002 Marseille<br><a class="link" href="mailto:contact@vapelite-france.fr">contact@vapelite-france.fr</a></p>
-      <p><strong>Vente interdite aux mineurs de moins de 18&nbsp;ans.</strong><br>Les produits du vapotage contenant de la nicotine créent une forte dépendance. Leur utilisation est déconseillée aux non-fumeurs.</p>
-      <p><a class="link" href="mentions-legales.html">Mentions légales</a><br>© <span id="year">2026</span> Vapelite France</p>
+    <div class="footer__legal">
+      <p><strong>Vente interdite aux mineurs de moins de 18&nbsp;ans.</strong> Les produits du vapotage contenant de la nicotine créent une forte dépendance. Leur utilisation est déconseillée aux non-fumeurs.</p>
+      <p>© <span id="year">2026</span> Vapelite France</p>
     </div>
   </footer>
 
   <!-- Vérification de l'âge -->
   <div class="age" id="age" role="dialog" aria-modal="true" aria-labelledby="age-title" hidden>
-    <img class="age__logo" src="assets/logo-vapelite.svg" alt="Vapelite France" width="248" height="175">
-    <div class="age__inner">
-      <p class="label">Accès réservé</p>
-      <h2 class="display display--lg" id="age-title">18 ans<br>et plus&nbsp;?</h2>
-      <p class="body">Ce site présente des produits du vapotage. Leur vente est interdite aux mineurs.</p>
+    <div class="age__card">
+      <img class="age__logo" src="assets/logo-vapelite.svg" alt="Vapelite France" width="248" height="175">
+      <h2 class="age__title" id="age-title">Avez-vous 18 ans ou plus&nbsp;?</h2>
+      <p>Ce site présente des produits du vapotage, dont la vente est interdite aux mineurs.</p>
       <div class="age__actions">
-        <button class="btn btn--solid" type="button" data-age="yes">J’ai 18 ans ou plus</button>
-        <button class="btn btn--ghost" type="button" data-age="no">Non</button>
+        <button class="btn btn--klein" type="button" data-age="yes">Oui, j’ai 18 ans ou plus</button>
+        <button class="btn btn--outline" type="button" data-age="no">Non</button>
       </div>
-      <p class="body-sm age__denied" hidden>Désolé, ce site est réservé aux personnes majeures.</p>
+      <p class="age__denied" hidden>Désolé, ce site est réservé aux personnes majeures.</p>
     </div>
   </div>
 
