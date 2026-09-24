@@ -42,6 +42,18 @@ pastilles sont indicatifs : à ajuster selon le stock.
 
    La mise en forme (taille, ombre, animation au survol) s'applique automatiquement.
 
+## Photos et vidéo de la boutique
+
+| Fichier | Utilisation |
+|---|---|
+| `assets/photos/boutique-interieur-{800,1600}.{webp,jpg}` | Section « Entrez, on vous attend » (plein cadre, zoom au défilement) |
+| `assets/photos/devanture.{webm,mp4}` + `devanture-poster.jpg` | Vidéo de la devanture en boucle, section « La boutique » |
+| `assets/photos/devanture-nuit-{600,1000}.{webp,jpg}` | Photo de la devanture le soir, section « La boutique » |
+| `assets/og-image.jpg` | Image de partage sur les réseaux sociaux (logo sur fond bleu) |
+
+La vidéo d'origine (HDR, 7 Mo) a été convertie en SDR 720p sans son (≈ 0,4–0,5 Mo). Les photos sont
+redimensionnées et compressées en WebP avec repli JPEG.
+
 ## Structure
 
 | Fichier | Rôle |
@@ -72,7 +84,7 @@ Valeurs provisoires à remplacer :
 
 - Adresse exacte (`Quai du Port, 13002 Marseille`) — `index.html` (menu, « Nous trouver », footer, JSON-LD) et `mentions-legales.html`
 - Téléphone (`04 91 00 00 00` / `+33491000000`)
-- Horaires d'ouverture (« Nous trouver » et `openingHours` du JSON-LD)
+- Horaires d'ouverture : **lundi – samedi 9h30 – 20h**, relevés sur la plaque de la devanture (à confirmer)
 - Produits présentés (noms, visuels, coloris) dans la section « Nos produits »
 - Informations légales dans `mentions-legales.html` (forme juridique, SIRET, hébergeur…)
 
