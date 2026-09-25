@@ -860,6 +860,7 @@ button { font: inherit; color: inherit; }
 .card__visual .device--real.is-swapping { opacity: 0; }
 .card__visual .device--kiwi { height: 236px; margin-top: 22px; }
 .card__visual .device--box { height: 236px; margin-top: 14px; }
+.card__visual .device--dojo { height: 228px; }
 .swatches { flex-wrap: wrap; }
 .card__visual--photo { padding: 0; }
 .card__visual--photo::before { display: none; }
@@ -957,6 +958,7 @@ a.chip:hover { background: var(--ink); color: var(--white); }
 .type__model { margin-top: 4px; font-weight: 600; }
 .type__duo .specs { margin-top: 6px; }
 .type__brands { margin-top: 10px; }
+.type__brands-title { margin-top: 18px; }
 .card__visual--soon {
   display: flex;
   flex-direction: column;
@@ -1815,6 +1817,7 @@ a.chip:hover { background: var(--ink); color: var(--white); }
   .card__visual .device--real { height: 175px; }
   .card__visual .device--kiwi { height: 160px; margin-top: 18px; }
   .card__visual .device--box { height: 170px; margin-top: 10px; }
+  .card__visual .device--dojo { height: 168px; }
   .specs { font-size: 13px; }
   .card__body { padding: 14px 14px 16px; }
   .card__name { font-size: 17px; }
