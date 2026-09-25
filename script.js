@@ -243,7 +243,7 @@
     updateReviewArrows();
   }
 
-  /* ---------- Arrêter le tabac : animation liée au défilement ---------- */
+  /* ---------- Bien choisir : animation liée au défilement ---------- */
 
   const spotlight = document.querySelector(".spotlight");
   const spotVideo = spotlight.querySelector(".spotlight__video");
