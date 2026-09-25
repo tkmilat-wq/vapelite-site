@@ -101,11 +101,10 @@ pour l'instant le nom de chaque marque. Pour passer au logo :
 
 ## Notre coup de cœur
 
-Section `#coup-de-coeur` (avant « Nos produits ») consacrée à l'**Aspire Pixo Max White Glow** : photo
-d'ambiance et caractéristiques clés (`assets/produits/pixo-max-white-glow-{900,1600}.{webp,jpg}`).
-La même photo sert de fond à la **deuxième diapositive de la bannière** (« Pixo Max White Glow. »).
-Dans « Nos produits », la carte Pixo Max affiche la vraie photo de chaque coloris
-(`assets/produits/aspire-pixo-max-<coloris>.webp`) quand on clique sur une pastille.
+L'**Aspire Pixo Max White Glow** est présentée comme « Notre coup de cœur » dans la **deuxième diapositive
+de la bannière** (photo `assets/produits/pixo-max-white-glow-{900,1600}.{webp,jpg}` en plein cadre). Le lien
+« Coup de cœur » du menu affiche directement cette diapositive. Dans « Nos produits », la carte Pixo Max
+affiche la vraie photo de chaque coloris (`assets/produits/aspire-pixo-max-<coloris>.webp`).
 
 ## Vidéo VOOPOO Drag X3 & Drag S3
 
