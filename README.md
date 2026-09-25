@@ -73,6 +73,30 @@ détourés avec transparence et convertis en WebP (`assets/produits/`). Flacons 
 La section « La collection Vapelite » (`#collection`) présente les 13 flacons dans un carrousel
 horizontal filtrable par famille ; trois flacons sont aussi mis en avant dans la bannière.
 
+## Marques partenaires
+
+**Ruban défilant** (sous la bannière) : marques principales uniquement — Geekvape, VOOPOO, Aspire, OXVA,
+Vaporesso, Vaptio, Nevoks, Lost Vape, Dotmod, Kiwi, SMOK, Elf Bar (cigarettes électroniques) et Liquideo,
+Alfaliquid, A&L, Pulp, JNR, Adalya, Al Fakher, Elfliq, Curieux (e-liquides).
+
+**Section « Les marques de la Maison »** (`#marques`) : liste complète par catégorie (cigarettes
+électroniques, puffs rechargeables, e-liquides principaux et « Et aussi »).
+
+### Ajouter les logos dans le ruban
+
+Les logos officiels n'étant pas téléchargeables depuis l'environnement de travail, le ruban affiche
+pour l'instant le nom de chaque marque. Pour passer au logo :
+
+1. Déposer le fichier dans `assets/partenaires/`, nommé d'après le `data-slug` de la marque
+   (`geekvape.svg`, `voopoo.svg`, `a-et-l.png`…) — SVG ou PNG transparent de préférence.
+2. Dans `index.html`, dans le ruban, remplacer le texte de la marque par l'image (les deux occurrences) :
+
+   ```html
+   <li class="partner" data-slug="geekvape"><img src="assets/partenaires/geekvape.svg" alt="Geekvape"></li>
+   ```
+
+   Les logos s'affichent en gris et reprennent leurs couleurs au survol.
+
 ## Photos et vidéo de la boutique
 
 | Fichier | Utilisation |

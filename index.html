@@ -287,12 +287,14 @@
       </div>
     </section>
 
-    <!-- Ruban défilant -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee__track">
-        <span>OXVA</span><b>•</b><span>Aspire</span><b>•</b><span>Voopoo</span><b>•</b><span>Nevoks</span><b>•</b><span>Alfaliquid</span><b>•</b><span>E-liquides</span><b>•</b><span>Accessoires</span><b>•</b>
-        <span>OXVA</span><b>•</b><span>Aspire</span><b>•</b><span>Voopoo</span><b>•</b><span>Nevoks</span><b>•</b><span>Alfaliquid</span><b>•</b><span>E-liquides</span><b>•</b><span>Accessoires</span><b>•</b>
-      </div>
+    <!-- Ruban défilant : marques partenaires principales
+         Pour afficher un logo : déposer assets/partenaires/<slug>.svg (ou .png)
+         et remplacer le texte du <li> par <img src="assets/partenaires/<slug>.svg" alt="Nom"> -->
+    <div class="marquee marquee--partners" aria-hidden="true">
+      <ul class="marquee__track">
+        <li class="partner" data-slug="geekvape">Geekvape</li><li class="partner" data-slug="voopoo">VOOPOO</li><li class="partner" data-slug="aspire">Aspire</li><li class="partner" data-slug="oxva">OXVA</li><li class="partner" data-slug="vaporesso">Vaporesso</li><li class="partner" data-slug="vaptio">Vaptio</li><li class="partner" data-slug="nevoks">Nevoks</li><li class="partner" data-slug="lostvape">Lost Vape</li><li class="partner" data-slug="dotmod">Dotmod</li><li class="partner" data-slug="kiwi">Kiwi</li><li class="partner" data-slug="smok">SMOK</li><li class="partner" data-slug="elfbar">Elf Bar</li><li class="partner" data-slug="liquideo">Liquideo</li><li class="partner" data-slug="alfaliquid">Alfaliquid</li><li class="partner" data-slug="a-et-l">A&amp;L</li><li class="partner" data-slug="pulp">Pulp</li><li class="partner" data-slug="jnr">JNR</li><li class="partner" data-slug="adalya">Adalya</li><li class="partner" data-slug="al-fakher">Al Fakher</li><li class="partner" data-slug="elfliq">Elfliq</li><li class="partner" data-slug="curieux">Curieux</li>
+        <li class="partner" data-slug="geekvape">Geekvape</li><li class="partner" data-slug="voopoo">VOOPOO</li><li class="partner" data-slug="aspire">Aspire</li><li class="partner" data-slug="oxva">OXVA</li><li class="partner" data-slug="vaporesso">Vaporesso</li><li class="partner" data-slug="vaptio">Vaptio</li><li class="partner" data-slug="nevoks">Nevoks</li><li class="partner" data-slug="lostvape">Lost Vape</li><li class="partner" data-slug="dotmod">Dotmod</li><li class="partner" data-slug="kiwi">Kiwi</li><li class="partner" data-slug="smok">SMOK</li><li class="partner" data-slug="elfbar">Elf Bar</li><li class="partner" data-slug="liquideo">Liquideo</li><li class="partner" data-slug="alfaliquid">Alfaliquid</li><li class="partner" data-slug="a-et-l">A&amp;L</li><li class="partner" data-slug="pulp">Pulp</li><li class="partner" data-slug="jnr">JNR</li><li class="partner" data-slug="adalya">Adalya</li><li class="partner" data-slug="al-fakher">Al Fakher</li><li class="partner" data-slug="elfliq">Elfliq</li><li class="partner" data-slug="curieux">Curieux</li>
+      </ul>
     </div>
 
     <!-- Atouts -->
@@ -567,6 +569,43 @@
     </section>
 
     <!-- ================================================================
+         Marques partenaires
+         ================================================================ -->
+    <section class="section brands" id="marques" aria-labelledby="brands-title">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow reveal">Nos partenaires</p>
+          <h2 class="section__title reveal" id="brands-title">Les marques<br>de la Maison.</h2>
+        </div>
+        <p class="section__lead reveal">Une sélection de fabricants reconnus, choisis pour la fiabilité de leur matériel et la qualité de leurs recettes.</p>
+      </div>
+      <div class="brands__grid">
+        <div class="brands__col reveal">
+          <h3>Cigarettes électroniques</h3>
+          <ul class="brands__list brands__list--main">
+            <li>Geekvape</li><li>VOOPOO</li><li>Aspire</li><li>OXVA</li><li>Vaporesso</li><li>Vaptio</li><li>Nevoks</li><li>Lost Vape</li><li>Dotmod</li><li>Kiwi</li><li>SMOK</li><li>Elf Bar</li>
+          </ul>
+        </div>
+        <div class="brands__col reveal">
+          <h3>Puffs rechargeables</h3>
+          <ul class="brands__list brands__list--main">
+            <li>JNR</li><li>Dojo by Vaporesso</li><li>Crown Bar Al Fakher</li><li>Elf Bar</li><li>Lost Mary</li><li>Kiwi Go</li><li>Vuse</li>
+          </ul>
+        </div>
+        <div class="brands__col reveal">
+          <h3>E-liquides</h3>
+          <ul class="brands__list brands__list--main">
+            <li>Liquideo</li><li>Alfaliquid</li><li>A&amp;L</li><li>Pulp</li><li>JNR</li><li>Adalya</li><li>Al Fakher</li><li>Elfliq</li><li>Curieux</li>
+          </ul>
+          <p class="brands__also">Et aussi</p>
+          <ul class="brands__list">
+            <li>Puff Killer</li><li>Le Petit Verger</li><li>Enfer</li><li>E-Tasty</li><li>Dinner Lady</li><li>French Liquid</li><li>Fuel</li><li>Secret Lab</li><li>Petit Nuage</li><li>Vape of Legends</li><li>Six Vape</li><li>Fruizee</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
          Bien choisir — section sombre animée au défilement
          ================================================================ -->
     <section class="spotlight" id="pod">
@@ -689,6 +728,7 @@
         <a href="#produits" data-filter-link="oxva">OXVA</a>
         <a href="#produits" data-filter-link="aspire">Aspire</a>
         <a href="#collection">E-liquides Vapelite</a>
+        <a href="#marques">Nos marques</a>
         <a href="#produits" data-filter-link="accessoires">Accessoires</a>
       </nav>
       <nav class="footer__col" aria-label="Vapelite">
