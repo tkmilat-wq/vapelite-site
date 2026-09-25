@@ -183,8 +183,20 @@
       const swatch = event.target.closest("button");
       if (!swatch) return;
       group.querySelectorAll("button").forEach((b) => b.setAttribute("aria-checked", String(b === swatch)));
-      device.style.setProperty("--body", swatch.dataset.body);
       card.style.setProperty("--tint", swatch.dataset.tint);
+      if (swatch.dataset.img) {
+        // Vraie photo du coloris : fondu enchaîné
+        const label = card.querySelector(".card__color-name");
+        device.classList.add("is-swapping");
+        setTimeout(() => {
+          device.src = swatch.dataset.img;
+          device.alt = device.alt.replace(/coloris .*/, `coloris ${swatch.dataset.name}`);
+          if (label) label.textContent = swatch.dataset.name;
+          device.classList.remove("is-swapping");
+        }, 180);
+      } else {
+        device.style.setProperty("--body", swatch.dataset.body);
+      }
     });
   });
 
