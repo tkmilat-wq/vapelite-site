@@ -32,9 +32,9 @@ repère « 60+ » affiché). Les pastilles en haut de section mènent à chaque 
 | Pod | `#type-pod` | Aspire Pixo Max (coup de cœur), 8 coloris | photos réelles `aspire-pixo-max-<coloris>.webp` |
 | Box mod | `#type-box` | Geekvape Aegis Legend 5 (5–200 W, double 18650, IP68, Z Tank), 5 coloris | photos détourées `geekvape-legend-5-<coloris>.webp` (Aurora Rainbow, Carbon Black, Earth Brown, Frost Silver, Glacier Green) |
 | Tube / stick | `#type-tube` | Kiwi Vapor Kiwi 2, 5 coloris | photos réelles `kiwi-2-<coloris>.webp` |
-| Puff rechargeable | `#type-puff` | marques JNR, Dojo by Vaporesso, Crown Bar Al Fakher, Elf Bar, Lost Mary, Kiwi Go, Vuse | **en attente des photos** (encart provisoire) |
+| Puff rechargeable | `#type-puff` | Dojo 30 000 (recharge fournie) ; plus de 50 parfums toutes marques réunies, tirage aérien façon chicha (Al Fakher) ou serré (JNR), formats 1 000, 15K, 28K, 30K et 50K puffs ; marques JNR, Dojo by Vaporesso, Crown Bar Al Fakher, Elf Bar, Lost Mary, Kiwi Go, Vuse | photo détourée `dojo-30000.webp` (appareil + cartouche, sans le texte ni le logo du grossiste) |
 
-Pour remplacer un encart provisoire, remplacer le bloc `<div class="card__visual card__visual--soon">…</div>`
+Pour un futur encart provisoire (`card__visual--soon`), remplacer le bloc `<div class="card__visual card__visual--soon">…</div>`
 de la carte par `<div class="card__visual"><img class="device device--real" src="assets/produits/<fichier>.webp" alt="…"></div>`.
 
 ## Collection d'e-liquides Vapelite
