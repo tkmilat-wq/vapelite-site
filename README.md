@@ -135,7 +135,7 @@ Les cartes Drag X3 / Drag S3 utilisent pour l'instant des images tirées de la v
 
 | Fichier | Utilisation |
 |---|---|
-| `assets/photos/boutique-interieur-{800,1600}.{webp,jpg}` | Section « Entrez, on vous attend » (plein cadre, zoom au défilement) |
+| `assets/photos/boutique-interieur-{800,1600}.{webp,jpg}` | Section « Entrez, on vous attend » avec nos quatre valeurs (`#valeurs`, plein cadre, zoom au défilement, juste avant « Nos produits phares ») |
 | `assets/photos/devanture.{webm,mp4}` + `devanture-poster.jpg` | Vidéo de la devanture en boucle, section « La boutique » |
 | `assets/photos/devanture-nuit-{600,1000}.{webp,jpg}` | Photo de la devanture le soir, section « La boutique » |
 | `assets/og-image.jpg` | Image de partage sur les réseaux sociaux (logo sur fond bleu) |
