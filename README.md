@@ -22,38 +22,20 @@ produits en avant. Éléments issus de la **charte graphique Vapelite France** :
 
 ## Produits phares
 
-La section « Nos produits phares » (`#produits`) présente une sélection, pas le catalogue complet : la
-Maison propose **plus de 60 modèles** de cigarettes électroniques (pods et mods), repère « 60+ » affiché.
+La section « Nos produits phares » (`#produits`) présente les **5 types de cigarettes électroniques**,
+chacun avec une courte description et notre sélection (la Maison propose **plus de 60 modèles**,
+repère « 60+ » affiché). Les pastilles en haut de section mènent à chaque type.
 
-### Produits présentés
+| Type | Ancre | Sélection | Visuel |
+|---|---|---|---|
+| Pod mod | `#type-pod-mod` | VOOPOO Drag X3 & Drag S3 (même carte, édition French Riviera) | `voopoo-drag-x3-s3-duo.webp` (image tirée de la vidéo officielle) |
+| Pod | `#type-pod` | Aspire Pixo Max (coup de cœur), 8 coloris | photos réelles `aspire-pixo-max-<coloris>.webp` |
+| Box mod | `#type-box` | Geekvape Aegis Legend 5 (5–200 W, double 18650, IP68, Z Tank) | **en attente des photos** (encart provisoire) |
+| Tube / stick | `#type-tube` | Kiwi Vapor Kiwi 2, 5 coloris | photos réelles `kiwi-2-<coloris>.webp` |
+| Puff rechargeable | `#type-puff` | marques JNR, Dojo by Vaporesso, Crown Bar Al Fakher, Elf Bar, Lost Mary, Kiwi Go, Vuse | **en attente des photos** (encart provisoire) |
 
-| Marque | Modèle | Caractéristiques affichées (versions européennes, pods 2 ml) |
-|---|---|---|
-| VOOPOO | Drag X3 (édition French Riviera) | écran tactile 1,66", 5–80 W, accu 18650 ou 21700, pod PnP X, modes Smart / RBA / Eco |
-| VOOPOO | Drag S3 (édition French Riviera) | écran 0,96", batterie 3000 mAh, 5–60 W, pod PnP X |
-| OXVA | Xlim Pro 3 | écran couleur 1,05", 1500 mAh, 5–30 W |
-| OXVA | Xlim Pro 2 | écran couleur 0,56", 1300 mAh, 5–30 W |
-| OXVA | Xlim SE | 900 mAh, jusqu'à 25 W, tirage automatique |
-| Aspire | Pixo | écran couleur tactile, 1100 mAh, 5–30 W |
-| Kiwi Vapor | Kiwi 2 | pen 400 mAh + power bank 1800 mAh, pod 1,8 ml 0,8 Ω, USB-C ; 5 coloris en photo réelle (Midnight Blue, Champagne, Iron Gate, Nimbus Cloud, Red Velvet) |
-| Aspire | Pixo Max (coup de cœur) | 2600 mAh, 10–35 W, modes Eco / Normal / Max, double écran LED, recharge 2 A ; 8 coloris en photo réelle (Brushed Silver, White Glow, Wood Grain, Pink Gradient, Brushed Pink, Glory Black, Speedy Black, Carbon Black) |
-
-Les appareils sont pour l'instant des **illustrations SVG** inspirées des modèles (sprite en haut de
-`index.html`, couleurs réglables par variables CSS `--body`, `--liquid`, `--accent`). Les coloris des
-pastilles sont indicatifs : à ajuster selon le stock.
-
-### Remplacer une illustration par la photo officielle
-
-1. Déposer la photo détourée (fond transparent, format `.webp` ou `.png`) dans `assets/produits/`,
-   par exemple `assets/produits/oxva-xlim-pro-3.webp`. Utiliser les visuels fournis par le fabricant
-   ou le distributeur, avec leur accord.
-2. Dans `index.html`, dans la carte du produit, remplacer la ligne `<svg class="device" …>…</svg>` par :
-
-   ```html
-   <img src="assets/produits/oxva-xlim-pro-3.webp" alt="OXVA Xlim Pro 3" loading="lazy">
-   ```
-
-   La mise en forme (taille, ombre, animation au survol) s'applique automatiquement.
+Pour remplacer un encart provisoire, remplacer le bloc `<div class="card__visual card__visual--soon">…</div>`
+de la carte par `<div class="card__visual"><img class="device device--real" src="assets/produits/<fichier>.webp" alt="…"></div>`.
 
 ## Collection d'e-liquides Vapelite
 

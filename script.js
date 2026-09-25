@@ -152,33 +152,7 @@
     });
   }
 
-  /* ---------- Gamme : filtres et coloris ---------- */
-
-  const chips = [...document.querySelectorAll(".chip")];
-  const cards = [...document.querySelectorAll(".card")];
-
-  const filter = (cat) => {
-    chips.forEach((chip) => {
-      const active = chip.dataset.filter === cat;
-      chip.classList.toggle("is-active", active);
-      chip.setAttribute("aria-pressed", String(active));
-    });
-    cards.forEach((card) => {
-      const visible = cat === "all" || card.dataset.cat === cat;
-      const wasHidden = card.hidden;
-      card.hidden = !visible;
-      if (visible && wasHidden) {
-        card.classList.remove("is-entering");
-        void card.offsetWidth;
-        card.classList.add("is-entering");
-      }
-    });
-  };
-
-  chips.forEach((chip) => chip.addEventListener("click", () => filter(chip.dataset.filter)));
-  document.querySelectorAll("[data-filter-link]").forEach((link) => {
-    link.addEventListener("click", () => filter(link.dataset.filterLink));
-  });
+  /* ---------- Produits phares : coloris ---------- */
 
   document.querySelectorAll(".swatches").forEach((group) => {
     const card = group.closest(".card");
