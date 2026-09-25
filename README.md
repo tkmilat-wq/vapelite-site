@@ -103,7 +103,7 @@ du début à chaque affichage et se met en pause sur les autres diapositives.
 
 ## Bien choisir
 
-La section sombre animée au défilement (`#pod`, lien « Bien choisir » du menu) présente le conseil en
+La section bleu Klein animée au défilement (`#pod`, même dégradé que les cartes produits, lien « Bien choisir » du menu) présente le conseil en
 Maison en quatre étapes : faire le point sur vos habitudes et vos goûts, un matériel simple pour débuter,
 le bon taux de nicotine, un suivi dans la durée. Conformément à l'art. L3513-4 du Code de la santé
 publique, le site ne fait **aucune référence à l'arrêt du tabac ou au sevrage** et aucune allégation de santé.
