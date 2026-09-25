@@ -5,12 +5,30 @@
    Logo et typographie arrondie issus de la charte graphique.
    ========================================================================== */
 
-/* Nunito variable auto-hébergée (SIL Open Font License), substitut libre de Museo Sans Rounded */
+/* Polices auto-hébergées (SIL Open Font License)
+   - Bodoni Moda : titres, esprit maison de couture (contraste fort, tailles optiques)
+   - Inter : textes et interface, proche de la police d'Apple (utilisée directement sur iPhone / Mac) */
 @font-face {
-  font-family: "Nunito";
-  src: url("assets/fonts/nunito-latin-wght-normal.woff2") format("woff2-variations"),
-       url("assets/fonts/nunito-latin-wght-normal.woff2") format("woff2");
-  font-weight: 200 1000;
+  font-family: "Bodoni Moda";
+  src: url("assets/fonts/bodoni-moda-latin-standard-normal.woff2") format("woff2-variations"),
+       url("assets/fonts/bodoni-moda-latin-standard-normal.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Bodoni Moda";
+  src: url("assets/fonts/bodoni-moda-latin-standard-italic.woff2") format("woff2-variations"),
+       url("assets/fonts/bodoni-moda-latin-standard-italic.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/inter-latin-wght-normal.woff2") format("woff2-variations"),
+       url("assets/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -27,7 +45,8 @@
   --white: #ffffff;
   --night: #0b0d12;         /* sections sombres */
 
-  --font: "Museo Sans Rounded", "Nunito", ui-rounded, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
 
   --gutter: clamp(16px, 4vw, 56px);
   --max: 1320px;
@@ -56,8 +75,10 @@ body {
   color: var(--ink);
   font-family: var(--font);
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.55;
+  letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
   overflow-x: hidden;
 }
 body.is-locked { overflow: hidden; }
@@ -110,7 +131,7 @@ button { font: inherit; color: inherit; }
   padding: 12px 26px;
   border: 2px solid transparent;
   border-radius: 999px;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 15px;
   text-decoration: none;
   cursor: pointer;
@@ -129,7 +150,7 @@ button { font: inherit; color: inherit; }
 .btn--outline:hover { border-color: var(--ink); }
 
 .link {
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: underline 2px transparent;
   text-underline-offset: 4px;
   transition: text-decoration-color 0.2s ease, color 0.2s ease;
@@ -140,8 +161,8 @@ button { font: inherit; color: inherit; }
   margin-bottom: 10px;
   color: var(--klein);
   font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 .eyebrow--light { color: #8fb0ff; }
@@ -160,10 +181,11 @@ button { font: inherit; color: inherit; }
   margin-bottom: clamp(32px, 5vw, 56px);
 }
 .section__title {
-  font-size: clamp(34px, 5.4vw, 64px);
-  font-weight: 1000;
-  line-height: 1.02;
-  letter-spacing: -0.03em;
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5.6vw, 72px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
 }
 .section__title--light { color: var(--white); }
 .section__lead {
@@ -216,7 +238,7 @@ button { font: inherit; color: inherit; }
 .nav__list a {
   position: relative;
   padding: 6px 0;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
 }
 .nav__list a::after {
@@ -310,9 +332,11 @@ button { font: inherit; color: inherit; }
   left: -0.04em;
   bottom: -0.2em;
   font-size: clamp(90px, 19vw, 300px);
-  font-weight: 1000;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
   line-height: 1;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   white-space: nowrap;
   color: transparent;
@@ -354,14 +378,15 @@ button { font: inherit; color: inherit; }
   border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 999px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.02em;
 }
 .slide__title {
-  font-size: clamp(40px, 6.4vw, 88px);
-  font-weight: 1000;
+  font-size: clamp(42px, 6.8vw, 96px);
+  font-family: var(--font-serif);
+  font-weight: 500;
   line-height: 0.98;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.015em;
 }
 .slide__lead {
   max-width: 34ch;
@@ -380,7 +405,7 @@ button { font: inherit; color: inherit; }
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .slide__actions {
@@ -570,13 +595,14 @@ button { font: inherit; color: inherit; }
   gap: 28px;
   width: max-content;
   font-size: clamp(22px, 3vw, 36px);
-  font-weight: 1000;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
   animation: marquee 32s linear infinite;
 }
 .marquee__track b { color: var(--klein); font-size: 0.6em; }
-.marquee__track span:nth-of-type(odd) { color: transparent; -webkit-text-stroke: 1.5px var(--ink); }
+.marquee__track span:nth-of-type(odd) { color: var(--klein); }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 .perks {
@@ -620,7 +646,7 @@ button { font: inherit; color: inherit; }
   border: 1.5px solid var(--line);
   border-radius: 999px;
   background: var(--white);
-  font-weight: 800;
+  font-weight: 600;
   font-size: 14px;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -659,7 +685,7 @@ button { font: inherit; color: inherit; }
   border-radius: 999px;
   background: var(--white);
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 600;
 }
 .badge--new { background: var(--klein); color: var(--white); }
 
@@ -702,15 +728,15 @@ button { font: inherit; color: inherit; }
 .card__cat {
   color: var(--klein);
   font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 .card__name {
   margin-top: 2px;
   font-size: 21px;
-  font-weight: 900;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 .card__desc {
   margin-top: 6px;
@@ -836,9 +862,9 @@ button { font: inherit; color: inherit; }
   flex: none;
   width: 36px;
   color: #8fb0ff;
-  font-weight: 900;
+  font-weight: 600;
 }
-.feat h3 { font-size: clamp(20px, 2vw, 26px); font-weight: 900; letter-spacing: -0.01em; }
+.feat h3 { font-family: var(--font-serif); font-size: clamp(22px, 2.2vw, 30px); font-weight: 500; }
 .feat p {
   max-width: 42ch;
   margin-top: 4px;
@@ -927,7 +953,7 @@ button { font: inherit; color: inherit; }
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
@@ -956,9 +982,9 @@ button { font: inherit; color: inherit; }
   border-radius: 14px;
   background: var(--klein);
   color: var(--white);
-  font-weight: 900;
+  font-weight: 600;
 }
-.value h3 { margin-top: 22px; font-size: 22px; font-weight: 900; }
+.value h3 { margin-top: 22px; font-family: var(--font-serif); font-size: 26px; font-weight: 500; }
 .value p { margin-top: 8px; color: var(--ink-soft); font-size: 15px; }
 
 /* --------------------------------------------------------------------------
@@ -1020,7 +1046,7 @@ button { font: inherit; color: inherit; }
   padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
 }
-.info dt { font-weight: 800; }
+.info dt { font-weight: 600; }
 .info dd { overflow-wrap: anywhere; }
 .shop__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 
@@ -1049,7 +1075,7 @@ button { font: inherit; color: inherit; }
 .footer__title {
   margin-bottom: 4px;
   color: var(--white);
-  font-weight: 800;
+  font-weight: 600;
 }
 .footer__legal {
   display: flex;
@@ -1092,10 +1118,10 @@ button { font: inherit; color: inherit; }
 }
 @keyframes pop { from { opacity: 0; transform: translateY(20px) scale(0.96); } }
 .age__logo { width: 96px; margin: 0 auto 22px; }
-.age__title { font-size: 26px; font-weight: 1000; line-height: 1.15; letter-spacing: -0.02em; }
+.age__title { font-family: var(--font-serif); font-size: 30px; font-weight: 500; line-height: 1.15; }
 .age__card > p { margin-top: 10px; color: var(--ink-soft); }
 .age__actions { display: grid; gap: 10px; margin-top: 26px; }
-.age__denied { margin-top: 16px; color: var(--klein); font-weight: 800; }
+.age__denied { margin-top: 16px; color: var(--klein); font-weight: 600; }
 
 /* --------------------------------------------------------------------------
    Apparition au défilement
@@ -1140,7 +1166,7 @@ button { font: inherit; color: inherit; }
   }
   .nav.is-open { opacity: 1; transform: none; visibility: visible; }
   .nav__list { flex-direction: column; gap: 4px; }
-  .nav__list a { display: block; padding: 12px 0; font-size: 22px; font-weight: 900; }
+  .nav__list a { display: block; padding: 10px 0; font-family: var(--font-serif); font-size: 30px; font-weight: 500; }
   .nav__list a::after { display: none; }
 
   .slide {
@@ -1155,7 +1181,7 @@ button { font: inherit; color: inherit; }
   .stage { --device-h: min(34vh, 300px); height: calc(var(--device-h) + 90px); }
   .vapor { top: 80px; }
   .hero__rings { left: 50%; top: 26%; }
-  .slide__title { font-size: clamp(38px, 10vw, 60px); }
+  .slide__title { font-size: clamp(44px, 12vw, 66px); }
   .slide__lead { margin-top: 14px; }
   .slide__actions { margin-top: 22px; }
 
@@ -1225,9 +1251,10 @@ button { font: inherit; color: inherit; }
 .legal { max-width: 860px; }
 .legal h1 {
   font-size: clamp(38px, 6vw, 72px);
-  font-weight: 1000;
+  font-family: var(--font-serif);
+  font-weight: 500;
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
 }
-.legal h2 { margin-top: 44px; font-size: 22px; font-weight: 900; }
+.legal h2 { margin-top: 44px; font-size: 20px; font-weight: 600; }
 .legal p { margin-top: 10px; color: var(--ink-soft); font-size: 17px; }
