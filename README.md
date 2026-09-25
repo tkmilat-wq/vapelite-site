@@ -121,6 +121,14 @@ du début à chaque affichage et se met en pause sur les autres diapositives.
 Les cartes Drag X3 / Drag S3 utilisent pour l'instant des images tirées de la vidéo
 (`assets/produits/voopoo-drag-{x3,s3}-video.webp`) ; à remplacer par les photos produits détourées.
 
+## Coordonnées, itinéraire et avis
+
+- **Adresse** : 1 rue Pythéas, 13001 Marseille · **Téléphone** : 04 91 70 92 97
+- **Horaires** : lundi – samedi 10h00 – 19h30, dimanche 11h30 – 18h30 (aussi dans le JSON-LD)
+- **Itinéraire** : boutons Google Maps et Waze dans la section « La Maison »
+- **Avis Google** : bandeau `#avis` avec liens vers la fiche Google (lire / laisser un avis). Aucun avis
+  n'est affiché tant que de vrais avis n'ont pas été fournis.
+
 ## Photos et vidéo de la boutique
 
 | Fichier | Utilisation |
@@ -162,8 +170,7 @@ python3 -m http.server 8000
 
 Valeurs provisoires à remplacer :
 
-- Adresse et téléphone : **1 rue Pythéas, 13001 Marseille · 04 91 70 92 97**, repris de l'étiquette des flacons (à confirmer)
-- Horaires d'ouverture : **lundi – samedi 9h30 – 20h**, relevés sur la plaque de la devanture (à confirmer)
+- Avis Google : note moyenne et avis réels à ajouter dans la section `#avis` (liste `.reviews__list`)
 - Appareils présentés (visuels, coloris) dans la section « Nos produits »
 - Informations légales dans `mentions-legales.html` (forme juridique, SIRET, hébergeur…)
 
