@@ -21,7 +21,11 @@ produits en avant. Éléments issus de la **charte graphique Vapelite France** :
     police système d'Apple (SF Pro) est utilisée directement.
 - **Motif** : le « V » du logo répété en bleu pâle (`assets/motif.svg`, disponible pour de futurs usages).
 
-## Produits présentés
+## Produits phares
+
+La section « Nos produits phares » (`#produits`) présente une sélection, pas le catalogue complet.
+
+### Produits présentés
 
 | Marque | Modèle | Caractéristiques affichées (versions européennes, pods 2 ml) |
 |---|---|---|
@@ -73,7 +77,7 @@ détourés avec transparence et convertis en WebP (`assets/produits/`). Flacons 
 | Nectar Exotique | mangue · pastèque · citron | Fruité | `eliquide-nectar-exotique-{360,720}.webp` |
 | Original Coke | cola · frais | Frais | `eliquide-original-coke-{360,720}.webp` |
 
-La section « La collection Vapelite » (`#collection`) présente les 13 flacons dans un carrousel
+La gamme Vapelite compte **20 saveurs** (et la Maison plus de **700 saveurs d'e-liquides** au total) ; la section « La collection Vapelite » (`#collection`) en présente une sélection de 13 dans un carrousel
 horizontal filtrable par famille ; trois flacons sont aussi mis en avant dans la bannière.
 
 ## Marques partenaires

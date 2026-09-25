@@ -927,6 +927,40 @@ button { font: inherit; color: inherit; }
   padding-bottom: clamp(64px, 9vw, 112px);
 }
 .collection__inner { padding-bottom: 28px; }
+.collection__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 48px;
+  margin: -8px 0 32px;
+  padding: 0;
+  list-style: none;
+}
+.collection__stats li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.collection__stats strong {
+  font-family: var(--font-serif);
+  font-size: clamp(44px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--klein);
+}
+.collection__stats sup { font-size: 0.6em; font-family: var(--font); font-weight: 600; vertical-align: 0.5em; margin-left: 2px; }
+.collection__stats span {
+  max-width: 16ch;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.3;
+}
+.products__lead { margin-top: 14px; }
+.brands__count {
+  margin: -8px 0 16px;
+  color: var(--klein);
+  font-size: 14px;
+  font-weight: 600;
+}
 .collection__bar {
   display: flex;
   flex-wrap: wrap;
