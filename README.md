@@ -31,6 +31,7 @@ produits en avant. Éléments issus de la **charte graphique Vapelite France** :
 | OXVA | Xlim Pro 2 | écran couleur 0,56", 1300 mAh, 5–30 W |
 | OXVA | Xlim SE | 900 mAh, jusqu'à 25 W, tirage automatique |
 | Aspire | Pixo | écran couleur tactile, 1100 mAh, 5–30 W |
+| Kiwi Vapor | Kiwi 2 | pen 400 mAh + power bank 1800 mAh, pod 1,8 ml 0,8 Ω, USB-C ; 5 coloris en photo réelle (Midnight Blue, Champagne, Iron Gate, Nimbus Cloud, Red Velvet) |
 | Aspire | Pixo Max (coup de cœur) | 2600 mAh, 10–35 W, modes Eco / Normal / Max, double écran LED, recharge 2 A ; 8 coloris en photo réelle (Brushed Silver, White Glow, Wood Grain, Pink Gradient, Brushed Pink, Glory Black, Speedy Black, Carbon Black) |
 
 Les appareils sont pour l'instant des **illustrations SVG** inspirées des modèles (sprite en haut de

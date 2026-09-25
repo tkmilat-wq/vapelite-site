@@ -873,6 +873,7 @@ button { font: inherit; color: inherit; }
 }
 .card:hover .card__visual .device--real { transform: translateY(-10px) rotate(-4deg) scale(1.04); }
 .card__visual .device--real.is-swapping { opacity: 0; }
+.card__visual .device--kiwi { height: 236px; margin-top: 22px; }
 .swatches { flex-wrap: wrap; }
 .card__visual--photo { padding: 0; }
 .card__visual--photo::before { display: none; }
@@ -1535,6 +1536,7 @@ button { font: inherit; color: inherit; }
   .card__visual .device { height: 160px; }
   .card__visual img { height: 170px; }
   .card__visual .device--real { height: 175px; }
+  .card__visual .device--kiwi { height: 160px; margin-top: 18px; }
   .specs { font-size: 13px; }
   .card__body { padding: 14px 14px 16px; }
   .card__name { font-size: 17px; }
