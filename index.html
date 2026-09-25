@@ -42,132 +42,6 @@
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
   <!-- ==================================================================
-       Illustrations des appareils (couleurs pilotées par variables CSS :
-       --body, --mouth, --liquid, --accent, --cap)
-       ================================================================== -->
-  <svg class="sprite" aria-hidden="true" focusable="false">
-    <defs>
-      <linearGradient id="g-shade" x1="0" x2="1" y1="0" y2="0">
-        <stop offset="0" stop-color="#fff" stop-opacity=".42"/>
-        <stop offset=".16" stop-color="#fff" stop-opacity=".14"/>
-        <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
-        <stop offset=".84" stop-color="#000" stop-opacity=".14"/>
-        <stop offset="1" stop-color="#000" stop-opacity=".38"/>
-      </linearGradient>
-      <linearGradient id="g-glass" x1="0" x2="1" y1="0" y2="0">
-        <stop offset="0" stop-color="#fff" stop-opacity=".7"/>
-        <stop offset=".22" stop-color="#fff" stop-opacity=".18"/>
-        <stop offset=".6" stop-color="#fff" stop-opacity=".04"/>
-        <stop offset="1" stop-color="#fff" stop-opacity=".45"/>
-      </linearGradient>
-      <linearGradient id="g-liquid" x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0" stop-color="#fff" stop-opacity=".35"/>
-        <stop offset="1" stop-color="#000" stop-opacity=".18"/>
-      </linearGradient>
-      <linearGradient id="g-metal" x1="0" x2="1" y1="0" y2="0">
-        <stop offset="0" stop-color="#7d8490"/>
-        <stop offset=".3" stop-color="#f3f5f8"/>
-        <stop offset=".62" stop-color="#b9bfc8"/>
-        <stop offset="1" stop-color="#666d78"/>
-      </linearGradient>
-    </defs>
-
-    <!-- OXVA Xlim : base commune -->
-    <symbol id="xlim-base" viewBox="0 0 80 360">
-      <path d="M26 8h28a6 6 0 0 1 6 6v28H20V14a6 6 0 0 1 6-6z" fill="var(--mouth,#15171c)"/>
-      <path d="M26 8h28a6 6 0 0 1 6 6v28H20V14a6 6 0 0 1 6-6z" fill="url(#g-shade)"/>
-      <rect x="11" y="38" width="58" height="92" rx="9" fill="var(--pod,#dfe6ee)" fill-opacity=".55"/>
-      <rect class="liquid" x="17" y="72" width="46" height="52" rx="5" fill="var(--liquid,#ff7a59)"/>
-      <rect x="17" y="72" width="46" height="52" rx="5" fill="url(#g-liquid)"/>
-      <rect x="37" y="46" width="6" height="64" rx="3" fill="#fff" fill-opacity=".38"/>
-      <rect x="11" y="38" width="58" height="92" rx="9" fill="url(#g-glass)"/>
-      <rect x="8" y="124" width="64" height="228" rx="12" fill="var(--body,#1d2027)"/>
-      <rect x="8" y="124" width="64" height="228" rx="12" fill="url(#g-shade)"/>
-      <rect x="8" y="124" width="64" height="4" fill="#000" fill-opacity=".25"/>
-      <rect x="30" y="344" width="20" height="4" rx="2" fill="#000" fill-opacity=".35"/>
-    </symbol>
-
-    <!-- OXVA Xlim Pro 3 : grand écran couleur 1,05" -->
-    <symbol id="d-xlim-pro3" viewBox="0 0 80 360">
-      <use href="#xlim-base"/>
-      <rect x="17" y="146" width="46" height="64" rx="6" fill="#0b0e13"/>
-      <text x="40" y="176" text-anchor="middle" fill="var(--accent,#39d0ff)" font-family="Inter, -apple-system, sans-serif" font-weight="700" font-size="15">30W</text>
-      <rect class="led" x="24" y="186" width="32" height="6" rx="3" fill="var(--accent,#39d0ff)" fill-opacity=".85"/>
-      <rect x="24" y="197" width="20" height="3" rx="1.5" fill="#fff" fill-opacity=".4"/>
-      <circle cx="40" cy="230" r="6" fill="#000" fill-opacity=".22"/>
-    </symbol>
-
-    <!-- OXVA Xlim Pro 2 : écran couleur 0,56" -->
-    <symbol id="d-xlim-pro2" viewBox="0 0 80 360">
-      <use href="#xlim-base"/>
-      <rect x="21" y="148" width="38" height="24" rx="4" fill="#0b0e13"/>
-      <text x="40" y="165" text-anchor="middle" fill="var(--accent,#39d0ff)" font-family="Inter, -apple-system, sans-serif" font-weight="700" font-size="11">30W</text>
-      <rect class="led" x="21" y="148" width="38" height="2" fill="var(--accent,#39d0ff)"/>
-      <circle cx="40" cy="192" r="5" fill="#000" fill-opacity=".22"/>
-    </symbol>
-
-    <!-- OXVA Xlim SE : témoin LED -->
-    <symbol id="d-xlim-se" viewBox="0 0 80 360">
-      <use href="#xlim-base"/>
-      <rect class="led" x="35" y="152" width="10" height="10" rx="5" fill="var(--accent,#39d0ff)"/>
-      <rect x="36" y="296" width="8" height="28" rx="4" fill="#000" fill-opacity=".22"/>
-    </symbol>
-
-    <!-- Aspire Pixo : base commune (écran tactile) -->
-    <symbol id="pixo-base" viewBox="0 0 110 340">
-      <path d="M38 8h34a8 8 0 0 1 8 8v26H30V16a8 8 0 0 1 8-8z" fill="var(--mouth,#15171c)"/>
-      <path d="M38 8h34a8 8 0 0 1 8 8v26H30V16a8 8 0 0 1 8-8z" fill="url(#g-shade)"/>
-      <rect x="16" y="36" width="78" height="84" rx="18" fill="var(--pod,#dfe6ee)" fill-opacity=".55"/>
-      <rect class="liquid" x="24" y="68" width="62" height="46" rx="12" fill="var(--liquid,#ff7a59)"/>
-      <rect x="24" y="68" width="62" height="46" rx="12" fill="url(#g-liquid)"/>
-      <rect x="52" y="44" width="6" height="56" rx="3" fill="#fff" fill-opacity=".38"/>
-      <rect x="16" y="36" width="78" height="84" rx="18" fill="url(#g-glass)"/>
-      <rect x="10" y="110" width="90" height="222" rx="32" fill="var(--body,#2b2f38)"/>
-      <rect x="10" y="110" width="90" height="222" rx="32" fill="url(#g-shade)"/>
-      <rect x="22" y="134" width="66" height="118" rx="16" fill="#0b0e13"/>
-      <circle cx="55" cy="184" r="22" fill="none" stroke="#fff" stroke-opacity=".12" stroke-width="5"/>
-      <circle class="led" cx="55" cy="184" r="22" fill="none" stroke="var(--accent,#39d0ff)" stroke-width="5" stroke-linecap="round" stroke-dasharray="96 200" transform="rotate(-90 55 184)"/>
-      <rect x="36" y="222" width="38" height="5" rx="2.5" fill="#fff" fill-opacity=".35"/>
-      <rect x="42" y="232" width="26" height="4" rx="2" fill="#fff" fill-opacity=".2"/>
-      <rect x="45" y="324" width="20" height="4" rx="2" fill="#000" fill-opacity=".35"/>
-    </symbol>
-
-    <!-- Aspire Pixo -->
-    <symbol id="d-pixo" viewBox="0 0 110 340">
-      <use href="#pixo-base"/>
-      <text x="55" y="189" text-anchor="middle" fill="#fff" font-family="Inter, -apple-system, sans-serif" font-weight="700" font-size="13">30W</text>
-    </symbol>
-
-    <!-- Aspire Pixo Max : entrée d'air latérale -->
-    <symbol id="d-pixo-max" viewBox="0 0 110 340">
-      <use href="#pixo-base"/>
-      <text x="55" y="189" text-anchor="middle" fill="#fff" font-family="Inter, -apple-system, sans-serif" font-weight="700" font-size="13">35W</text>
-      <rect x="96" y="150" width="4" height="40" rx="2" fill="#000" fill-opacity=".35"/>
-      <rect x="22" y="268" width="66" height="36" rx="12" fill="#000" fill-opacity=".12"/>
-    </symbol>
-
-    <!-- Pods de rechange Xlim et Pixo -->
-    <symbol id="d-cartridges" viewBox="0 0 190 150">
-      <g transform="translate(4 4)"><path d="M26 8h28a6 6 0 0 1 6 6v28H20V14a6 6 0 0 1 6-6z" fill="var(--mouth,#15171c)"/>
-      <path d="M26 8h28a6 6 0 0 1 6 6v28H20V14a6 6 0 0 1 6-6z" fill="url(#g-shade)"/>
-      <rect x="11" y="38" width="58" height="92" rx="9" fill="var(--pod,#dfe6ee)" fill-opacity=".55"/>
-      <rect class="liquid" x="17" y="72" width="46" height="52" rx="5" fill="var(--liquid,#ff7a59)"/>
-      <rect x="17" y="72" width="46" height="52" rx="5" fill="url(#g-liquid)"/>
-      <rect x="37" y="46" width="6" height="64" rx="3" fill="#fff" fill-opacity=".38"/>
-      <rect x="11" y="38" width="58" height="92" rx="9" fill="url(#g-glass)"/></g>
-      <g transform="translate(76 14)"><path d="M38 8h34a8 8 0 0 1 8 8v26H30V16a8 8 0 0 1 8-8z" fill="var(--mouth,#15171c)"/>
-      <path d="M38 8h34a8 8 0 0 1 8 8v26H30V16a8 8 0 0 1 8-8z" fill="url(#g-shade)"/>
-      <rect x="16" y="36" width="78" height="84" rx="18" fill="var(--pod,#dfe6ee)" fill-opacity=".55"/>
-      <rect class="liquid" x="24" y="68" width="62" height="46" rx="12" fill="var(--liquid,#ff7a59)"/>
-      <rect x="24" y="68" width="62" height="46" rx="12" fill="url(#g-liquid)"/>
-      <rect x="52" y="44" width="6" height="56" rx="3" fill="#fff" fill-opacity=".38"/>
-      <rect x="16" y="36" width="78" height="84" rx="18" fill="url(#g-glass)"/></g>
-    </symbol>
-
-
-  </svg>
-
-  <!-- ==================================================================
        En-tête
        ================================================================== -->
   <header class="header" id="header">
@@ -180,7 +54,7 @@
           <li><a href="#top" data-slide="1">Coup de cœur</a></li>
           <li><a href="#produits">Produits phares</a></li>
           <li><a href="#collection">E-liquides</a></li>
-          <li><a href="#pod">Bien choisir</a></li>
+          <li><a href="#pod">Arrêter le tabac</a></li>
           <li><a href="#valeurs">Pourquoi nous</a></li>
           <li><a href="#boutique">La Maison</a></li>
         </ul>
@@ -651,37 +525,44 @@
     </section>
 
     <!-- ================================================================
-         Bien choisir — section sombre animée au défilement
+         Arrêter le tabac — section sombre animée au défilement (vidéo OXVA NeXLIM 2 Mini)
          ================================================================ -->
     <section class="spotlight" id="pod">
       <div class="spotlight__sticky">
         <div class="spotlight__inner">
           <div class="spotlight__visual">
             <div class="spotlight__glow" aria-hidden="true"></div>
-            <svg class="device spotlight__device" viewBox="0 0 80 360" style="--body:#e9ecf1;--pod:#9aa3b0;--liquid:#ff7a59;--accent:#39d0ff" aria-hidden="true"><use href="#d-xlim-pro3"/></svg>
+            <figure class="spotlight__media">
+              <video class="spotlight__video" autoplay muted loop playsinline preload="metadata" poster="assets/videos/oxva-nexlim-2-mini-poster.jpg" aria-label="Animation de présentation de l’OXVA NeXLIM 2 Mini">
+                <source src="assets/videos/oxva-nexlim-2-mini.webm" type="video/webm">
+                <source src="assets/videos/oxva-nexlim-2-mini.mp4" type="video/mp4">
+              </video>
+              <figcaption>OXVA NeXLIM 2 Mini</figcaption>
+            </figure>
           </div>
           <div class="spotlight__text">
-            <p class="eyebrow eyebrow--light">Bien choisir</p>
-            <h2 class="section__title section__title--light">Ce qu’on regarde<br>avec vous.</h2>
+            <p class="eyebrow eyebrow--light">Arrêter le tabac</p>
+            <h2 class="section__title section__title--light">On vous accompagne,<br>pas à pas.</h2>
             <ol class="feats">
               <li class="feat is-active">
                 <span class="feat__num">01</span>
-                <div><h3>Le tirage</h3><p>Serré comme une cigarette ou plus aérien : c’est le premier critère, on vous fait essayer.</p></div>
+                <div><h3>On fait le point</h3><p>Combien de cigarettes par jour, à quels moments, quel tirage : on part de vos habitudes de fumeur, sans jugement.</p></div>
               </li>
               <li class="feat">
                 <span class="feat__num">02</span>
-                <div><h3>Le remplissage</h3><p>Cartouche remplissable ou pré-remplie, remplissage par le haut ou sur le côté.</p></div>
+                <div><h3>Un matériel simple pour débuter</h3><p>Un appareil facile à prendre en main, au tirage serré proche de la cigarette. On vous montre tout, du remplissage à la recharge.</p></div>
               </li>
               <li class="feat">
                 <span class="feat__num">03</span>
-                <div><h3>L’autonomie</h3><p>Batterie intégrée ou accu amovible, recharge USB-C : selon votre rythme de la journée.</p></div>
+                <div><h3>Le bon taux de nicotine</h3><p>Sels de nicotine ou nicotine classique, taux choisi selon votre consommation de tabac : c’est ce qui compte le plus au début.</p></div>
               </li>
               <li class="feat">
                 <span class="feat__num">04</span>
-                <div><h3>Le bon e-liquide</h3><p>Taux de nicotine, sels ou nicotine classique, saveur : on ajuste avec vous.</p></div>
+                <div><h3>Un suivi dans la durée</h3><p>Revenez nous voir quand vous voulez : on ajuste le matériel, la saveur et le taux de nicotine à votre rythme.</p></div>
               </li>
             </ol>
             <div class="spotlight__bar" aria-hidden="true"><span></span></div>
+            <p class="spotlight__note">Envie d’un accompagnement médical en plus ? Tabac Info Service : <a href="tel:3989">39 89</a> · <a href="https://www.tabac-info-service.fr" target="_blank" rel="noopener">tabac-info-service.fr</a></p>
           </div>
         </div>
       </div>
@@ -835,7 +716,7 @@
       </nav>
       <nav class="footer__col" aria-label="Vapelite">
         <p class="footer__title">Vapelite</p>
-        <a href="#pod">Bien choisir</a>
+        <a href="#pod">Arrêter le tabac</a>
         <a href="#valeurs">Nos valeurs</a>
         <a href="#boutique">La Maison</a>
         <a href="mentions-legales.html">Mentions légales</a>

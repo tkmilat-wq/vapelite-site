@@ -1240,22 +1240,36 @@ a.chip:hover { background: var(--ink); color: var(--white); }
   width: min(80%, 520px);
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(closest-side, var(--glow, rgba(0, 47, 167, 0.9)), transparent);
+  background: radial-gradient(closest-side, var(--glow, rgba(200, 24, 24, 0.55)), transparent);
   filter: blur(24px);
   opacity: 0.9;
   transition: background 0.8s ease;
 }
-.spotlight__device {
+.spotlight__media {
   position: relative;
-  height: min(68vh, 560px);
+  width: 100%;
+  margin: 0;
   transform:
-    translateY(calc((0.5 - var(--p)) * 60px))
-    rotate(calc((var(--p) - 0.5) * 24deg))
-    scale(calc(0.9 + var(--p) * 0.15));
-  filter: drop-shadow(0 40px 50px rgba(0, 0, 0, 0.5));
+    translateY(calc((0.5 - var(--p)) * 40px))
+    scale(calc(0.94 + var(--p) * 0.08));
   will-change: transform;
 }
-.spotlight__device .led,
+.spotlight__video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1280 / 712;
+  object-fit: cover;
+  border-radius: 24px;
+  background: #0b0b0d;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+.spotlight__media figcaption {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
 .stage .led { animation: led 2.4s ease-in-out infinite; }
 @keyframes led { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
@@ -1284,7 +1298,7 @@ a.chip:hover { background: var(--ink); color: var(--white); }
   overflow: hidden;
   transition: max-height 0.5s var(--ease);
 }
-.feat.is-active p { max-height: 6em; }
+.feat.is-active p { max-height: 8em; }
 .spotlight__bar {
   height: 3px;
   margin-top: 24px;
@@ -1299,6 +1313,13 @@ a.chip:hover { background: var(--ink); color: var(--white); }
   transform: scaleX(var(--p));
   transform-origin: left;
 }
+.spotlight__note {
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 13px;
+}
+.spotlight__text .section__title { font-size: clamp(34px, 3.6vw, 52px); }
+.spotlight__note a { color: #8fb0ff; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
 
 /* --------------------------------------------------------------------------
    Intérieur de la boutique (photo plein cadre)
@@ -1733,12 +1754,16 @@ a.chip:hover { background: var(--ink); color: var(--white); }
 
   .spotlight__inner {
     grid-template-columns: 1fr;
-    grid-template-rows: 40% auto;
-    gap: 8px;
+    grid-template-rows: auto auto;
+    align-content: center;
+    gap: 28px;
     padding-top: calc(var(--header-h) + 8px);
     padding-bottom: 24px;
   }
-  .spotlight__device { height: min(34vh, 300px); }
+  .spotlight__visual { height: auto; }
+  .spotlight__video { border-radius: 16px; }
+  .spotlight__media figcaption { margin-top: 8px; font-size: 12px; }
+  .spotlight__note { margin-top: 12px; font-size: 12px; }
   .spotlight__text .section__title { font-size: clamp(28px, 7.5vw, 44px); }
   .feats { margin-top: 16px; }
   .feat:not(.is-active) { display: none; }

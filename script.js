@@ -243,17 +243,11 @@
     updateReviewArrows();
   }
 
-  /* ---------- Bien choisir : animation liée au défilement ---------- */
+  /* ---------- Arrêter le tabac : animation liée au défilement ---------- */
 
   const spotlight = document.querySelector(".spotlight");
-  const spotDevice = spotlight.querySelector(".spotlight__device");
+  const spotVideo = spotlight.querySelector(".spotlight__video");
   const feats = [...spotlight.querySelectorAll(".feat")];
-  const looks = [
-    { body: "#e9ecf1", liquid: "#ff7a59", accent: "#39d0ff", glow: "rgba(0, 47, 167, 0.9)" },
-    { body: "#1d2027", liquid: "#3ddc97", accent: "#3ddc97", glow: "rgba(61, 220, 151, 0.7)" },
-    { body: "#ff6b5b", liquid: "#ffb000", accent: "#ffffff", glow: "rgba(255, 150, 110, 0.75)" },
-    { body: "#b69cff", liquid: "#8b5cf6", accent: "#ffffff", glow: "rgba(160, 120, 255, 0.8)" },
-  ];
   let step = -1;
   let ticking = false;
 
@@ -268,11 +262,6 @@
     if (next !== step) {
       step = next;
       feats.forEach((feat, i) => feat.classList.toggle("is-active", i === step));
-      const look = looks[step];
-      spotDevice.style.setProperty("--body", look.body);
-      spotDevice.style.setProperty("--liquid", look.liquid);
-      spotDevice.style.setProperty("--accent", look.accent);
-      spotlight.style.setProperty("--glow", look.glow);
     }
   };
 
@@ -284,6 +273,14 @@
   }, { passive: true });
   window.addEventListener("resize", updateSpotlight);
   updateSpotlight();
+
+  // La vidéo ne tourne que lorsque la section est visible
+  if (spotVideo && "IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) spotVideo.play().catch(() => {});
+      else spotVideo.pause();
+    }, { threshold: 0.1 }).observe(spotVideo);
+  }
 
   /* ---------- Photo de l'intérieur : léger zoom au défilement ---------- */
 
