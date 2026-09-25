@@ -249,6 +249,26 @@
     updateArrows();
   }
 
+  /* ---------- Avis Google : défilement des cartes ---------- */
+
+  const reviewList = document.querySelector(".reviews__list");
+  if (reviewList) {
+    const reviewArrows = [...document.querySelectorAll("[data-reviews-scroll]")];
+    const updateReviewArrows = () => {
+      const max = reviewList.scrollWidth - reviewList.clientWidth - 4;
+      reviewArrows.forEach((arrow) => {
+        arrow.disabled = Number(arrow.dataset.reviewsScroll) < 0 ? reviewList.scrollLeft <= 4 : reviewList.scrollLeft >= max;
+      });
+    };
+    reviewArrows.forEach((arrow) => arrow.addEventListener("click", () => {
+      const card = reviewList.querySelector(".review");
+      reviewList.scrollBy({ left: Number(arrow.dataset.reviewsScroll) * ((card?.offsetWidth || 340) + 18), behavior: reduceMotion ? "auto" : "smooth" });
+    }));
+    reviewList.addEventListener("scroll", () => requestAnimationFrame(updateReviewArrows), { passive: true });
+    window.addEventListener("resize", updateReviewArrows);
+    updateReviewArrows();
+  }
+
   /* ---------- Bien choisir : animation liée au défilement ---------- */
 
   const spotlight = document.querySelector(".spotlight");

@@ -128,7 +128,8 @@ Les cartes Drag X3 / Drag S3 utilisent pour l'instant des images tirées de la v
 - **Itinéraire** : boutons Google Maps et Waze dans la section « La Maison »
 - **Avis Google** : bandeau `#avis` avec la note **5,0 / 5 (254 avis)**, lien vers la fiche Google et
   lien direct pour laisser un avis (`https://g.page/r/CQMPkHKr5SAJEBM/review`). Mettre à jour la note et le
-  nombre d'avis de temps en temps dans `index.html`.
+  nombre d'avis de temps en temps dans `index.html`. Cinq avis réels (captures fournies par la Maison) sont
+  affichés en cartes défilantes, reproduits tels quels avec prénom + initiale.
 
 ## Photos et vidéo de la boutique
 
