@@ -130,6 +130,8 @@ button { font: inherit; color: inherit; }
 .btn--ghost-white { border-color: rgba(255, 255, 255, 0.55); color: var(--white); }
 .btn--ghost-white:hover { border-color: var(--white); background: rgba(255, 255, 255, 0.1); }
 .btn--outline { border-color: var(--line); color: var(--ink); background: var(--white); }
+.btn--waze { background: #33ccff; color: #0e1116; }
+.btn--waze:hover { background: #1fb8ec; }
 .btn--outline:hover { border-color: var(--ink); }
 
 .link {
@@ -1365,6 +1367,64 @@ button { font: inherit; color: inherit; }
 .info dt { font-weight: 600; }
 .info dd { overflow-wrap: anywhere; }
 .shop__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+/* --------------------------------------------------------------------------
+   Bandeau avis Google
+   -------------------------------------------------------------------------- */
+
+.reviews {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(64px, 9vw, 112px) var(--gutter);
+  background:
+    radial-gradient(70% 90% at 85% 20%, #1446d6 0%, rgba(20, 70, 214, 0) 60%),
+    var(--klein);
+  color: var(--white);
+}
+.reviews__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px 64px;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.reviews__intro { max-width: 640px; }
+.reviews__stars {
+  margin-bottom: 18px;
+  color: #ffc83d;
+  font-size: 28px;
+  letter-spacing: 6px;
+}
+.reviews__lead {
+  margin-top: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(16px, 1.5vw, 19px);
+}
+.reviews__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.g-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: conic-gradient(#ea4335 0 25%, #fbbc05 0 50%, #34a853 0 75%, #4285f4 0);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+}
+.reviews__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  max-width: var(--max);
+  margin: 48px auto 0;
+  padding: 0;
+  list-style: none;
+}
+.reviews__list[hidden] { display: none; }
+@media (max-width: 900px) { .reviews__list { grid-template-columns: 1fr; } }
 
 /* --------------------------------------------------------------------------
    Pied de page
