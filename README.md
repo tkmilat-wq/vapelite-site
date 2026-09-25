@@ -30,7 +30,7 @@ repère « 60+ » affiché). Les pastilles en haut de section mènent à chaque 
 |---|---|---|---|
 | Pod mod | `#type-pod-mod` | VOOPOO Drag X3 & Drag S3 (même carte, édition French Riviera) | visuel officiel `voopoo-drag-french-riviera-{600,1000}.webp` |
 | Pod | `#type-pod` | Aspire Pixo Max (coup de cœur), 8 coloris | photos réelles `aspire-pixo-max-<coloris>.webp` |
-| Box mod | `#type-box` | Geekvape Aegis Legend 5 (5–200 W, double 18650, IP68, Z Tank) | **en attente des photos** (encart provisoire) |
+| Box mod | `#type-box` | Geekvape Aegis Legend 5 (5–200 W, double 18650, IP68, Z Tank), 5 coloris | photos détourées `geekvape-legend-5-<coloris>.webp` (Aurora Rainbow, Carbon Black, Earth Brown, Frost Silver, Glacier Green) |
 | Tube / stick | `#type-tube` | Kiwi Vapor Kiwi 2, 5 coloris | photos réelles `kiwi-2-<coloris>.webp` |
 | Puff rechargeable | `#type-puff` | marques JNR, Dojo by Vaporesso, Crown Bar Al Fakher, Elf Bar, Lost Mary, Kiwi Go, Vuse | **en attente des photos** (encart provisoire) |
 
