@@ -31,7 +31,7 @@ produits en avant. Éléments issus de la **charte graphique Vapelite France** :
 | OXVA | Xlim Pro 2 | écran couleur 0,56", 1300 mAh, 5–30 W |
 | OXVA | Xlim SE | 900 mAh, jusqu'à 25 W, tirage automatique |
 | Aspire | Pixo | écran couleur tactile, 1100 mAh, 5–30 W |
-| Aspire | Pixo Max | 2600 mAh, jusqu'à 35 W (3 modes), remplissage haut ou côté |
+| Aspire | Pixo Max (coup de cœur) | 2600 mAh, 10–35 W, modes Eco / Normal / Max, double écran LED, recharge 2 A ; 8 coloris en photo réelle (Brushed Silver, White Glow, Wood Grain, Pink Gradient, Brushed Pink, Glory Black, Speedy Black, Carbon Black) |
 
 Les appareils sont pour l'instant des **illustrations SVG** inspirées des modèles (sprite en haut de
 `index.html`, couleurs réglables par variables CSS `--body`, `--liquid`, `--accent`). Les coloris des
@@ -98,6 +98,13 @@ pour l'instant le nom de chaque marque. Pour passer au logo :
    ```
 
    Les logos s'affichent en gris et reprennent leurs couleurs au survol.
+
+## Notre coup de cœur
+
+Section `#coup-de-coeur` (avant « Nos produits ») consacrée à l'**Aspire Pixo Max White Glow** : photo
+d'ambiance, caractéristiques clés, photo de la gamme (`assets/produits/pixo-max-{white-glow,gamme}-{900,1600}.{webp,jpg}`).
+Dans « Nos produits », la carte Pixo Max affiche la vraie photo de chaque coloris
+(`assets/produits/aspire-pixo-max-<coloris>.webp`) quand on clique sur une pastille.
 
 ## Vidéo VOOPOO Drag X3 & Drag S3
 

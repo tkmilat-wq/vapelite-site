@@ -690,6 +690,105 @@ button { font: inherit; color: inherit; }
 .perk strong { display: block; color: var(--ink); font-size: 15px; }
 
 /* --------------------------------------------------------------------------
+   Notre coup de cœur (Aspire Pixo Max White Glow)
+   -------------------------------------------------------------------------- */
+
+.favorite {
+  padding: clamp(72px, 10vw, 128px) var(--gutter);
+  background: linear-gradient(135deg, #eef3ff 0%, #f6eefa 48%, #e9f6ff 100%);
+  overflow: hidden;
+}
+.favorite__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 88px);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.favorite__media {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(60, 70, 140, 0.22);
+}
+.favorite__media img {
+  width: 100%;
+  height: auto;
+  transform: scale(1.02);
+  transition: transform 1.2s var(--ease);
+}
+.favorite__media:hover img { transform: scale(1.06); }
+.favorite__tag {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: #d6336c;
+  font-size: 13px;
+  font-weight: 600;
+}
+.favorite__tag svg { animation: heart 2.2s ease-in-out infinite; }
+@keyframes heart { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.25); } 30% { transform: scale(1); } }
+.favorite__text .section__title em { font-style: italic; color: var(--klein); }
+.favorite__text .section__lead { margin-top: 18px; }
+.favorite__specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+.favorite__specs div {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+.favorite__specs dt {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.favorite__specs dd {
+  margin-top: 4px;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+.favorite__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.favorite__range {
+  max-width: var(--max);
+  margin: clamp(48px, 7vw, 88px) auto 0;
+}
+.favorite__range img {
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+}
+.favorite__range figcaption {
+  margin-top: 14px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  text-align: center;
+}
+@media (max-width: 900px) {
+  .favorite__inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .favorite__specs { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .favorite__specs div { padding: 14px; }
+  .favorite__specs dt { font-size: 20px; }
+  .favorite__range img { border-radius: 20px; }
+}
+
+/* --------------------------------------------------------------------------
    Gamme
    -------------------------------------------------------------------------- */
 
@@ -744,6 +843,7 @@ button { font: inherit; color: inherit; }
   font-weight: 600;
 }
 .badge--new { background: var(--klein); color: var(--white); }
+.badge--heart { background: #ffe3ee; color: #c2255c; }
 
 .card__visual {
   position: relative;
@@ -821,6 +921,16 @@ button { font: inherit; color: inherit; }
   border-radius: 50%;
   background: var(--klein);
 }
+.card__visual .device--real {
+  position: relative;
+  width: auto;
+  height: 232px;
+  filter: drop-shadow(0 18px 20px rgba(14, 17, 22, 0.2));
+  transition: transform 0.6s var(--ease), opacity 0.25s ease;
+}
+.card:hover .card__visual .device--real { transform: translateY(-10px) rotate(-4deg) scale(1.04); }
+.card__visual .device--real.is-swapping { opacity: 0; }
+.swatches { flex-wrap: wrap; }
 .card__visual--photo { padding: 0; }
 .card__visual--photo::before { display: none; }
 .card .card__visual--photo img {
@@ -855,6 +965,7 @@ button { font: inherit; color: inherit; }
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .swatches button:hover { transform: scale(1.12); }
+.swatches button { background: var(--c); }
 .swatches button[aria-checked="true"] { box-shadow: 0 0 0 2px var(--ink); }
 
 .products__note {
@@ -1467,6 +1578,7 @@ button { font: inherit; color: inherit; }
   .card__visual::before { width: 130px; height: 130px; }
   .card__visual .device { height: 160px; }
   .card__visual img { height: 170px; }
+  .card__visual .device--real { height: 175px; }
   .specs { font-size: 13px; }
   .card__body { padding: 14px 14px 16px; }
   .card__name { font-size: 17px; }

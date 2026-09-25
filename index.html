@@ -177,6 +177,7 @@
       </a>
       <nav class="nav" id="nav" aria-label="Menu principal">
         <ul class="nav__list">
+          <li><a href="#coup-de-coeur">Coup de cœur</a></li>
           <li><a href="#produits">Produits</a></li>
           <li><a href="#collection">E-liquides</a></li>
           <li><a href="#pod">Bien choisir</a></li>
@@ -318,6 +319,43 @@
     </section>
 
     <!-- ================================================================
+         Notre coup de cœur : Aspire Pixo Max White Glow
+         ================================================================ -->
+    <section class="favorite" id="coup-de-coeur" aria-labelledby="favorite-title">
+      <div class="favorite__inner">
+        <div class="favorite__media reveal">
+          <picture>
+            <source type="image/webp" srcset="assets/produits/pixo-max-white-glow-900.webp 900w, assets/produits/pixo-max-white-glow-1600.webp 1600w" sizes="(max-width: 900px) 100vw, 55vw">
+            <img src="assets/produits/pixo-max-white-glow-1600.jpg" srcset="assets/produits/pixo-max-white-glow-900.jpg 900w, assets/produits/pixo-max-white-glow-1600.jpg 1600w" sizes="(max-width: 900px) 100vw, 55vw" width="1600" height="1051" alt="Aspire Pixo Max coloris White Glow, reflets nacrés irisés, posé sur un fond bleu et rose" loading="lazy">
+          </picture>
+          <span class="favorite__tag"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.1 5.2 3 1.6-1.9 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg>Notre coup de cœur</span>
+        </div>
+        <div class="favorite__text">
+          <p class="eyebrow reveal">Notre coup de cœur</p>
+          <h2 class="section__title reveal" id="favorite-title">Aspire Pixo Max<br><em>White Glow.</em></h2>
+          <p class="section__lead reveal">Un reflet nacré qui change avec la lumière, une grosse batterie dans un format de poche et trois modes de puissance&nbsp;: le pod que l’on recommande les yeux fermés.</p>
+          <dl class="favorite__specs reveal">
+            <div><dt>2600 mAh</dt><dd>Jusqu’à 3 jours d’autonomie</dd></div>
+            <div><dt>10 – 35 W</dt><dd>Modes Eco, Normal et Max</dd></div>
+            <div><dt>Double écran LED</dt><dd>Résistance et batterie</dd></div>
+            <div><dt>Recharge 2 A</dt><dd>Environ 1 heure, <span class="nowrap">USB-C</span></dd></div>
+          </dl>
+          <div class="favorite__actions reveal">
+            <a class="btn btn--klein" href="#produits" data-filter-link="aspire">Voir les 8 coloris</a>
+            <a class="btn btn--outline" href="#boutique">Venir l’essayer</a>
+          </div>
+        </div>
+      </div>
+      <figure class="favorite__range reveal">
+        <picture>
+          <source type="image/webp" srcset="assets/produits/pixo-max-gamme-900.webp 900w, assets/produits/pixo-max-gamme-1600.webp 1600w" sizes="(max-width: 1320px) 100vw, 1320px">
+          <img src="assets/produits/pixo-max-gamme-1600.jpg" srcset="assets/produits/pixo-max-gamme-900.jpg 900w, assets/produits/pixo-max-gamme-1600.jpg 1600w" sizes="(max-width: 1320px) 100vw, 1320px" width="1600" height="1066" alt="La gamme Aspire Pixo Max alignée : White Glow, Wood Grain, Brushed Silver, Brushed Pink, Speedy Black, Glory Black et Pink Gradient" loading="lazy">
+        </picture>
+        <figcaption>La gamme Pixo Max à la Maison&nbsp;: Brushed Silver, White Glow, Wood Grain, Pink Gradient, Brushed Pink, Glory Black, Speedy Black et Carbon Black.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================================================================
          Gamme
          ================================================================ -->
     <section class="section products" id="produits">
@@ -423,26 +461,28 @@
             </div>
           </div>
         </li>
-        <li class="card reveal" data-cat="aspire" style="--tint:#fff4de">
-          <span class="badge">Grande autonomie</span>
+        <li class="card reveal" data-cat="aspire" style="--tint:#f1f2f5">
+          <span class="badge badge--heart">Coup de cœur</span>
           <div class="card__visual">
-            <svg class="device device--wide" viewBox="0 0 110 340" style="--body:#e9ecf1;--liquid:#ffb000;--accent:#ff6b5b" role="img" aria-label="Aspire Pixo Max"><use href="#d-pixo-max"/></svg>
+            <img class="device device--real" src="assets/produits/aspire-pixo-max-white-glow.webp" width="78" height="286" alt="Aspire Pixo Max, coloris White Glow" loading="lazy">
           </div>
           <div class="card__body">
             <p class="card__cat">Aspire</p>
             <h3 class="card__name">Pixo Max</h3>
-            <ul class="specs"><li>Batterie 2600 mAh</li><li>Jusqu’à 35 W · 3 modes</li><li>Remplissage haut ou côté</li></ul>
+            <ul class="specs"><li>Batterie 2600 mAh · 10 – 35 W</li><li>Modes Eco, Normal, Max</li><li>Double écran LED · pod 2 ml</li></ul>
+            <p class="card__colors">Coloris : <span class="card__color-name">White Glow</span> · 8 coloris</p>
             <div class="swatches" role="radiogroup" aria-label="Coloris">
-              <button type="button" role="radio" aria-checked="true" aria-label="Blanc" style="--c:#e9ecf1" data-body="#e9ecf1" data-tint="#fff4de"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Noir" style="--c:#1d2027" data-body="#1d2027" data-tint="#eef0f3"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Corail" style="--c:#ff6b5b" data-body="#ff6b5b" data-tint="#fff0ee"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Brushed Silver" style="--c:linear-gradient(135deg,#d9dce0,#9ea3a9)" data-img="assets/produits/aspire-pixo-max-brushed-silver.webp" data-name="Brushed Silver" data-tint="#efefef"></button>
+              <button type="button" role="radio" aria-checked="true" aria-label="White Glow" style="--c:linear-gradient(135deg,#e3ecfb,#eadbf3 50%,#d3e9f7)" data-img="assets/produits/aspire-pixo-max-white-glow.webp" data-name="White Glow" data-tint="#f1f2f5"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Wood Grain" style="--c:linear-gradient(135deg,#7a5448,#4f342c)" data-img="assets/produits/aspire-pixo-max-wood-grain.webp" data-name="Wood Grain" data-tint="#e9e4e3"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Pink Gradient" style="--c:linear-gradient(135deg,#f6b5cf,#d9588e)" data-img="assets/produits/aspire-pixo-max-pink-gradient.webp" data-name="Pink Gradient" data-tint="#f9ebf1"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Brushed Pink" style="--c:linear-gradient(135deg,#d9b1be,#a77886)" data-img="assets/produits/aspire-pixo-max-brushed-pink.webp" data-name="Brushed Pink" data-tint="#f0ebed"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Glory Black" style="--c:linear-gradient(90deg,#1b1d20 0 26%,#f3f3f3 26% 74%,#1b1d20 74%)" data-img="assets/produits/aspire-pixo-max-glory-black.webp" data-name="Glory Black" data-tint="#fafafa"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Speedy Black" style="--c:linear-gradient(90deg,#1b1d20 0 58%,#3aa0d8 58% 70%,#d8342e 70% 82%,#1b1d20 82%)" data-img="assets/produits/aspire-pixo-max-speedy-black.webp" data-name="Speedy Black" data-tint="#e2e8e9"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Carbon Black" style="--c:#2a2b2d" data-img="assets/produits/aspire-pixo-max-carbon-black.webp" data-name="Carbon Black" data-tint="#e1e1e1"></button>
             </div>
           </div>
         </li>
-
-
-
-
         <li class="card reveal" data-cat="accessoires" style="--tint:#eaf6fd">
           <div class="card__visual">
             <svg class="device device--cartridges" viewBox="0 0 190 150" style="--liquid:#39d0ff;--pod:#9aa3b0" role="img" aria-label="Pods de rechange"><use href="#d-cartridges"/></svg>
