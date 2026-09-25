@@ -2,28 +2,11 @@
    Vapelite France — Vieux-Port, Marseille
    Vitrine produits animée. Bannière bleu Klein (couleur de la boutique),
    reste du site en blanc / gris clair / noir pour laisser la place aux produits.
-   Logo et typographie arrondie issus de la charte graphique.
+   Logo issu de la charte graphique ; typographie épurée façon Apple.
    ========================================================================== */
 
-/* Polices auto-hébergées (SIL Open Font License)
-   - Bodoni Moda : titres, esprit maison de couture (contraste fort, tailles optiques)
-   - Inter : textes et interface, proche de la police d'Apple (utilisée directement sur iPhone / Mac) */
-@font-face {
-  font-family: "Bodoni Moda";
-  src: url("assets/fonts/bodoni-moda-latin-standard-normal.woff2") format("woff2-variations"),
-       url("assets/fonts/bodoni-moda-latin-standard-normal.woff2") format("woff2");
-  font-weight: 400 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Bodoni Moda";
-  src: url("assets/fonts/bodoni-moda-latin-standard-italic.woff2") format("woff2-variations"),
-       url("assets/fonts/bodoni-moda-latin-standard-italic.woff2") format("woff2");
-  font-weight: 400 900;
-  font-style: italic;
-  font-display: swap;
-}
+/* Police auto-hébergée (SIL Open Font License) : Inter, proche de la police d'Apple
+   (SF Pro est utilisée directement sur iPhone / Mac). Titres en graisse fine, texte en graisse normale. */
 @font-face {
   font-family: "Inter";
   src: url("assets/fonts/inter-latin-wght-normal.woff2") format("woff2-variations"),
@@ -46,7 +29,7 @@
   --night: #0b0d12;         /* sections sombres */
 
   --font: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
-  --font-serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
 
   --gutter: clamp(16px, 4vw, 56px);
   --max: 1320px;
@@ -181,11 +164,11 @@ button { font: inherit; color: inherit; }
   margin-bottom: clamp(32px, 5vw, 56px);
 }
 .section__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(36px, 5.6vw, 72px);
-  font-weight: 500;
+  font-weight: 300;
   line-height: 1.04;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.04em;
 }
 .section__title--light { color: var(--white); }
 .section__lead {
@@ -333,9 +316,8 @@ button { font: inherit; color: inherit; }
   left: -0.04em;
   bottom: -0.2em;
   font-size: clamp(90px, 19vw, 300px);
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-weight: 200;
   line-height: 1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -384,10 +366,10 @@ button { font: inherit; color: inherit; }
 }
 .slide__title {
   font-size: clamp(42px, 6.4vw, 88px);
-  font-family: var(--font-serif);
-  font-weight: 500;
-  line-height: 0.98;
-  letter-spacing: -0.015em;
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 .slide__lead {
   max-width: 34ch;
@@ -640,7 +622,8 @@ button { font: inherit; color: inherit; }
 .slide__media--glow::after {
   background: linear-gradient(90deg, rgba(0, 31, 125, 0.82) 0%, rgba(0, 31, 125, 0.55) 34%, rgba(0, 31, 125, 0) 60%);
 }
-.slide__title em { font-style: italic; }
+.slide__title em { font-style: normal; font-weight: 200; }
+.slide--photo .slide__title { font-size: clamp(42px, 5.2vw, 74px); }
 .slide--video .kicker { border-color: rgba(230, 196, 120, 0.6); color: #f1d9a2; }
 
 /* --------------------------------------------------------------------------
@@ -941,9 +924,10 @@ button { font: inherit; color: inherit; }
   gap: 12px;
 }
 .collection__stats strong {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(44px, 5vw, 64px);
-  font-weight: 500;
+  font-weight: 200;
+  letter-spacing: -0.04em;
   line-height: 1;
   color: var(--klein);
 }
@@ -1045,9 +1029,10 @@ button { font: inherit; color: inherit; }
 }
 .flavor__name {
   margin-top: 4px;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 26px;
   font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 1.15;
 }
 .flavor__notes {
@@ -1086,9 +1071,10 @@ button { font: inherit; color: inherit; }
 }
 .brands__col h3 {
   margin-bottom: 18px;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 .brands__list {
   display: flex;
@@ -1194,7 +1180,7 @@ button { font: inherit; color: inherit; }
   color: #8fb0ff;
   font-weight: 600;
 }
-.feat h3 { font-family: var(--font-serif); font-size: clamp(22px, 2.2vw, 30px); font-weight: 500; }
+.feat h3 { font-family: var(--font-display); font-size: clamp(22px, 2.2vw, 30px); font-weight: 400; letter-spacing: -0.02em; }
 .feat p {
   max-width: 42ch;
   margin-top: 4px;
@@ -1314,7 +1300,7 @@ button { font: inherit; color: inherit; }
   color: var(--white);
   font-weight: 600;
 }
-.value h3 { margin-top: 22px; font-family: var(--font-serif); font-size: 26px; font-weight: 500; }
+.value h3 { margin-top: 22px; font-family: var(--font-display); font-size: 26px; font-weight: 400; letter-spacing: -0.02em; }
 .value p { margin-top: 8px; color: var(--ink-soft); font-size: 15px; }
 
 /* --------------------------------------------------------------------------
@@ -1448,7 +1434,7 @@ button { font: inherit; color: inherit; }
 }
 @keyframes pop { from { opacity: 0; transform: translateY(20px) scale(0.96); } }
 .age__logo { width: 96px; margin: 0 auto 22px; }
-.age__title { font-family: var(--font-serif); font-size: 30px; font-weight: 500; line-height: 1.15; }
+.age__title { font-family: var(--font-display); font-size: 30px; font-weight: 300; line-height: 1.15; letter-spacing: -0.03em; }
 .age__card > p { margin-top: 10px; color: var(--ink-soft); }
 .age__actions { display: grid; gap: 10px; margin-top: 26px; }
 .age__denied { margin-top: 16px; color: var(--klein); font-weight: 600; }
@@ -1496,7 +1482,7 @@ button { font: inherit; color: inherit; }
   }
   .nav.is-open { opacity: 1; transform: none; visibility: visible; }
   .nav__list { flex-direction: column; gap: 4px; }
-  .nav__list a { display: block; padding: 10px 0; font-family: var(--font-serif); font-size: 30px; font-weight: 500; }
+  .nav__list a { display: block; padding: 10px 0; font-family: var(--font-display); font-size: 30px; font-weight: 300; letter-spacing: -0.03em; }
   .nav__list a::after { display: none; }
 
   .slide {
@@ -1601,10 +1587,10 @@ button { font: inherit; color: inherit; }
 .legal { max-width: 860px; }
 .legal h1 {
   font-size: clamp(38px, 6vw, 72px);
-  font-family: var(--font-serif);
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-weight: 300;
   line-height: 1.05;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.04em;
 }
 .legal h2 { margin-top: 44px; font-size: 20px; font-weight: 600; }
 .legal p { margin-top: 10px; color: var(--ink-soft); font-size: 17px; }
