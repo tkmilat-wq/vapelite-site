@@ -102,7 +102,8 @@ pour l'instant le nom de chaque marque. Pour passer au logo :
 ## Notre coup de cœur
 
 Section `#coup-de-coeur` (avant « Nos produits ») consacrée à l'**Aspire Pixo Max White Glow** : photo
-d'ambiance, caractéristiques clés, photo de la gamme (`assets/produits/pixo-max-{white-glow,gamme}-{900,1600}.{webp,jpg}`).
+d'ambiance et caractéristiques clés (`assets/produits/pixo-max-white-glow-{900,1600}.{webp,jpg}`).
+La même photo sert de fond à la **deuxième diapositive de la bannière** (« Pixo Max White Glow. »).
 Dans « Nos produits », la carte Pixo Max affiche la vraie photo de chaque coloris
 (`assets/produits/aspire-pixo-max-<coloris>.webp`) quand on clique sur une pastille.
 
