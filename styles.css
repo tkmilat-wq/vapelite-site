@@ -194,6 +194,7 @@ button { font: inherit; color: inherit; }
   font-size: clamp(16px, 1.5vw, 19px);
 }
 .muted { color: var(--ink-soft); }
+.nowrap { white-space: nowrap; }
 
 /* --------------------------------------------------------------------------
    En-tête
@@ -382,7 +383,7 @@ button { font: inherit; color: inherit; }
   letter-spacing: 0.02em;
 }
 .slide__title {
-  font-size: clamp(42px, 6.8vw, 96px);
+  font-size: clamp(42px, 6.4vw, 88px);
   font-family: var(--font-serif);
   font-weight: 500;
   line-height: 0.98;
