@@ -1391,11 +1391,31 @@ button { font: inherit; color: inherit; }
   margin: 0 auto;
 }
 .reviews__intro { max-width: 640px; }
-.reviews__stars {
-  margin-bottom: 18px;
-  color: #ffc83d;
+.reviews__score {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  padding: 10px 18px 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.reviews__note {
   font-size: 28px;
-  letter-spacing: 6px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.reviews__stars {
+  color: #ffc83d;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+.reviews__count {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 600;
 }
 .reviews__lead {
   margin-top: 18px;

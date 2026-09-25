@@ -126,8 +126,9 @@ Les cartes Drag X3 / Drag S3 utilisent pour l'instant des images tirées de la v
 - **Adresse** : 1 rue Pythéas, 13001 Marseille · **Téléphone** : 04 91 70 92 97
 - **Horaires** : lundi – samedi 10h00 – 19h30, dimanche 11h30 – 18h30 (aussi dans le JSON-LD)
 - **Itinéraire** : boutons Google Maps et Waze dans la section « La Maison »
-- **Avis Google** : bandeau `#avis` avec liens vers la fiche Google (lire / laisser un avis). Aucun avis
-  n'est affiché tant que de vrais avis n'ont pas été fournis.
+- **Avis Google** : bandeau `#avis` avec la note **5,0 / 5 (254 avis)**, lien vers la fiche Google et
+  lien direct pour laisser un avis (`https://g.page/r/CQMPkHKr5SAJEBM/review`). Mettre à jour la note et le
+  nombre d'avis de temps en temps dans `index.html`.
 
 ## Photos et vidéo de la boutique
 
@@ -170,7 +171,6 @@ python3 -m http.server 8000
 
 Valeurs provisoires à remplacer :
 
-- Avis Google : note moyenne et avis réels à ajouter dans la section `#avis` (liste `.reviews__list`)
 - Appareils présentés (visuels, coloris) dans la section « Nos produits »
 - Informations légales dans `mentions-legales.html` (forme juridique, SIRET, hébergeur…)
 
