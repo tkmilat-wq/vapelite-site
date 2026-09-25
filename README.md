@@ -15,10 +15,9 @@ produits en avant. Éléments issus de la **charte graphique Vapelite France** :
 - **Logotype** : extrait en vectoriel de la charte, sans modification — version bleue sur fond clair,
   réserve blanche sur fond bleu. Placé en haut à gauche, largeur ≥ 20 mm.
 - **Typographie** : la charte prévoit Museo Sans Rounded ; à la demande de la Maison, le site adopte une
-  typographie plus premium, auto-hébergée (SIL Open Font License) :
-  - **Bodoni Moda** pour les titres (serif à fort contraste, esprit maison de couture) ;
-  - **Inter** pour les textes et l'interface, proche de la police d'Apple — sur iPhone et Mac, la
-    police système d'Apple (SF Pro) est utilisée directement.
+  typographie épurée façon Apple, auto-hébergée (SIL Open Font License) : **Inter** partout — titres en
+  graisse fine (200–300, lettres resserrées), texte en graisse normale. Sur iPhone et Mac, la police
+  système d'Apple (SF Pro) est utilisée directement.
 - **Motif** : le « V » du logo répété en bleu pâle (`assets/motif.svg`, disponible pour de futurs usages).
 
 ## Produits phares
@@ -147,7 +146,7 @@ redimensionnées et compressées en WebP avec repli JPEG.
 | `assets/symbole-vapelite.svg` | Symbole « V » seul |
 | `assets/motif.svg` | Motif de marque |
 | `assets/favicon.svg` | Favicon |
-| `assets/fonts/` | Bodoni Moda et Inter variables (SIL Open Font License) |
+| `assets/fonts/` | Inter variable (SIL Open Font License) |
 
 Aucune ressource externe n'est chargée (pas de Google Fonts, pas de traceur).
 
