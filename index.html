@@ -220,7 +220,7 @@
               <li>Drag X3 · 5 – 80 W</li><li>Drag S3 · 3000 mAh</li><li>Pod 2 ml</li>
             </ul>
             <div class="slide__actions">
-              <a class="btn btn--white" href="#produits" data-filter-link="voopoo">Voir les Drag</a>
+              <a class="btn btn--white" href="#type-pod-mod">Voir les Drag</a>
               <a class="btn btn--ghost-white" href="#boutique">Venir à la Maison</a>
             </div>
           </div>
@@ -242,7 +242,7 @@
               <li>2600 mAh</li><li>10 – 35 W</li><li>8 coloris</li>
             </ul>
             <div class="slide__actions">
-              <a class="btn btn--white" href="#produits" data-filter-link="aspire">Voir les 8 coloris</a>
+              <a class="btn btn--white" href="#type-pod">Voir les 8 coloris</a>
               <a class="btn btn--ghost-white" href="#boutique">Venir l’essayer</a>
             </div>
           </div>
@@ -345,116 +345,56 @@
         <div>
           <p class="eyebrow reveal">Sélection de la Maison</p>
           <h2 class="section__title reveal">Nos produits phares</h2>
-          <p class="section__lead products__lead reveal">Les incontournables du moment, choisis par l’équipe, parmi plus de 60 modèles de pods et de mods à découvrir à la Maison.</p>
+          <p class="section__lead products__lead reveal">Chaque type de cigarette électronique répond à une façon de vaper. Voici nos coups de cœur dans chaque famille, parmi plus de 60 modèles de pods et de mods à découvrir à la Maison.</p>
           <ul class="collection__stats products__stats reveal" aria-label="Le matériel à la Maison">
             <li><strong>60<sup>+</sup></strong><span>modèles de cigarettes électroniques, pods et mods</span></li>
           </ul>
         </div>
-        <div class="filters reveal" role="group" aria-label="Filtrer les produits">
-          <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">Tout</button>
-          <button class="chip" type="button" data-filter="oxva" aria-pressed="false">OXVA</button>
-          <button class="chip" type="button" data-filter="voopoo" aria-pressed="false">VOOPOO</button>
-          <button class="chip" type="button" data-filter="aspire" aria-pressed="false">Aspire</button>
-          <button class="chip" type="button" data-filter="kiwi" aria-pressed="false">Kiwi</button>
-          <button class="chip" type="button" data-filter="accessoires" aria-pressed="false">Accessoires</button>
-        </div>
+        <nav class="filters reveal" aria-label="Types de cigarettes électroniques">
+          <a class="chip" href="#type-pod-mod">Pod mod</a>
+          <a class="chip" href="#type-pod">Pod</a>
+          <a class="chip" href="#type-box">Box mod</a>
+          <a class="chip" href="#type-tube">Tube / stick</a>
+          <a class="chip" href="#type-puff">Puff rechargeable</a>
+        </nav>
       </div>
 
-      <ul class="grid">
-        <li class="card reveal" data-cat="voopoo">
+      <ul class="types">
+        <!-- Pod mod : VOOPOO Drag X3 & Drag S3 -->
+        <li class="card type type--wide reveal" id="type-pod-mod">
           <span class="badge badge--new">Édition French Riviera</span>
           <div class="card__visual card__visual--photo">
-            <img src="assets/produits/voopoo-drag-x3-video.webp" alt="VOOPOO Drag X3 édition French Riviera Grand Cru, cuir bordeaux et finitions dorées" width="640" height="800" loading="lazy">
+            <img src="assets/produits/voopoo-drag-x3-s3-duo.webp" alt="VOOPOO Drag S3 Grand Cru et Drag X3 Black Lagoon, édition French Riviera" width="720" height="769" loading="lazy">
           </div>
           <div class="card__body">
-            <p class="card__cat">VOOPOO</p>
-            <h3 class="card__name">Drag X3</h3>
-            <ul class="specs"><li>Écran tactile couleur 1,66"</li><li>5 – 80 W · accu 18650 ou 21700</li><li>Pod PnP X 2 ml · modes Smart, RBA, Eco</li></ul>
-            <p class="card__colors">Coloris : Grand Cru · Black Lagoon</p>
-          </div>
-        </li>
-        <li class="card reveal" data-cat="voopoo">
-          <span class="badge badge--new">Édition French Riviera</span>
-          <div class="card__visual card__visual--photo">
-            <img src="assets/produits/voopoo-drag-s3-video.webp" alt="VOOPOO Drag S3 édition French Riviera Black Lagoon, cuir noir et finitions dorées" width="640" height="800" loading="lazy">
-          </div>
-          <div class="card__body">
-            <p class="card__cat">VOOPOO</p>
-            <h3 class="card__name">Drag S3</h3>
-            <ul class="specs"><li>Écran couleur 0,96"</li><li>Batterie intégrée 3000 mAh</li><li>5 – 60 W · pod PnP X 2 ml</li></ul>
-            <p class="card__colors">Coloris : Black Lagoon · Grand Cru</p>
-          </div>
-        </li>
-        <li class="card reveal" data-cat="oxva" style="--tint:#fff1ec">
-          <span class="badge badge--new">Nouveau</span>
-          <div class="card__visual">
-            <svg class="device" viewBox="0 0 80 360" style="--body:#1d2027;--pod:#3a3f4a;--liquid:#ff7a59;--accent:#39d0ff" role="img" aria-label="OXVA Xlim Pro 3"><use href="#d-xlim-pro3"/></svg>
-          </div>
-          <div class="card__body">
-            <p class="card__cat">OXVA</p>
-            <h3 class="card__name">Xlim Pro 3</h3>
-            <ul class="specs"><li>Écran couleur 1,05"</li><li>Batterie 1500 mAh</li><li>5 – 30 W · pod 2 ml</li></ul>
-            <div class="swatches" role="radiogroup" aria-label="Coloris">
-              <button type="button" role="radio" aria-checked="true" aria-label="Noir" style="--c:#1d2027" data-body="#1d2027" data-tint="#fff1ec"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Argent" style="--c:#c9ced6" data-body="#c9ced6" data-tint="#f1f3f6"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Bleu" style="--c:#2f6bff" data-body="#2f6bff" data-tint="#eaf0ff"></button>
+            <p class="type__label">Pod mod</p>
+            <p class="type__desc">Le meilleur des deux mondes : la simplicité d’un pod et la puissance d’une box. Écran, puissance réglable et résistances interchangeables pour plus de vapeur et de saveur.</p>
+            <p class="card__cat">VOOPOO · Notre sélection</p>
+            <h3 class="card__name">Drag X3 &amp; Drag S3</h3>
+            <div class="type__duo">
+              <div>
+                <p class="type__model">Drag X3</p>
+                <ul class="specs"><li>Écran tactile couleur 1,66"</li><li>5 – 80 W</li><li>Accu 18650 ou 21700</li></ul>
+              </div>
+              <div>
+                <p class="type__model">Drag S3</p>
+                <ul class="specs"><li>Écran couleur 0,96"</li><li>5 – 60 W</li><li>Batterie intégrée 3000 mAh</li></ul>
+              </div>
             </div>
+            <p class="card__colors">Pod PnP X 2 ml · modes Smart, RBA, Eco · coloris Grand Cru et Black Lagoon</p>
           </div>
         </li>
-        <li class="card reveal" data-cat="oxva" style="--tint:#edf0f4">
-          <div class="card__visual">
-            <svg class="device" viewBox="0 0 80 360" style="--body:#5a6170;--pod:#3a3f4a;--liquid:#3ddc97;--accent:#3ddc97" role="img" aria-label="OXVA Xlim Pro 2"><use href="#d-xlim-pro2"/></svg>
-          </div>
-          <div class="card__body">
-            <p class="card__cat">OXVA</p>
-            <h3 class="card__name">Xlim Pro 2</h3>
-            <ul class="specs"><li>Écran couleur 0,56"</li><li>Batterie 1300 mAh</li><li>5 – 30 W · pod 2 ml</li></ul>
-            <div class="swatches" role="radiogroup" aria-label="Coloris">
-              <button type="button" role="radio" aria-checked="true" aria-label="Gris" style="--c:#5a6170" data-body="#5a6170" data-tint="#edf0f4"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Noir" style="--c:#1d2027" data-body="#1d2027" data-tint="#eef0f3"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Rouge" style="--c:#e0313b" data-body="#e0313b" data-tint="#fdecee"></button>
-            </div>
-          </div>
-        </li>
-        <li class="card reveal" data-cat="oxva" style="--tint:#eafbf3">
-          <span class="badge">Idéal pour débuter</span>
-          <div class="card__visual">
-            <svg class="device" viewBox="0 0 80 360" style="--body:#3ddc97;--pod:#2b7a5a;--liquid:#ffb000;--accent:#ffffff" role="img" aria-label="OXVA Xlim SE"><use href="#d-xlim-se"/></svg>
-          </div>
-          <div class="card__body">
-            <p class="card__cat">OXVA</p>
-            <h3 class="card__name">Xlim SE</h3>
-            <ul class="specs"><li>Batterie 900 mAh</li><li>Jusqu’à 25 W</li><li>Pod 2 ml · tirage auto</li></ul>
-            <div class="swatches" role="radiogroup" aria-label="Coloris">
-              <button type="button" role="radio" aria-checked="true" aria-label="Menthe" style="--c:#3ddc97" data-body="#3ddc97" data-tint="#eafbf3"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Noir" style="--c:#1d2027" data-body="#1d2027" data-tint="#eef0f3"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Lilas" style="--c:#b69cff" data-body="#b69cff" data-tint="#f3efff"></button>
-            </div>
-          </div>
-        </li>
-        <li class="card reveal" data-cat="aspire" style="--tint:#f3efff">
-          <span class="badge">Écran tactile</span>
-          <div class="card__visual">
-            <svg class="device device--wide" viewBox="0 0 110 340" style="--body:#2b2f38;--liquid:#8b5cf6;--accent:#b69cff" role="img" aria-label="Aspire Pixo"><use href="#d-pixo"/></svg>
-          </div>
-          <div class="card__body">
-            <p class="card__cat">Aspire</p>
-            <h3 class="card__name">Pixo</h3>
-            <ul class="specs"><li>Écran couleur tactile</li><li>Batterie 1100 mAh</li><li>5 – 30 W · pod 2 ml</li></ul>
-            <div class="swatches" role="radiogroup" aria-label="Coloris">
-              <button type="button" role="radio" aria-checked="true" aria-label="Noir" style="--c:#2b2f38" data-body="#2b2f38" data-tint="#f3efff"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Lilas" style="--c:#b69cff" data-body="#b69cff" data-tint="#f3efff"></button>
-              <button type="button" role="radio" aria-checked="false" aria-label="Ciel" style="--c:#5ac8fa" data-body="#5ac8fa" data-tint="#ebf7fe"></button>
-            </div>
-          </div>
-        </li>
-        <li class="card reveal" data-cat="aspire" style="--tint:#f1f2f5">
+
+        <!-- Pod : Aspire Pixo Max -->
+        <li class="card type reveal" id="type-pod" style="--tint:#f1f2f5">
           <span class="badge badge--heart">Coup de cœur</span>
           <div class="card__visual">
             <img class="device device--real" src="assets/produits/aspire-pixo-max-white-glow.webp" width="78" height="286" alt="Aspire Pixo Max, coloris White Glow" loading="lazy">
           </div>
           <div class="card__body">
-            <p class="card__cat">Aspire</p>
+            <p class="type__label">Pod</p>
+            <p class="type__desc">Compact, léger et prêt en quelques secondes : l’idéal pour débuter ou vaper au quotidien, avec une cartouche remplissable.</p>
+            <p class="card__cat">Aspire · Notre sélection</p>
             <h3 class="card__name">Pixo Max</h3>
             <ul class="specs"><li>Batterie 2600 mAh · 10 – 35 W</li><li>Modes Eco, Normal, Max</li><li>Double écran LED · pod 2 ml</li></ul>
             <p class="card__colors">Coloris : <span class="card__color-name">White Glow</span> · 8 coloris</p>
@@ -470,13 +410,32 @@
             </div>
           </div>
         </li>
-        <li class="card reveal" data-cat="kiwi" style="--tint:#e8ebed">
+
+        <!-- Box mod : Geekvape Legend 5 (photos à venir) -->
+        <li class="card type reveal" id="type-box">
+          <div class="card__visual card__visual--soon" aria-hidden="true">
+            <span class="soon__brand">Geekvape</span>
+            <span class="soon__name">Legend 5</span>
+          </div>
+          <div class="card__body">
+            <p class="type__label">Box mod</p>
+            <p class="type__desc">Pour les vapoteurs confirmés : grande puissance, accus amovibles, clearomiseur généreux et réglages avancés.</p>
+            <p class="card__cat">Geekvape · Notre sélection</p>
+            <h3 class="card__name">Aegis Legend 5</h3>
+            <ul class="specs"><li>5 – 200 W · double accu 18650</li><li>Écran 1,08" · modes Smart, Eco, TC</li><li>Étanche et antichoc IP68 · Z Tank</li></ul>
+          </div>
+        </li>
+
+        <!-- Tube / stick : Kiwi 2 -->
+        <li class="card type reveal" id="type-tube" style="--tint:#e8ebed">
           <span class="badge">Pen + power bank</span>
           <div class="card__visual">
             <img class="device device--real device--kiwi" src="assets/produits/kiwi-2-midnight-blue.webp" width="178" height="600" alt="Kiwi 2 de Kiwi Vapor, coloris Midnight Blue" loading="lazy">
           </div>
           <div class="card__body">
-            <p class="card__cat">Kiwi Vapor</p>
+            <p class="type__label">Tube / stick</p>
+            <p class="type__desc">Format stylo, discret et élégant : il se glisse dans la poche et offre un tirage serré, proche de la cigarette.</p>
+            <p class="card__cat">Kiwi Vapor · Notre sélection</p>
             <h3 class="card__name">Kiwi 2</h3>
             <ul class="specs"><li>Pen 400&nbsp;mAh + power bank 1800&nbsp;mAh</li><li>Recharge du pen dans l’étui, <span class="nowrap">USB-C</span></li><li>Pod 1,8&nbsp;ml · 0,8&nbsp;Ω, tirage serré</li></ul>
             <p class="card__colors">Coloris : <span class="card__color-name">Midnight Blue</span> · 5 coloris</p>
@@ -489,18 +448,22 @@
             </div>
           </div>
         </li>
-        <li class="card reveal" data-cat="accessoires" style="--tint:#eaf6fd">
-          <div class="card__visual">
-            <svg class="device device--cartridges" viewBox="0 0 190 150" style="--liquid:#39d0ff;--pod:#9aa3b0" role="img" aria-label="Pods de rechange"><use href="#d-cartridges"/></svg>
+
+        <!-- Puff rechargeable (photos à venir) -->
+        <li class="card type reveal" id="type-puff">
+          <div class="card__visual card__visual--soon card__visual--soon-alt" aria-hidden="true">
+            <span class="soon__brand">Nouvelle génération</span>
+            <span class="soon__name">Puff rechargeable</span>
           </div>
           <div class="card__body">
-            <p class="card__cat">Accessoires</p>
-            <h3 class="card__name">Pods de rechange</h3>
-            <ul class="specs"><li>OXVA Xlim : 0,4 à 1,2&nbsp;Ω</li><li>Aspire Pixo : 0,4 à 1,2&nbsp;Ω</li><li>Chargeurs et câbles USB-C</li></ul>
+            <p class="type__label">Puff rechargeable</p>
+            <p class="type__desc">La simplicité d’une puff, sans le jetable : batterie rechargeable en USB-C et cartouches à remplacer. Aucun réglage, prête à vaper.</p>
+            <p class="card__cat">Nos marques</p>
+            <ul class="brands__list brands__list--main type__brands"><li>JNR</li><li>Dojo by Vaporesso</li><li>Crown Bar Al Fakher</li><li>Elf Bar</li><li>Lost Mary</li><li>Kiwi Go</li><li>Vuse</li></ul>
           </div>
         </li>
       </ul>
-      <p class="products__note reveal">Caractéristiques des versions européennes (pods limités à 2 ml). Coloris selon arrivages. Ce n’est qu’une sélection : la gamme complète et les nouveautés vous attendent à la Maison.</p>
+      <p class="products__note reveal">Caractéristiques des versions européennes (réservoirs limités à 2 ml). Coloris selon arrivages. Ce n’est qu’une sélection : la gamme complète et les nouveautés vous attendent à la Maison.</p>
     </section>
 
     <!-- ================================================================
@@ -855,11 +818,13 @@
       </div>
       <nav class="footer__col" aria-label="Produits">
         <p class="footer__title">Produits</p>
-        <a href="#produits" data-filter-link="oxva">OXVA</a>
-        <a href="#produits" data-filter-link="aspire">Aspire</a>
+        <a href="#type-pod-mod">Pod mod</a>
+        <a href="#type-pod">Pod</a>
+        <a href="#type-box">Box mod</a>
+        <a href="#type-tube">Tube / stick</a>
+        <a href="#type-puff">Puff rechargeable</a>
         <a href="#collection">E-liquides Vapelite</a>
         <a href="#marques">Nos marques</a>
-        <a href="#produits" data-filter-link="accessoires">Accessoires</a>
       </nav>
       <nav class="footer__col" aria-label="Vapelite">
         <p class="footer__title">Vapelite</p>

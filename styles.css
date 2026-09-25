@@ -871,7 +871,7 @@ button { font: inherit; color: inherit; }
   filter: none;
   transition: transform 0.8s var(--ease);
 }
-.card:hover .card .card__visual--photo img { transform: scale(1.05); }
+.card:hover .card__visual.card__visual--photo img { transform: scale(1.04); }
 .card__colors {
   margin-top: 12px;
   color: var(--ink-soft);
@@ -896,6 +896,95 @@ button { font: inherit; color: inherit; }
 .swatches button:hover { transform: scale(1.12); }
 .swatches button { background: var(--c); }
 .swatches button[aria-checked="true"] { box-shadow: 0 0 0 2px var(--ink); }
+
+/* Types de cigarettes électroniques */
+a.chip { display: inline-flex; align-items: center; text-decoration: none; color: var(--ink); }
+a.chip:hover { background: var(--ink); color: var(--white); }
+.types {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+.type { scroll-margin-top: calc(var(--header-h) + 20px); }
+.type--wide {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.type--wide .card__visual { height: auto; min-height: 100%; }
+.type--wide .card__visual--photo { background: radial-gradient(90% 70% at 50% 40%, #3a1a22, #140a0d); }
+.type--wide .card__visual--photo img { object-fit: contain; }
+.type--wide .card__body {
+  border-top: 1px solid var(--line);
+  border-left: 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+.type__label {
+  align-self: flex-start;
+  margin-bottom: 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--klein);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.type__desc {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.type__duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+.type__model { margin-top: 4px; font-weight: 600; }
+.type__duo .specs { margin-top: 6px; }
+.type__brands { margin-top: 10px; }
+.card__visual--soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: radial-gradient(80% 80% at 50% 40%, #1f2430, #0b0d12);
+  color: var(--white);
+  text-align: center;
+}
+.card__visual--soon::before { display: none; }
+.card__visual--soon-alt { background: radial-gradient(80% 80% at 50% 40%, #1446d6, #001f73); }
+.soon__brand {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.soon__name {
+  font-size: 34px;
+  font-weight: 200;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1100px) {
+  .types { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .type--wide { grid-column: span 2; }
+}
+@media (max-width: 700px) {
+  .types { grid-template-columns: 1fr; gap: 16px; }
+  .type--wide { grid-column: auto; display: flex; }
+  .type--wide .card__visual { height: 320px; min-height: 0; }
+  .type--wide .card__body { border-top: 0; border-left: 1px solid var(--line); border-radius: 0 0 var(--radius) var(--radius); }
+  .type__duo { grid-template-columns: 1fr 1fr; gap: 10px; }
+}
 
 .products__note {
   margin-top: 28px;
