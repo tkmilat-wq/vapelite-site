@@ -859,6 +859,7 @@ button { font: inherit; color: inherit; }
 .card:hover .card__visual .device--real { transform: translateY(-10px) rotate(-4deg) scale(1.04); }
 .card__visual .device--real.is-swapping { opacity: 0; }
 .card__visual .device--kiwi { height: 236px; margin-top: 22px; }
+.card__visual .device--box { height: 236px; margin-top: 14px; }
 .swatches { flex-wrap: wrap; }
 .card__visual--photo { padding: 0; }
 .card__visual--photo::before { display: none; }
@@ -1782,6 +1783,7 @@ a.chip:hover { background: var(--ink); color: var(--white); }
   .card__visual img { height: 170px; }
   .card__visual .device--real { height: 175px; }
   .card__visual .device--kiwi { height: 160px; margin-top: 18px; }
+  .card__visual .device--box { height: 170px; margin-top: 10px; }
   .specs { font-size: 13px; }
   .card__body { padding: 14px 14px 16px; }
   .card__name { font-size: 17px; }
