@@ -1313,13 +1313,7 @@ a.chip:hover { background: var(--ink); color: var(--white); }
   transform: scaleX(var(--p));
   transform-origin: left;
 }
-.spotlight__note {
-  margin-top: 20px;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 13px;
-}
 .spotlight__text .section__title { font-size: clamp(34px, 3.6vw, 52px); }
-.spotlight__note a { color: #8fb0ff; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
 
 /* --------------------------------------------------------------------------
    Intérieur de la boutique (photo plein cadre)
@@ -1763,8 +1757,7 @@ a.chip:hover { background: var(--ink); color: var(--white); }
   .spotlight__visual { height: auto; }
   .spotlight__video { border-radius: 16px; }
   .spotlight__media figcaption { margin-top: 8px; font-size: 12px; }
-  .spotlight__note { margin-top: 12px; font-size: 12px; }
-  .spotlight__text .section__title { font-size: clamp(28px, 7.5vw, 44px); }
+    .spotlight__text .section__title { font-size: clamp(28px, 7.5vw, 44px); }
   .feats { margin-top: 16px; }
   .feat:not(.is-active) { display: none; }
   .feat.is-active { animation: card-in 0.4s var(--ease) both; }

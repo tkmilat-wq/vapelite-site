@@ -101,13 +101,12 @@ Grand Cru), en plein cadre derrière le texte. Fichiers `assets/videos/voopoo-dr
 (≈ 24 s, ≈ 3 Mo). La diapositive dure le temps de la vidéo (`data-duration="24000"`), la vidéo repart
 du début à chaque affichage et se met en pause sur les autres diapositives.
 
-## Arrêter le tabac
+## Bien choisir
 
-La section sombre animée au défilement (`#pod`, lien « Arrêter le tabac » du menu) présente
-l'accompagnement des fumeurs en quatre étapes : faire le point sur les habitudes, un matériel simple
-pour débuter, le bon taux de nicotine, un suivi dans la durée. Les textes restent informatifs (aucune
-promesse d'efficacité ni allégation de santé), et un renvoi vers **Tabac Info Service (39 89)** est
-affiché pour un accompagnement médical.
+La section sombre animée au défilement (`#pod`, lien « Bien choisir » du menu) présente le conseil en
+Maison en quatre étapes : faire le point sur vos habitudes et vos goûts, un matériel simple pour débuter,
+le bon taux de nicotine, un suivi dans la durée. Conformément à l'art. L3513-4 du Code de la santé
+publique, le site ne fait **aucune référence à l'arrêt du tabac ou au sevrage** et aucune allégation de santé.
 
 À gauche : animation de présentation de l'**OXVA NeXLIM 2 Mini** (`assets/videos/oxva-nexlim-2-mini.{webm,mp4}`
 + `-poster.jpg`) : 1280 px, 30 i/s, sans son, bordure de l'enregistrement d'écran rognée (≈ 17 s, 1,8–2,9 Mo).
@@ -138,7 +137,7 @@ redimensionnées et compressées en WebP avec repli JPEG.
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Page unique : slider, gamme, « Arrêter le tabac », valeurs, boutique, footer, vérification d'âge |
+| `index.html` | Page unique : slider, gamme, « Bien choisir », valeurs, boutique, footer, vérification d'âge |
 | `mentions-legales.html` | Mentions légales (à compléter) |
 | `styles.css` | Tokens de la charte et mise en page |
 | `script.js` | Slider, parallaxe, filtres, coloris, animation au défilement, menu mobile, vérification d'âge |
