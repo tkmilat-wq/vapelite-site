@@ -28,7 +28,7 @@ repère « 60+ » affiché). Les pastilles en haut de section mènent à chaque 
 
 | Type | Ancre | Sélection | Visuel |
 |---|---|---|---|
-| Pod mod | `#type-pod-mod` | VOOPOO Drag X3 & Drag S3 (même carte, édition French Riviera) | `voopoo-drag-x3-s3-duo.webp` (image tirée de la vidéo officielle) |
+| Pod mod | `#type-pod-mod` | VOOPOO Drag X3 & Drag S3 (même carte, édition French Riviera) | visuel officiel `voopoo-drag-french-riviera-{600,1000}.webp` |
 | Pod | `#type-pod` | Aspire Pixo Max (coup de cœur), 8 coloris | photos réelles `aspire-pixo-max-<coloris>.webp` |
 | Box mod | `#type-box` | Geekvape Aegis Legend 5 (5–200 W, double 18650, IP68, Z Tank) | **en attente des photos** (encart provisoire) |
 | Tube / stick | `#type-tube` | Kiwi Vapor Kiwi 2, 5 coloris | photos réelles `kiwi-2-<coloris>.webp` |
@@ -101,8 +101,6 @@ Grand Cru), en plein cadre derrière le texte. Fichiers `assets/videos/voopoo-dr
 (≈ 24 s, ≈ 3 Mo). La diapositive dure le temps de la vidéo (`data-duration="24000"`), la vidéo repart
 du début à chaque affichage et se met en pause sur les autres diapositives.
 
-Les cartes Drag X3 / Drag S3 utilisent pour l'instant des images tirées de la vidéo
-(`assets/produits/voopoo-drag-{x3,s3}-video.webp`) ; à remplacer par les photos produits détourées.
 
 ## Coordonnées, itinéraire et avis
 
