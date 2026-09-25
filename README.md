@@ -22,7 +22,8 @@ produits en avant. Éléments issus de la **charte graphique Vapelite France** :
 
 ## Produits phares
 
-La section « Nos produits phares » (`#produits`) présente une sélection, pas le catalogue complet.
+La section « Nos produits phares » (`#produits`) présente une sélection, pas le catalogue complet : la
+Maison propose **plus de 60 modèles** de cigarettes électroniques (pods et mods), repère « 60+ » affiché.
 
 ### Produits présentés
 
