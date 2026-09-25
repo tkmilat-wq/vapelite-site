@@ -68,7 +68,7 @@
   let current = 0;
   let timer = null;
 
-  hero.style.setProperty("--slide-ms", `${SLIDE_MS}ms`);
+  const slideMs = () => Number(slides[current].dataset.duration) || SLIDE_MS;
 
   const show = (index) => {
     current = (index + slides.length) % slides.length;
@@ -79,6 +79,17 @@
       slide.querySelectorAll("a, button").forEach((el) => { el.tabIndex = active ? 0 : -1; });
     });
     dots.forEach((dot, i) => dot.setAttribute("aria-selected", String(i === current)));
+    // Vidéo : lecture depuis le début sur la diapositive active, pause ailleurs
+    slides.forEach((slide, i) => {
+      const video = slide.querySelector("video");
+      if (!video) return;
+      if (i === current && !reduceMotion) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
     restart();
   };
 
@@ -88,8 +99,9 @@
     // Relance l'animation de la barre de progression
     hero.classList.remove("is-playing");
     void hero.offsetWidth;
+    hero.style.setProperty("--slide-ms", `${slideMs()}ms`);
     hero.classList.add("is-playing");
-    timer = setTimeout(() => show(current + 1), SLIDE_MS);
+    timer = setTimeout(() => show(current + 1), slideMs());
   };
 
   const pause = () => {
