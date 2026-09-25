@@ -25,6 +25,8 @@ produits en avant. Éléments issus de la **charte graphique Vapelite France** :
 
 | Marque | Modèle | Caractéristiques affichées (versions européennes, pods 2 ml) |
 |---|---|---|
+| VOOPOO | Drag X3 (édition French Riviera) | écran tactile 1,66", 5–80 W, accu 18650 ou 21700, pod PnP X, modes Smart / RBA / Eco |
+| VOOPOO | Drag S3 (édition French Riviera) | écran 0,96", batterie 3000 mAh, 5–60 W, pod PnP X |
 | OXVA | Xlim Pro 3 | écran couleur 1,05", 1500 mAh, 5–30 W |
 | OXVA | Xlim Pro 2 | écran couleur 0,56", 1300 mAh, 5–30 W |
 | OXVA | Xlim SE | 900 mAh, jusqu'à 25 W, tirage automatique |
@@ -96,6 +98,17 @@ pour l'instant le nom de chaque marque. Pour passer au logo :
    ```
 
    Les logos s'affichent en gris et reprennent leurs couleurs au survol.
+
+## Vidéo VOOPOO Drag X3 & Drag S3
+
+Première diapositive de la bannière : vidéo officielle de l'édition French Riviera (Black Lagoon,
+Grand Cru), en plein cadre derrière le texte. Fichiers `assets/videos/voopoo-drag-x3-s3.{webm,mp4}`
++ `-poster.jpg` : 1280 px, sans son, introduction noire de 6 s retirée et bande noire basse rognée
+(≈ 24 s, ≈ 3 Mo). La diapositive dure le temps de la vidéo (`data-duration="24000"`), la vidéo repart
+du début à chaque affichage et se met en pause sur les autres diapositives.
+
+Les cartes Drag X3 / Drag S3 utilisent pour l'instant des images tirées de la vidéo
+(`assets/produits/voopoo-drag-{x3,s3}-video.webp`) ; à remplacer par les photos produits détourées.
 
 ## Photos et vidéo de la boutique
 

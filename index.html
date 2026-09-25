@@ -203,26 +203,24 @@
       </div>
 
       <div class="slides">
-        <!-- Slide 1 -->
-        <article class="slide is-active" aria-roledescription="diapositive" aria-label="1 sur 3">
+        <!-- Slide 1 : vidéo VOOPOO Drag X3 & Drag S3 (édition French Riviera) -->
+        <article class="slide slide--video is-active" data-duration="24000" aria-roledescription="diapositive" aria-label="1 sur 3">
+          <div class="slide__media" aria-hidden="true">
+            <video muted loop playsinline preload="auto" poster="assets/videos/voopoo-drag-x3-s3-poster.jpg">
+              <source src="assets/videos/voopoo-drag-x3-s3.webm" type="video/webm">
+              <source src="assets/videos/voopoo-drag-x3-s3.mp4" type="video/mp4">
+            </video>
+          </div>
           <div class="slide__text">
-            <p class="kicker">À la Maison · OXVA</p>
-            <h1 class="slide__title">OXVA<br>Xlim Pro 3</h1>
-            <p class="slide__lead">Écran couleur 1,05", batterie 1500 mAh, jusqu’à 30 W et recharge rapide USB-C. Venez la prendre en main au Vieux-Port.</p>
+            <p class="kicker">À la Maison · VOOPOO · Édition French Riviera</p>
+            <h1 class="slide__title">Drag X3<br>&amp; Drag S3</h1>
+            <p class="slide__lead">Cuir, finitions dorées et écran couleur : la nouvelle génération Drag de VOOPOO, en édition French Riviera Black Lagoon et Grand Cru. Venez les prendre en main au <span class="nowrap">Vieux-Port</span>.</p>
             <ul class="specs-chips" aria-label="Caractéristiques">
-              <li>1500 mAh</li><li>5 – 30 W</li><li>Pod 2 ml</li>
+              <li>Drag X3 · 5 – 80 W</li><li>Drag S3 · 3000 mAh</li><li>Pod 2 ml</li>
             </ul>
             <div class="slide__actions">
-              <a class="btn btn--white" href="#produits" data-filter-link="oxva">La gamme OXVA</a>
+              <a class="btn btn--white" href="#produits" data-filter-link="voopoo">Voir les Drag</a>
               <a class="btn btn--ghost-white" href="#boutique">Venir à la Maison</a>
-            </div>
-          </div>
-          <div class="slide__visual">
-            <div class="stage" data-parallax>
-              <div class="vapor" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-              <svg class="device device--hero" viewBox="0 0 80 360" style="--body:#1d2027;--pod:#3a3f4a;--liquid:#ff7a59;--accent:#39d0ff" role="img" aria-label="OXVA Xlim Pro 3"><use href="#d-xlim-pro3"/></svg>
-              <svg class="device device--back" viewBox="0 0 80 360" style="--body:#c9ced6;--pod:#9aa3b0;--liquid:#3ddc97;--accent:#3ddc97" aria-hidden="true"><use href="#d-xlim-pro3"/></svg>
-              <span class="stage__shadow" aria-hidden="true"></span>
             </div>
           </div>
         </article>
@@ -331,12 +329,37 @@
         <div class="filters reveal" role="group" aria-label="Filtrer les produits">
           <button class="chip is-active" type="button" data-filter="all" aria-pressed="true">Tout</button>
           <button class="chip" type="button" data-filter="oxva" aria-pressed="false">OXVA</button>
+          <button class="chip" type="button" data-filter="voopoo" aria-pressed="false">VOOPOO</button>
           <button class="chip" type="button" data-filter="aspire" aria-pressed="false">Aspire</button>
           <button class="chip" type="button" data-filter="accessoires" aria-pressed="false">Accessoires</button>
         </div>
       </div>
 
       <ul class="grid">
+        <li class="card reveal" data-cat="voopoo">
+          <span class="badge badge--new">Édition French Riviera</span>
+          <div class="card__visual card__visual--photo">
+            <img src="assets/produits/voopoo-drag-x3-video.webp" alt="VOOPOO Drag X3 édition French Riviera Grand Cru, cuir bordeaux et finitions dorées" width="640" height="800" loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="card__cat">VOOPOO</p>
+            <h3 class="card__name">Drag X3</h3>
+            <ul class="specs"><li>Écran tactile couleur 1,66"</li><li>5 – 80 W · accu 18650 ou 21700</li><li>Pod PnP X 2 ml · modes Smart, RBA, Eco</li></ul>
+            <p class="card__colors">Coloris : Grand Cru · Black Lagoon</p>
+          </div>
+        </li>
+        <li class="card reveal" data-cat="voopoo">
+          <span class="badge badge--new">Édition French Riviera</span>
+          <div class="card__visual card__visual--photo">
+            <img src="assets/produits/voopoo-drag-s3-video.webp" alt="VOOPOO Drag S3 édition French Riviera Black Lagoon, cuir noir et finitions dorées" width="640" height="800" loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="card__cat">VOOPOO</p>
+            <h3 class="card__name">Drag S3</h3>
+            <ul class="specs"><li>Écran couleur 0,96"</li><li>Batterie intégrée 3000 mAh</li><li>5 – 60 W · pod PnP X 2 ml</li></ul>
+            <p class="card__colors">Coloris : Black Lagoon · Grand Cru</p>
+          </div>
+        </li>
         <li class="card reveal" data-cat="oxva" style="--tint:#fff1ec">
           <span class="badge badge--new">Nouveau</span>
           <div class="card__visual">
