@@ -114,6 +114,10 @@
   };
 
   dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
+  // Liens vers une diapositive précise (ex. « Coup de cœur » dans le menu)
+  document.querySelectorAll("[data-slide]").forEach((link) => {
+    link.addEventListener("click", () => show(Number(link.dataset.slide)));
+  });
   hero.querySelectorAll(".hero__arrow").forEach((arrow) => {
     arrow.addEventListener("click", () => show(current + Number(arrow.dataset.dir)));
   });
