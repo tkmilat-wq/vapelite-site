@@ -792,6 +792,123 @@ button { font: inherit; color: inherit; }
 }
 
 /* --------------------------------------------------------------------------
+   La collection d'e-liquides Vapelite (vrais rendus des flacons)
+   -------------------------------------------------------------------------- */
+
+.collection {
+  background: #f6f3ee;
+  padding-bottom: clamp(64px, 9vw, 112px);
+}
+.collection__inner { padding-bottom: 28px; }
+.collection__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.collection__arrows { display: flex; gap: 10px; }
+.round-btn {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+.round-btn:hover { border-color: var(--ink); }
+.round-btn:disabled { opacity: 0.35; cursor: default; }
+
+.flavors {
+  --edge: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(210px, 21vw, 260px);
+  gap: 20px;
+  padding: 8px var(--edge) 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--edge);
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.flavors::-webkit-scrollbar { display: none; }
+
+.flavor {
+  scroll-snap-align: start;
+}
+.flavor[hidden] { display: none; }
+.flavor.is-entering { animation: card-in 0.5s var(--ease) both; }
+.flavor__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 380px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(60% 45% at 50% 55%, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0) 70%),
+    var(--tint);
+  overflow: hidden;
+  transition: box-shadow 0.4s var(--ease);
+}
+.flavor__visual::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: var(--c);
+  opacity: 0.85;
+}
+.flavor__img {
+  position: relative;
+  width: auto;
+  height: 320px;
+  transition: transform 0.6s var(--ease);
+}
+.flavor:hover .flavor__visual { box-shadow: 0 24px 48px rgba(14, 17, 22, 0.1); }
+.flavor:hover .flavor__img { transform: translateY(-10px) rotate(-3deg) scale(1.03); }
+.flavor__fam {
+  margin-top: 16px;
+  color: var(--c);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  filter: saturate(1.2) brightness(0.85);
+}
+.flavor__name {
+  margin-top: 4px;
+  font-family: var(--font-serif);
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.15;
+}
+.flavor__notes {
+  margin-top: 4px;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+/* Flacons réels dans la bannière */
+.stage > .device--photo {
+  filter: drop-shadow(0 26px 34px rgba(0, 10, 50, 0.35));
+}
+
+@media (max-width: 560px) {
+  .flavors { grid-auto-columns: 64vw; gap: 14px; }
+  .flavor__visual { height: 300px; }
+  .flavor__img { height: 250px; }
+  .flavor__name { font-size: 22px; }
+  .collection__arrows { display: none; }
+}
+
+/* --------------------------------------------------------------------------
    Bien choisir — section sombre, animée au défilement
    -------------------------------------------------------------------------- */
 

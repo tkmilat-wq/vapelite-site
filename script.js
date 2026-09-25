@@ -176,6 +176,51 @@
     });
   });
 
+  /* ---------- Collection Vapelite : familles et défilement ---------- */
+
+  const flavorList = document.querySelector(".flavors");
+  if (flavorList) {
+    const flavors = [...flavorList.querySelectorAll(".flavor")];
+    const famChips = [...document.querySelectorAll("[data-fam-filter]")];
+    const arrows = [...document.querySelectorAll("[data-scroll]")];
+
+    const updateArrows = () => {
+      const max = flavorList.scrollWidth - flavorList.clientWidth - 4;
+      arrows.forEach((arrow) => {
+        arrow.disabled = Number(arrow.dataset.scroll) < 0 ? flavorList.scrollLeft <= 4 : flavorList.scrollLeft >= max;
+      });
+    };
+
+    famChips.forEach((chip) => chip.addEventListener("click", () => {
+      const fam = chip.dataset.famFilter;
+      famChips.forEach((c) => {
+        c.classList.toggle("is-active", c === chip);
+        c.setAttribute("aria-pressed", String(c === chip));
+      });
+      flavors.forEach((flavor) => {
+        const visible = fam === "all" || flavor.dataset.fam.split(" ").includes(fam);
+        const wasHidden = flavor.hidden;
+        flavor.hidden = !visible;
+        if (visible && wasHidden) {
+          flavor.classList.remove("is-entering");
+          void flavor.offsetWidth;
+          flavor.classList.add("is-entering");
+        }
+      });
+      flavorList.scrollTo({ left: 0, behavior: reduceMotion ? "auto" : "smooth" });
+      requestAnimationFrame(updateArrows);
+    }));
+
+    arrows.forEach((arrow) => arrow.addEventListener("click", () => {
+      const step = flavors.find((f) => !f.hidden)?.offsetWidth || 240;
+      flavorList.scrollBy({ left: Number(arrow.dataset.scroll) * (step + 20) * 2, behavior: reduceMotion ? "auto" : "smooth" });
+    }));
+
+    flavorList.addEventListener("scroll", () => requestAnimationFrame(updateArrows), { passive: true });
+    window.addEventListener("resize", updateArrows);
+    updateArrows();
+  }
+
   /* ---------- Bien choisir : animation liée au défilement ---------- */
 
   const spotlight = document.querySelector(".spotlight");
