@@ -909,13 +909,18 @@ a.chip:hover { background: var(--ink); color: var(--white); }
   list-style: none;
 }
 .type { scroll-margin-top: calc(var(--header-h) + 20px); }
+/* Fond bleu Klein autour du rond blanc, comme l'encart puff rechargeable */
+.type .card__visual:not(.card__visual--photo):not(.card__visual--soon) {
+  background: radial-gradient(80% 80% at 50% 40%, #1446d6, #001f73);
+}
+.type .card__visual:not(.card__visual--photo)::before { background: rgba(255, 255, 255, 0.92); }
 .type--wide {
   grid-column: span 2;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 .type--wide .card__visual { height: 100%; min-height: 560px; background: #0d0806; }
-.type--wide .badge { top: auto; bottom: 14px; }
+.type--wide .badge { top: auto; bottom: 14px; z-index: 1; }
 .type--wide .card__visual--photo img { object-fit: cover; }
 .type--wide .card__body { justify-content: center; }
 .type--wide .card__body {
