@@ -48,6 +48,31 @@ pastilles sont indicatifs : à ajuster selon le stock.
 
    La mise en forme (taille, ombre, animation au survol) s'applique automatiquement.
 
+## Collection d'e-liquides Vapelite
+
+Rendus 3D officiels extraits du document « E-liquide Vapelite » (PDF de présentation des étiquettes),
+détourés avec transparence et convertis en WebP (`assets/produits/`). Flacons de 50 ml, 0 mg,
+50 PG / 50 VG, fabriqués et conditionnés en France.
+
+| Parfum | Notes | Famille (filtre) | Fichiers |
+|---|---|---|---|
+| Blond Antique | classic blond | Classique | `eliquide-blond-antique-{360,720}.webp` |
+| Dragon Céleste | fruit du dragon | Fruité | `eliquide-dragon-celeste-{360,720}.webp` |
+| Douceur Nacré | biscuit · café · vanille | Gourmand | `eliquide-douceur-nacre-{360,720}.webp` |
+| Menthe Éternelle | menthe · frais | Frais | `eliquide-menthe-eternelle-{360,720}.webp` |
+| Golden Pop | pop-corn | Gourmand | `eliquide-golden-pop-{360,720}.webp` |
+| Rubis Écarlate | cerise · framboise bleue | Fruité | `eliquide-rubis-ecarlate-{360,720}.webp` |
+| Rouge Envoûtant | fruits rouges · frais | Fruité, Frais | `eliquide-rouge-envoutant-{360,720}.webp` |
+| Souffle de Fraise | fraise · fruit du dragon | Fruité | `eliquide-souffle-de-fraise-{360,720}.webp` |
+| Éclat Tropical | pastèque · kiwi | Fruité | `eliquide-eclat-tropical-{360,720}.webp` |
+| Vigne Boréale | raisin glacé | Fruité, Frais | `eliquide-vigne-boreale-{360,720}.webp` |
+| Mélodie Pourpre | ananas · kiwi · fruit du dragon | Fruité | `eliquide-melodie-pourpre-{360,720}.webp` |
+| Nectar Exotique | mangue · pastèque · citron | Fruité | `eliquide-nectar-exotique-{360,720}.webp` |
+| Original Coke | cola · frais | Frais | `eliquide-original-coke-{360,720}.webp` |
+
+La section « La collection Vapelite » (`#collection`) présente les 13 flacons dans un carrousel
+horizontal filtrable par famille ; trois flacons sont aussi mis en avant dans la bannière.
+
 ## Photos et vidéo de la boutique
 
 | Fichier | Utilisation |
@@ -89,10 +114,9 @@ python3 -m http.server 8000
 
 Valeurs provisoires à remplacer :
 
-- Adresse exacte (`Quai du Port, 13002 Marseille`) — `index.html` (menu, « Nous trouver », footer, JSON-LD) et `mentions-legales.html`
-- Téléphone (`04 91 00 00 00` / `+33491000000`)
+- Adresse et téléphone : **1 rue Pythéas, 13001 Marseille · 04 91 70 92 97**, repris de l'étiquette des flacons (à confirmer)
 - Horaires d'ouverture : **lundi – samedi 9h30 – 20h**, relevés sur la plaque de la devanture (à confirmer)
-- Produits présentés (noms, visuels, coloris) dans la section « Nos produits »
+- Appareils présentés (visuels, coloris) dans la section « Nos produits »
 - Informations légales dans `mentions-legales.html` (forme juridique, SIRET, hébergeur…)
 
 L'e-mail `contact@vapelite-france.fr` et le domaine `vapelite-france.fr` proviennent de la charte.
