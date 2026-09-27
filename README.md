@@ -93,7 +93,7 @@ l'**Aspire Pixo Max White Glow** (`pixo-max-white-glow-{900,1600}.{webp,jpg}`), 
 « **On vous conseille, pas à pas.** » à gauche, suivi des **4 étapes** du conseil (faire le point sur vos goûts,
 le bon matériel, le bon taux de nicotine, un suivi dans la durée) : un seul message à la fois, chacun
 remplace le précédent toutes les 3 s (entrée par le bas, sortie par le haut), avec quatre barres qui
-indiquent la progression, en boucle ; et une étiquette « ♥ Notre coup de cœur · Aspire Pixo Max »
+indiquent la progression (sans numéros), en boucle ; et une étiquette « ♥ Notre coup de cœur · Aspire Pixo Max »
 posée sur la photo (lien vers la carte Pixo Max). Le lien « Coup de cœur » du menu mène aussi à cette carte,
 qui affiche la vraie photo de chaque coloris (`aspire-pixo-max-<coloris>.webp`).
 
