@@ -168,14 +168,13 @@ python3 -m http.server 8000
 
 ## À compléter avant la mise en ligne
 
-Valeurs provisoires à remplacer :
+Contenus encore attendus :
 
-- Appareils présentés (visuels, coloris) dans la section « Nos produits »
-- Adresse e-mail de contact : `contact@vapelite-france.fr` (issue de la charte) à confirmer ou remplacer
-  (mentions légales complètes : SAS au capital de 1 000 €, SIRET 928 252 600 00012, directeur·rice de la
-  publication « le représentant légal de Vapelite France », hébergeur GitHub Pages)
+- Les 7 saveurs Vapelite manquantes et les logos des partenaires (ruban défilant)
 
-L'e-mail `contact@vapelite-france.fr` provient de la charte ; le site est publié sur `vapelite.fr`.
+Coordonnées et mentions légales à jour : site publié sur `vapelite.fr`, e-mail `contact@vapelite.fr`,
+SAS au capital de 1 000 €, SIRET 928 252 600 00012, directeur·rice de la publication « le représentant légal
+de Vapelite France », hébergeur GitHub Pages.
 
 ## Rappel réglementaire
 
