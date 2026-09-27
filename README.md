@@ -140,6 +140,21 @@ redimensionnées et compressées en WebP avec repli JPEG.
 
 Aucune ressource externe n'est chargée (pas de Google Fonts, pas de traceur).
 
+## Mise en ligne (GitHub Pages)
+
+Le site est publié par GitHub Pages depuis la branche `main`, dossier racine (Settings → Pages →
+« Deploy from a branch » → `main` / `(root)`). Adresse : https://tkmilat-wq.github.io/vapelite-site/.
+Le fichier `.nojekyll` indique à GitHub de servir les fichiers tels quels.
+
+Pour le domaine `vapelite-france.fr`, chez le registraire, zone DNS :
+
+| Type | Nom | Valeur |
+|---|---|---|
+| A | @ | 185.199.108.153 · 185.199.109.153 · 185.199.110.153 · 185.199.111.153 (4 lignes) |
+| CNAME | www | tkmilat-wq.github.io |
+
+Puis Settings → Pages → « Custom domain » : `vapelite-france.fr`, et cocher « Enforce HTTPS ».
+
 ## Lancer en local
 
 ```bash
@@ -153,8 +168,9 @@ python3 -m http.server 8000
 Valeurs provisoires à remplacer :
 
 - Appareils présentés (visuels, coloris) dans la section « Nos produits »
-- Hébergeur dans `mentions-legales.html` (SAS au capital de 1 000 €, SIRET 928 252 600 00012 et directeur·rice
-  de la publication « le représentant légal de Vapelite France » renseignés)
+- Nom de domaine `vapelite-france.fr` : une fois acheté et relié à GitHub Pages, ajouter le fichier `CNAME`
+  (mentions légales complètes : SAS au capital de 1 000 €, SIRET 928 252 600 00012, directeur·rice de la
+  publication « le représentant légal de Vapelite France », hébergeur GitHub Pages)
 
 L'e-mail `contact@vapelite-france.fr` et le domaine `vapelite-france.fr` proviennent de la charte.
 
