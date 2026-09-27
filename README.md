@@ -5,7 +5,7 @@ Sur le site, le lieu est appelé **« la Maison »** (et non « la boutique ») 
 
 Vitrine produits animée : bannière (photo de notre coup de cœur, la Pixo Max), boutons **bleu Klein** (`#002fa7`, couleur de la boutique),
 gamme de produits avec choix des coloris, collection d'e-liquides, avis Google, valeurs,
-boutique et pied de page sombre. Le reste du site est blanc, gris clair et noir pour mettre les
+boutique et pied de page bleu Klein (même dégradé que les cartes produits). Le reste du site est blanc, gris clair et noir pour mettre les
 produits en avant. Éléments issus de la **charte graphique Vapelite France** :
 
 - **Couleur de référence** : bleu `#2c5794` (RVB 44 87 148 · Pantone P 105-7C · CMJN 84/57/0/22).
@@ -90,7 +90,9 @@ pour l'instant le nom de chaque marque. Pour passer au logo :
 
 La bannière (`#top`, lien « Bien choisir » du menu) est une seule image : la photo de notre coup de cœur,
 l'**Aspire Pixo Max White Glow** (`pixo-max-white-glow-{900,1600}.{webp,jpg}`), avec le texte court
-« **On vous conseille, pas à pas.** » à gauche et une étiquette « ♥ Notre coup de cœur · Aspire Pixo Max »
+« **On vous conseille, pas à pas.** » à gauche, suivi des **4 étapes** du conseil (faire le point sur vos goûts,
+le bon matériel, le bon taux de nicotine, un suivi dans la durée) : une barre blanche se remplit sous chaque
+étape, l'une après l'autre (3 s chacune, en boucle), et une étiquette « ♥ Notre coup de cœur · Aspire Pixo Max »
 posée sur la photo (lien vers la carte Pixo Max). Le lien « Coup de cœur » du menu mène aussi à cette carte,
 qui affiche la vraie photo de chaque coloris (`aspire-pixo-max-<coloris>.webp`).
 

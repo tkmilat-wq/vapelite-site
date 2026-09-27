@@ -59,6 +59,28 @@
     if (event.key === "Escape") setNav(false);
   });
 
+  /* ---------- Bannière : étapes « Bien choisir » ---------- */
+
+  const heroSteps = [...document.querySelectorAll(".hero-steps li")];
+  if (heroSteps.length) {
+    const STEP_MS = 3000;
+    let step = 0;
+    const paint = () => heroSteps.forEach((li, i) => {
+      li.classList.toggle("is-active", i === step);
+      li.classList.toggle("is-done", i < step);
+    });
+    if (reduceMotion) {
+      heroSteps.forEach((li) => li.classList.add("is-active", "is-done"));
+    } else {
+      document.querySelector(".hero").style.setProperty("--step-ms", `${STEP_MS}ms`);
+      paint();
+      setInterval(() => {
+        step = (step + 1) % heroSteps.length;
+        paint();
+      }, STEP_MS);
+    }
+  }
+
   /* ---------- Produits phares : coloris ---------- */
 
   document.querySelectorAll(".swatches").forEach((group) => {
