@@ -61,35 +61,35 @@
 
   /* ---------- Bannière : étapes « Bien choisir » ---------- */
 
-  const heroSteps = [...document.querySelectorAll(".hero-steps li")];
-  if (heroSteps.length) {
+  const heroSteps = document.querySelector(".hero-steps");
+  if (heroSteps) {
     const STEP_MS = 3000;
+    const messages = [...heroSteps.querySelectorAll(".hero-steps__list li")];
+    const bars = [...heroSteps.querySelectorAll(".hero-steps__bars span")];
     if (reduceMotion) {
-      heroSteps.forEach((li) => li.classList.add("is-shown", "is-done"));
+      heroSteps.classList.add("is-static");
+      bars.forEach((bar) => bar.classList.add("is-done"));
     } else {
-      // Les étapes apparaissent une par une, restent affichées, puis la séquence reprend
-      document.querySelector(".hero").style.setProperty("--step-ms", `${STEP_MS}ms`);
+      // Un message à la fois : chacun remplace le précédent, en boucle
+      heroSteps.style.setProperty("--step-ms", `${STEP_MS}ms`);
       let step = 0;
-      const tick = () => {
-        if (step < heroSteps.length) {
-          heroSteps.forEach((li, i) => {
-            li.classList.toggle("is-shown", i <= step);
-            li.classList.toggle("is-active", i === step);
-            li.classList.toggle("is-done", i < step);
-          });
-          step += 1;
-          setTimeout(tick, STEP_MS);
-        } else if (step === heroSteps.length) {
-          heroSteps.forEach((li) => { li.classList.remove("is-active"); li.classList.add("is-done"); });
-          step += 1;
-          setTimeout(tick, 1500);
-        } else {
-          heroSteps.forEach((li) => li.classList.remove("is-shown", "is-active", "is-done"));
-          step = 0;
-          setTimeout(tick, 700);
-        }
+      const show = () => {
+        const last = messages.length - 1;
+        messages.forEach((message, i) => {
+          message.classList.toggle("is-active", i === step);
+          // En reprenant au début, le dernier message sort lui aussi par le haut
+          message.classList.toggle("is-done", i < step || (step === 0 && i === last));
+        });
+        bars.forEach((bar, i) => {
+          bar.classList.toggle("is-active", i === step);
+          bar.classList.toggle("is-done", i < step);
+        });
       };
-      setTimeout(tick, 600);
+      show();
+      setInterval(() => {
+        step = (step + 1) % messages.length;
+        show();
+      }, STEP_MS);
     }
   }
 
