@@ -64,20 +64,32 @@
   const heroSteps = [...document.querySelectorAll(".hero-steps li")];
   if (heroSteps.length) {
     const STEP_MS = 3000;
-    let step = 0;
-    const paint = () => heroSteps.forEach((li, i) => {
-      li.classList.toggle("is-active", i === step);
-      li.classList.toggle("is-done", i < step);
-    });
     if (reduceMotion) {
-      heroSteps.forEach((li) => li.classList.add("is-active", "is-done"));
+      heroSteps.forEach((li) => li.classList.add("is-shown", "is-done"));
     } else {
+      // Les étapes apparaissent une par une, restent affichées, puis la séquence reprend
       document.querySelector(".hero").style.setProperty("--step-ms", `${STEP_MS}ms`);
-      paint();
-      setInterval(() => {
-        step = (step + 1) % heroSteps.length;
-        paint();
-      }, STEP_MS);
+      let step = 0;
+      const tick = () => {
+        if (step < heroSteps.length) {
+          heroSteps.forEach((li, i) => {
+            li.classList.toggle("is-shown", i <= step);
+            li.classList.toggle("is-active", i === step);
+            li.classList.toggle("is-done", i < step);
+          });
+          step += 1;
+          setTimeout(tick, STEP_MS);
+        } else if (step === heroSteps.length) {
+          heroSteps.forEach((li) => { li.classList.remove("is-active"); li.classList.add("is-done"); });
+          step += 1;
+          setTimeout(tick, 1500);
+        } else {
+          heroSteps.forEach((li) => li.classList.remove("is-shown", "is-active", "is-done"));
+          step = 0;
+          setTimeout(tick, 700);
+        }
+      };
+      setTimeout(tick, 600);
     }
   }
 

@@ -91,8 +91,9 @@ pour l'instant le nom de chaque marque. Pour passer au logo :
 La bannière (`#top`, lien « Bien choisir » du menu) est une seule image : la photo de notre coup de cœur,
 l'**Aspire Pixo Max White Glow** (`pixo-max-white-glow-{900,1600}.{webp,jpg}`), avec le texte court
 « **On vous conseille, pas à pas.** » à gauche, suivi des **4 étapes** du conseil (faire le point sur vos goûts,
-le bon matériel, le bon taux de nicotine, un suivi dans la durée) : une barre blanche se remplit sous chaque
-étape, l'une après l'autre (3 s chacune, en boucle), et une étiquette « ♥ Notre coup de cœur · Aspire Pixo Max »
+le bon matériel, le bon taux de nicotine, un suivi dans la durée) : les étapes apparaissent une par une
+(3 s chacune, avec une barre blanche qui se remplit), restent affichées un instant puis la séquence reprend,
+et une étiquette « ♥ Notre coup de cœur · Aspire Pixo Max »
 posée sur la photo (lien vers la carte Pixo Max). Le lien « Coup de cœur » du menu mène aussi à cette carte,
 qui affiche la vraie photo de chaque coloris (`aspire-pixo-max-<coloris>.webp`).
 
