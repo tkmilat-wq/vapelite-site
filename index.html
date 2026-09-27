@@ -51,8 +51,8 @@
       </a>
       <nav class="nav" id="nav" aria-label="Menu principal">
         <ul class="nav__list">
-          <li><a href="#top" data-slide="0">Bien choisir</a></li>
-          <li><a href="#top" data-slide="1">Coup de cœur</a></li>
+          <li><a href="#top">Bien choisir</a></li>
+          <li><a href="#type-pod">Coup de cœur</a></li>
           <li><a href="#produits">Produits phares</a></li>
           <li><a href="#collection">E-liquides</a></li>
           <li><a href="#valeurs">Pourquoi nous</a></li>
@@ -69,74 +69,37 @@
   <main id="contenu">
 
     <!-- ================================================================
-         Bannière bleu Klein — slider
+         Bannière : Bien choisir, sur la photo de la Pixo Max White Glow
          ================================================================ -->
-    <section class="hero" id="top" aria-roledescription="carrousel" aria-label="À la une">
+    <section class="hero" id="top" aria-label="À la une">
       <div class="hero__bg" aria-hidden="true">
         <div class="hero__rings"><span></span><span></span><span></span></div>
         <p class="hero__word">Vieux-Port</p>
       </div>
 
       <div class="slides">
-        <!-- Slide 1 : bien choisir, avec le flacon Vapelite Blond Antique -->
-        <article class="slide slide--advice is-active" data-duration="16000" aria-roledescription="diapositive" aria-label="1 sur 2">
+        <!-- Bien choisir, sur la photo de l'Aspire Pixo Max White Glow, avec le flacon Vapelite Blond Antique -->
+        <article class="slide slide--photo slide--advice is-active">
+          <div class="slide__media slide__media--glow" aria-hidden="true">
+            <picture>
+              <source type="image/webp" srcset="assets/produits/pixo-max-white-glow-900.webp 900w, assets/produits/pixo-max-white-glow-1600.webp 1600w" sizes="100vw">
+              <img src="assets/produits/pixo-max-white-glow-1600.jpg" srcset="assets/produits/pixo-max-white-glow-900.jpg 900w, assets/produits/pixo-max-white-glow-1600.jpg 1600w" sizes="100vw" width="1600" height="1051" alt="">
+            </picture>
+          </div>
           <div class="slide__text">
             <p class="kicker">Bien choisir · À la Maison</p>
             <h1 class="slide__title">On vous conseille,<br><em>pas à pas.</em></h1>
-            <ol class="hero-steps">
-              <li class="is-active"><span class="hero-steps__num">01</span><div><h3>On fait le point</h3><p>Vos habitudes, vos goûts, le tirage que vous aimez : on part de vous, sans jugement.</p></div></li>
-              <li><span class="hero-steps__num">02</span><div><h3>Un matériel simple pour débuter</h3><p>Un appareil facile à prendre en main. On vous montre tout, du remplissage à la recharge.</p></div></li>
-              <li><span class="hero-steps__num">03</span><div><h3>Le bon taux de nicotine</h3><p>Sels de nicotine ou nicotine classique : on vous aide à choisir le taux qui vous convient.</p></div></li>
-              <li><span class="hero-steps__num">04</span><div><h3>Un suivi dans la durée</h3><p>Revenez nous voir quand vous voulez : on ajuste le matériel, la saveur et le taux de nicotine à votre rythme.</p></div></li>
-            </ol>
+            <p class="slide__lead">Vos goûts, le bon matériel, le bon taux de nicotine&nbsp;: on choisit ensemble, puis on vous suit dans la durée.</p>
             <div class="slide__actions">
               <a class="btn btn--white" href="#produits">Nos produits phares</a>
               <a class="btn btn--ghost-white" href="#boutique">Venir à la Maison</a>
             </div>
           </div>
-          <div class="slide__visual">
-            <div class="stage stage--bottle" data-parallax>
-              <img class="device device--photo device--hero" src="assets/produits/eliquide-blond-antique-720.webp" srcset="assets/produits/eliquide-blond-antique-360.webp 190w, assets/produits/eliquide-blond-antique-720.webp 380w" sizes="(max-width: 560px) 160px, 260px" width="380" height="720" alt="E-liquide Vapelite Blond Antique, 50 ml">
-              <span class="stage__shadow" aria-hidden="true"></span>
-              <p class="stage__label"><span>Vapelite</span> Blond Antique</p>
-            </div>
-          </div>
+          <figure class="hero-bottle" data-parallax>
+            <img src="assets/produits/eliquide-blond-antique-720.webp" srcset="assets/produits/eliquide-blond-antique-360.webp 190w, assets/produits/eliquide-blond-antique-720.webp 380w" sizes="(max-width: 900px) 120px, 240px" width="380" height="720" alt="E-liquide Vapelite Blond Antique, 50 ml">
+            <figcaption><span>Vapelite</span> Blond Antique</figcaption>
+          </figure>
         </article>
-
-        <!-- Slide 2 : notre coup de cœur, Aspire Pixo Max White Glow -->
-        <article class="slide slide--photo" aria-roledescription="diapositive" aria-label="2 sur 2">
-          <div class="slide__media slide__media--glow" aria-hidden="true">
-            <picture>
-              <source type="image/webp" srcset="assets/produits/pixo-max-white-glow-900.webp 900w, assets/produits/pixo-max-white-glow-1600.webp 1600w" sizes="100vw">
-              <img src="assets/produits/pixo-max-white-glow-1600.jpg" srcset="assets/produits/pixo-max-white-glow-900.jpg 900w, assets/produits/pixo-max-white-glow-1600.jpg 1600w" sizes="100vw" width="1600" height="1051" alt="" loading="lazy">
-            </picture>
-          </div>
-          <div class="slide__text">
-            <p class="kicker kicker--heart"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.1 5.2 3 1.6-1.9 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg>Notre coup de cœur</p>
-            <h2 class="slide__title">Aspire <span class="nowrap">Pixo Max</span><br><em>White Glow.</em></h2>
-            <p class="slide__lead">Notre coup de cœur de la Maison&nbsp;: un reflet nacré qui change avec la lumière, 2600&nbsp;mAh et trois modes de puissance dans un format de poche. Le pod que l’on recommande les yeux fermés.</p>
-            <ul class="specs-chips" aria-label="Caractéristiques">
-              <li>2600 mAh</li><li>10 – 35 W</li><li>8 coloris</li>
-            </ul>
-            <div class="slide__actions">
-              <a class="btn btn--white" href="#type-pod">Voir les 8 coloris</a>
-              <a class="btn btn--ghost-white" href="#boutique">Venir l’essayer</a>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="hero__controls">
-        <button class="hero__arrow" type="button" data-dir="-1" aria-label="Diapositive précédente">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="hero__dots" role="tablist" aria-label="Choisir une diapositive">
-          <button type="button" role="tab" aria-selected="true" aria-label="Diapositive 1"><span></span></button>
-          <button type="button" role="tab" aria-selected="false" aria-label="Diapositive 2"><span></span></button>
-        </div>
-        <button class="hero__arrow" type="button" data-dir="1" aria-label="Diapositive suivante">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
       </div>
     </section>
 
@@ -660,7 +623,7 @@
       </nav>
       <nav class="footer__col" aria-label="Vapelite">
         <p class="footer__title">Vapelite</p>
-        <a href="#top" data-slide="0">Bien choisir</a>
+        <a href="#top">Bien choisir</a>
         <a href="#valeurs">Nos valeurs</a>
         <a href="#boutique">La Maison</a>
         <a href="mentions-legales.html">Mentions légales</a>

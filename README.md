@@ -3,7 +3,7 @@
 Site vitrine statique de **Vapelite France**, maison de la vape au Vieux-Port de Marseille.
 Sur le site, le lieu est appelé **« la Maison »** (et non « la boutique ») pour un ton plus chaleureux et plus haut de gamme.
 
-Vitrine produits animée : bannière **bleu Klein** (`#002fa7`, couleur de la boutique) en slider,
+Vitrine produits animée : bannière (photo Pixo Max et flacon Blond Antique), boutons **bleu Klein** (`#002fa7`, couleur de la boutique),
 gamme de produits avec choix des coloris, collection d'e-liquides, avis Google, valeurs,
 boutique et pied de page sombre. Le reste du site est blanc, gris clair et noir pour mettre les
 produits en avant. Éléments issus de la **charte graphique Vapelite France** :
@@ -88,16 +88,12 @@ pour l'instant le nom de chaque marque. Pour passer au logo :
 
 ## Bannière
 
-La bannière bleu Klein (`#top`) compte **deux diapositives** :
-
-1. **Bien choisir — « On vous conseille, pas à pas. »** Les quatre étapes du conseil en Maison (faire le
-   point sur vos habitudes et vos goûts, un matériel simple pour débuter, le bon taux de nicotine, un suivi
-   dans la durée) s'allument l'une après l'autre (4 s chacune, `data-duration="16000"`), à côté du flacon
-   **Vapelite Blond Antique** qui flotte (`eliquide-blond-antique-{360,720}.webp`). Sur téléphone, seule
-   l'étape en cours est affichée. Lien « Bien choisir » du menu et du pied de page (`data-slide="0"`).
-2. **Notre coup de cœur — Aspire Pixo Max White Glow**, photo `pixo-max-white-glow-{900,1600}.{webp,jpg}`
-   en plein cadre. Lien « Coup de cœur » du menu (`data-slide="1"`). Dans « Nos produits phares », la
-   carte Pixo Max affiche la vraie photo de chaque coloris (`aspire-pixo-max-<coloris>.webp`).
+La bannière (`#top`, lien « Bien choisir » du menu) est une seule image : la photo de l'**Aspire Pixo Max
+White Glow** (`pixo-max-white-glow-{900,1600}.{webp,jpg}`, sans texte sur la Pixo) avec le texte court
+« **On vous conseille, pas à pas.** » à gauche et le flacon **Vapelite Blond Antique** qui flotte à droite
+(`eliquide-blond-antique-{360,720}.webp`, léger effet de parallaxe à la souris). Le lien « Coup de cœur »
+du menu mène à la carte Pixo Max des produits phares, qui affiche la vraie photo de chaque coloris
+(`aspire-pixo-max-<coloris>.webp`).
 
 Conformément à l'art. L3513-4 du Code de la santé publique, le site ne fait **aucune référence à l'arrêt
 du tabac ou au sevrage** et aucune allégation de santé.
@@ -128,10 +124,10 @@ redimensionnées et compressées en WebP avec repli JPEG.
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Page unique : bannière (Bien choisir, coup de cœur), gamme, e-liquides, avis, valeurs, boutique, footer, vérification d'âge |
+| `index.html` | Page unique : bannière (Bien choisir), gamme, e-liquides, avis, valeurs, boutique, footer, vérification d'âge |
 | `mentions-legales.html` | Mentions légales (à compléter) |
 | `styles.css` | Tokens de la charte et mise en page |
-| `script.js` | Slider, parallaxe, filtres, coloris, animation au défilement, menu mobile, vérification d'âge |
+| `script.js` | Parallaxe de la bannière, filtres, coloris, animation au défilement, menu mobile, vérification d'âge |
 | `assets/logo-vapelite-klein.svg` | Logotype bleu Klein (utilisé sur le site) |
 | `assets/logo-vapelite.svg` / `logo-vapelite-blanc.svg` | Logotype bleu charte / négatif |
 | `assets/symbole-vapelite.svg` | Symbole « V » seul |
