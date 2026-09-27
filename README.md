@@ -94,8 +94,8 @@ l'**Aspire Pixo Max White Glow** (`pixo-max-white-glow-{900,1600}.{webp,jpg}`), 
 le bon matériel, le bon taux de nicotine, un suivi dans la durée) : un seul message à la fois, chacun
 remplace le précédent toutes les 3 s (entrée par le bas, sortie par le haut), avec quatre barres qui
 indiquent la progression (sans numéros), en boucle ; et une étiquette « Aspire Pixo Max » avec un cœur qui bat,
-posée sur la photo (lien vers la carte Pixo Max). Le lien « Pixo Max » du menu mène aussi à cette carte,
-qui affiche la vraie photo de chaque coloris (`aspire-pixo-max-<coloris>.webp`).
+posée sur la photo (lien vers la carte Pixo Max). La carte Pixo Max des produits phares
+affiche la vraie photo de chaque coloris (`aspire-pixo-max-<coloris>.webp`).
 
 Conformément à l'art. L3513-4 du Code de la santé publique, le site ne fait **aucune référence à l'arrêt
 du tabac ou au sevrage** et aucune allégation de santé.
@@ -105,7 +105,7 @@ du tabac ou au sevrage** et aucune allégation de santé.
 - **Adresse** : 1 rue Pythéas, 13001 Marseille · **Téléphone** : 04 91 70 92 97
 - **Horaires** : lundi – samedi 10h00 – 19h30, dimanche 11h30 – 18h30 (aussi dans le JSON-LD)
 - **Itinéraire** : boutons Google Maps et Waze dans la section « La Maison »
-- **Avis Google** : bandeau `#avis` avec la note **5,0 / 5 (254 avis)**, lien vers la fiche Google et
+- **Avis Google** : bandeau `#avis` (« Vos retours » dans le menu et le pied de page) avec la note **5,0 / 5 (254 avis)**, lien vers la fiche Google et
   lien direct pour laisser un avis (`https://g.page/r/CQMPkHKr5SAJEBM/review`). Mettre à jour la note et le
   nombre d'avis de temps en temps dans `index.html`. Cinq avis réels (captures fournies par la Maison) sont
   affichés en cartes défilantes, reproduits tels quels avec prénom + initiale.
