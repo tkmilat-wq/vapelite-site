@@ -143,17 +143,20 @@ Aucune ressource externe n'est chargée (pas de Google Fonts, pas de traceur).
 ## Mise en ligne (GitHub Pages)
 
 Le site est publié par GitHub Pages depuis la branche `main`, dossier racine (Settings → Pages →
-« Deploy from a branch » → `main` / `(root)`). Adresse : https://tkmilat-wq.github.io/vapelite-site/.
-Le fichier `.nojekyll` indique à GitHub de servir les fichiers tels quels.
+« Deploy from a branch » → `main` / `(root)`), sur le domaine **https://vapelite.fr** (fichier `CNAME`,
+domaine enregistré chez IONOS). Le fichier `.nojekyll` indique à GitHub de servir les fichiers tels quels.
 
-Pour le domaine `vapelite-france.fr`, chez le registraire, zone DNS :
+Zone DNS de `vapelite.fr` chez IONOS (Domaines & SSL → vapelite.fr → DNS) ; supprimer l'enregistrement A
+et AAAA « @ » par défaut d'IONOS, garder les enregistrements MX (e-mail) :
 
 | Type | Nom | Valeur |
 |---|---|---|
 | A | @ | 185.199.108.153 · 185.199.109.153 · 185.199.110.153 · 185.199.111.153 (4 lignes) |
+| AAAA | @ | 2606:50c0:8000::153 · 2606:50c0:8001::153 · 2606:50c0:8002::153 · 2606:50c0:8003::153 (facultatif, 4 lignes) |
 | CNAME | www | tkmilat-wq.github.io |
 
-Puis Settings → Pages → « Custom domain » : `vapelite-france.fr`, et cocher « Enforce HTTPS ».
+Puis Settings → Pages : vérifier que « Custom domain » affiche `vapelite.fr` et cocher « Enforce HTTPS »
+(le certificat peut prendre jusqu'à 24 h).
 
 ## Lancer en local
 
@@ -168,11 +171,11 @@ python3 -m http.server 8000
 Valeurs provisoires à remplacer :
 
 - Appareils présentés (visuels, coloris) dans la section « Nos produits »
-- Nom de domaine `vapelite-france.fr` : une fois acheté et relié à GitHub Pages, ajouter le fichier `CNAME`
+- Adresse e-mail de contact : `contact@vapelite-france.fr` (issue de la charte) à confirmer ou remplacer
   (mentions légales complètes : SAS au capital de 1 000 €, SIRET 928 252 600 00012, directeur·rice de la
   publication « le représentant légal de Vapelite France », hébergeur GitHub Pages)
 
-L'e-mail `contact@vapelite-france.fr` et le domaine `vapelite-france.fr` proviennent de la charte.
+L'e-mail `contact@vapelite-france.fr` provient de la charte ; le site est publié sur `vapelite.fr`.
 
 ## Rappel réglementaire
 
