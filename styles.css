@@ -430,7 +430,7 @@ button { font: inherit; color: inherit; }
 .js .hero-steps__list li.is-active { opacity: 1; transform: none; transition-delay: 0.25s; }
 .hero-steps.is-static .hero-steps__list li { grid-area: auto; opacity: 1; transform: none; margin-top: 10px; }
 
-/* Étiquette « Notre coup de cœur » posée sur la photo de la Pixo Max */
+/* Étiquette posée sur la photo de la Pixo Max, avec un cœur qui bat */
 .hero-tag {
   position: absolute;
   right: var(--gutter);
@@ -454,8 +454,6 @@ button { font: inherit; color: inherit; }
 .slide.is-active .hero-tag { opacity: 1; transform: none; }
 .hero-tag:hover { background: var(--white); }
 .hero-tag svg { flex: none; color: #d6336c; }
-.hero-tag span { display: grid; line-height: 1.2; }
-.hero-tag small { color: #c2255c; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .hero-tag strong { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
 
 /* Diapositive photo (plein cadre derrière le texte) */
@@ -587,8 +585,14 @@ button { font: inherit; color: inherit; }
 }
 .perk strong { display: block; color: var(--ink); font-size: 15px; }
 
-/* Badge « Notre coup de cœur » (2e diapositive) */
-@keyframes heart { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.25); } 30% { transform: scale(1); } }
+/* Cœur qui bat (bannière et carte Pixo Max) : double battement puis pause */
+.heartbeat { transform-origin: 50% 55%; animation: heartbeat 1.4s ease-in-out infinite; }
+@keyframes heartbeat {
+  0%, 60%, 100% { transform: scale(1); }
+  12% { transform: scale(1.28); }
+  24% { transform: scale(1); }
+  36% { transform: scale(1.2); }
+}
 
 /* --------------------------------------------------------------------------
    Gamme
@@ -646,6 +650,8 @@ button { font: inherit; color: inherit; }
 }
 .badge--new { background: var(--klein); color: var(--white); }
 .badge--heart { background: #ffe3ee; color: #c2255c; }
+.badge.badge--icon { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border-radius: 50%; }
+.badge--icon .heartbeat { color: #d6336c; }
 
 .card__visual {
   position: relative;
@@ -1515,7 +1521,6 @@ a.chip:hover { background: var(--ink); color: var(--white); }
   .hero-tag { top: 20px; bottom: auto; padding: 9px 16px 9px 12px; gap: 10px; }
   .hero-steps { margin-top: 20px; }
   .hero-steps__list li { font-size: 18px; }
-  .hero-tag small { font-size: 11px; }
   .hero-tag strong { font-size: 15px; }
   .slide__media--glow img {
     left: 0;

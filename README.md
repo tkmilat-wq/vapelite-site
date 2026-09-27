@@ -3,7 +3,7 @@
 Site vitrine statique de **Vapelite France**, maison de la vape au Vieux-Port de Marseille.
 Sur le site, le lieu est appelé **« la Maison »** (et non « la boutique ») pour un ton plus chaleureux et plus haut de gamme.
 
-Vitrine produits animée : bannière (photo de notre coup de cœur, la Pixo Max), boutons **bleu Klein** (`#002fa7`, couleur de la boutique),
+Vitrine produits animée : bannière (photo de l'Aspire Pixo Max), boutons **bleu Klein** (`#002fa7`, couleur de la boutique),
 gamme de produits avec choix des coloris, collection d'e-liquides, avis Google, valeurs,
 boutique et pied de page bleu Klein (même dégradé que les cartes produits). Le reste du site est blanc, gris clair et noir pour mettre les
 produits en avant. Éléments issus de la **charte graphique Vapelite France** :
@@ -29,7 +29,7 @@ repère « 60+ » affiché). Les pastilles en haut de section mènent à chaque 
 | Type | Ancre | Sélection | Visuel |
 |---|---|---|---|
 | Pod mod | `#type-pod-mod` | VOOPOO Drag X3 & Drag S3 (même carte, édition French Riviera) | visuel officiel `voopoo-drag-french-riviera-{600,1000}.webp` |
-| Pod | `#type-pod` | Aspire Pixo Max (coup de cœur), 8 coloris | photos réelles `aspire-pixo-max-<coloris>.webp` |
+| Pod | `#type-pod` | Aspire Pixo Max (badge cœur qui bat), 8 coloris | photos réelles `aspire-pixo-max-<coloris>.webp` |
 | Box mod | `#type-box` | Geekvape Aegis Legend 5 (5–200 W, double 18650, IP68, Z Tank), 8 coloris | photos détourées `geekvape-legend-5-<coloris>.webp` (Aurora Rainbow, Carbon Black, Earth Brown, Frost Silver, Glacier Green, Racing Gold, Turbo Red, Twilight Blue) |
 | Tube / stick | `#type-tube` | Kiwi Vapor Kiwi 2, 5 coloris | photos réelles `kiwi-2-<coloris>.webp` |
 | Puff rechargeable | `#type-puff` | Dojo 30 000 (recharge fournie) ; plus de 50 parfums toutes marques réunies, tirage aérien façon chicha (Al Fakher) ou serré (JNR), formats 1 000, 15K, 28K, 30K et 50K puffs ; marques JNR, Dojo by Vaporesso, Crown Bar Al Fakher, Elf Bar, Lost Mary, Kiwi Go, Vuse | photo détourée `dojo-30000.webp` (appareil + cartouche, sans le texte ni le logo du grossiste) |
@@ -88,13 +88,13 @@ pour l'instant le nom de chaque marque. Pour passer au logo :
 
 ## Bannière
 
-La bannière (`#top`, lien « Bien choisir » du menu) est une seule image : la photo de notre coup de cœur,
+La bannière (`#top`, lien « Bien choisir » du menu) est une seule image : la photo de
 l'**Aspire Pixo Max White Glow** (`pixo-max-white-glow-{900,1600}.{webp,jpg}`), avec le texte court
 « **On vous conseille, pas à pas.** » à gauche, suivi des **4 étapes** du conseil (faire le point sur vos goûts,
 le bon matériel, le bon taux de nicotine, un suivi dans la durée) : un seul message à la fois, chacun
 remplace le précédent toutes les 3 s (entrée par le bas, sortie par le haut), avec quatre barres qui
-indiquent la progression (sans numéros), en boucle ; et une étiquette « ♥ Notre coup de cœur · Aspire Pixo Max »
-posée sur la photo (lien vers la carte Pixo Max). Le lien « Coup de cœur » du menu mène aussi à cette carte,
+indiquent la progression (sans numéros), en boucle ; et une étiquette « Aspire Pixo Max » avec un cœur qui bat,
+posée sur la photo (lien vers la carte Pixo Max). Le lien « Pixo Max » du menu mène aussi à cette carte,
 qui affiche la vraie photo de chaque coloris (`aspire-pixo-max-<coloris>.webp`).
 
 Conformément à l'art. L3513-4 du Code de la santé publique, le site ne fait **aucune référence à l'arrêt
@@ -153,12 +153,15 @@ python3 -m http.server 8000
 Valeurs provisoires à remplacer :
 
 - Appareils présentés (visuels, coloris) dans la section « Nos produits »
-- Informations légales dans `mentions-legales.html` : forme juridique et capital, directeur·rice de la
-  publication, hébergeur (SIRET 928 252 600 00012 renseigné)
+- Hébergeur dans `mentions-legales.html` (SAS au capital de 1 000 €, SIRET 928 252 600 00012 et directeur·rice
+  de la publication « le représentant légal de Vapelite France » renseignés)
 
 L'e-mail `contact@vapelite-france.fr` et le domaine `vapelite-france.fr` proviennent de la charte.
 
 ## Rappel réglementaire
+
+Textes volontairement **descriptifs et neutres** : pas de « coup de cœur », de « meilleur » ni d'« idéal »,
+aucune mention de prix (les deux passages d'avis clients qui en parlaient sont coupés avec « […] »).
 
 La publicité en faveur des produits du vapotage est encadrée en France (art. L3513-4 du Code de la santé
 publique). Le site présente les produits **à titre informatif**, sans prix, sans vente en ligne et sans
