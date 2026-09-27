@@ -67,6 +67,7 @@
   const SLIDE_MS = 6000;
   let current = 0;
   let timer = null;
+  let stepTimer = null;
 
   const slideMs = () => Number(slides[current].dataset.duration) || SLIDE_MS;
 
@@ -93,8 +94,24 @@
     restart();
   };
 
+  // Étapes « Bien choisir » : mises en avant l'une après l'autre pendant la diapositive
+  const runSteps = () => {
+    clearInterval(stepTimer);
+    const steps = [...slides[current].querySelectorAll(".hero-steps li")];
+    if (!steps.length) return;
+    let step = 0;
+    const highlight = () => steps.forEach((li, i) => li.classList.toggle("is-active", i === step));
+    highlight();
+    if (reduceMotion) return;
+    stepTimer = setInterval(() => {
+      step = (step + 1) % steps.length;
+      highlight();
+    }, slideMs() / steps.length);
+  };
+
   const restart = () => {
     clearTimeout(timer);
+    runSteps();
     if (reduceMotion) return;
     // Relance l'animation de la barre de progression
     hero.classList.remove("is-playing");
@@ -106,6 +123,7 @@
 
   const pause = () => {
     clearTimeout(timer);
+    clearInterval(stepTimer);
     hero.classList.add("is-paused");
   };
   const resume = () => {
@@ -241,45 +259,6 @@
     reviewList.addEventListener("scroll", () => requestAnimationFrame(updateReviewArrows), { passive: true });
     window.addEventListener("resize", updateReviewArrows);
     updateReviewArrows();
-  }
-
-  /* ---------- Bien choisir : animation liée au défilement ---------- */
-
-  const spotlight = document.querySelector(".spotlight");
-  const spotVideo = spotlight.querySelector(".spotlight__video");
-  const feats = [...spotlight.querySelectorAll(".feat")];
-  let step = -1;
-  let ticking = false;
-
-  const updateSpotlight = () => {
-    ticking = false;
-    const rect = spotlight.getBoundingClientRect();
-    const total = spotlight.offsetHeight - window.innerHeight;
-    const p = Math.min(1, Math.max(0, -rect.top / total));
-    spotlight.style.setProperty("--p", p.toFixed(3));
-
-    const next = Math.min(feats.length - 1, Math.floor(p * feats.length));
-    if (next !== step) {
-      step = next;
-      feats.forEach((feat, i) => feat.classList.toggle("is-active", i === step));
-    }
-  };
-
-  window.addEventListener("scroll", () => {
-    if (!ticking) {
-      ticking = true;
-      requestAnimationFrame(updateSpotlight);
-    }
-  }, { passive: true });
-  window.addEventListener("resize", updateSpotlight);
-  updateSpotlight();
-
-  // La vidéo ne tourne que lorsque la section est visible
-  if (spotVideo && "IntersectionObserver" in window) {
-    new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) spotVideo.play().catch(() => {});
-      else spotVideo.pause();
-    }, { threshold: 0.1 }).observe(spotVideo);
   }
 
   /* ---------- Photo de l'intérieur : léger zoom au défilement ---------- */

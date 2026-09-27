@@ -51,10 +51,10 @@
       </a>
       <nav class="nav" id="nav" aria-label="Menu principal">
         <ul class="nav__list">
+          <li><a href="#top" data-slide="0">Bien choisir</a></li>
           <li><a href="#top" data-slide="1">Coup de cœur</a></li>
           <li><a href="#produits">Produits phares</a></li>
           <li><a href="#collection">E-liquides</a></li>
-          <li><a href="#pod">Bien choisir</a></li>
           <li><a href="#valeurs">Pourquoi nous</a></li>
           <li><a href="#boutique">La Maison</a></li>
         </ul>
@@ -78,30 +78,33 @@
       </div>
 
       <div class="slides">
-        <!-- Slide 1 : vidéo VOOPOO Drag X3 & Drag S3 (édition French Riviera) -->
-        <article class="slide slide--video is-active" data-duration="24000" aria-roledescription="diapositive" aria-label="1 sur 3">
-          <div class="slide__media" aria-hidden="true">
-            <video muted loop playsinline preload="auto" poster="assets/videos/voopoo-drag-x3-s3-poster.jpg">
-              <source src="assets/videos/voopoo-drag-x3-s3.webm" type="video/webm">
-              <source src="assets/videos/voopoo-drag-x3-s3.mp4" type="video/mp4">
-            </video>
-          </div>
+        <!-- Slide 1 : bien choisir, avec le flacon Vapelite Blond Antique -->
+        <article class="slide slide--advice is-active" data-duration="16000" aria-roledescription="diapositive" aria-label="1 sur 2">
           <div class="slide__text">
-            <p class="kicker">À la Maison · VOOPOO · Édition French Riviera</p>
-            <h1 class="slide__title">Drag X3<br>&amp; Drag S3</h1>
-            <p class="slide__lead">Cuir, finitions dorées et écran couleur : la nouvelle génération Drag de VOOPOO, en édition French Riviera Black Lagoon et Grand Cru. Venez les prendre en main au <span class="nowrap">Vieux-Port</span>.</p>
-            <ul class="specs-chips" aria-label="Caractéristiques">
-              <li>Drag X3 · 5 – 80 W</li><li>Drag S3 · 3000 mAh</li><li>Pod 2 ml</li>
-            </ul>
+            <p class="kicker">Bien choisir · À la Maison</p>
+            <h1 class="slide__title">On vous conseille,<br><em>pas à pas.</em></h1>
+            <ol class="hero-steps">
+              <li class="is-active"><span class="hero-steps__num">01</span><div><h3>On fait le point</h3><p>Vos habitudes, vos goûts, le tirage que vous aimez : on part de vous, sans jugement.</p></div></li>
+              <li><span class="hero-steps__num">02</span><div><h3>Un matériel simple pour débuter</h3><p>Un appareil facile à prendre en main. On vous montre tout, du remplissage à la recharge.</p></div></li>
+              <li><span class="hero-steps__num">03</span><div><h3>Le bon taux de nicotine</h3><p>Sels de nicotine ou nicotine classique : on vous aide à choisir le taux qui vous convient.</p></div></li>
+              <li><span class="hero-steps__num">04</span><div><h3>Un suivi dans la durée</h3><p>Revenez nous voir quand vous voulez : on ajuste le matériel, la saveur et le taux de nicotine à votre rythme.</p></div></li>
+            </ol>
             <div class="slide__actions">
-              <a class="btn btn--white" href="#type-pod-mod">Voir les Drag</a>
+              <a class="btn btn--white" href="#produits">Nos produits phares</a>
               <a class="btn btn--ghost-white" href="#boutique">Venir à la Maison</a>
+            </div>
+          </div>
+          <div class="slide__visual">
+            <div class="stage stage--bottle" data-parallax>
+              <img class="device device--photo device--hero" src="assets/produits/eliquide-blond-antique-720.webp" srcset="assets/produits/eliquide-blond-antique-360.webp 190w, assets/produits/eliquide-blond-antique-720.webp 380w" sizes="(max-width: 560px) 160px, 260px" width="380" height="720" alt="E-liquide Vapelite Blond Antique, 50 ml">
+              <span class="stage__shadow" aria-hidden="true"></span>
+              <p class="stage__label"><span>Vapelite</span> Blond Antique</p>
             </div>
           </div>
         </article>
 
         <!-- Slide 2 : notre coup de cœur, Aspire Pixo Max White Glow -->
-        <article class="slide slide--photo" aria-roledescription="diapositive" aria-label="2 sur 3">
+        <article class="slide slide--photo" aria-roledescription="diapositive" aria-label="2 sur 2">
           <div class="slide__media slide__media--glow" aria-hidden="true">
             <picture>
               <source type="image/webp" srcset="assets/produits/pixo-max-white-glow-900.webp 900w, assets/produits/pixo-max-white-glow-1600.webp 1600w" sizes="100vw">
@@ -121,26 +124,6 @@
             </div>
           </div>
         </article>
-
-        <!-- Slide 3 -->
-        <article class="slide" aria-roledescription="diapositive" aria-label="3 sur 3">
-          <div class="slide__text">
-            <p class="kicker">Fabriqué et conditionné en France · 50 ml</p>
-            <h2 class="slide__title">Les <span class="nowrap">e-liquides</span><br>Vapelite.</h2>
-            <p class="slide__lead">20 saveurs signées Vapelite : fruitées, fraîches, gourmandes ou classiques, en flacon de 50 ml.</p>
-            <div class="slide__actions">
-              <a class="btn btn--white" href="#collection">Découvrir la collection</a>
-              <a class="btn btn--ghost-white" href="#boutique">Venir à la Maison</a>
-            </div>
-          </div>
-          <div class="slide__visual">
-            <div class="stage stage--trio" data-parallax>
-              <img class="device device--photo b1" src="assets/produits/eliquide-rubis-ecarlate-720.webp" srcset="assets/produits/eliquide-rubis-ecarlate-360.webp 190w, assets/produits/eliquide-rubis-ecarlate-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="" aria-hidden="true">
-              <img class="device device--photo b2" src="assets/produits/eliquide-nectar-exotique-720.webp" srcset="assets/produits/eliquide-nectar-exotique-360.webp 190w, assets/produits/eliquide-nectar-exotique-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquides Vapelite : Rubis Écarlate, Nectar Exotique et Menthe Éternelle">
-              <img class="device device--photo b3" src="assets/produits/eliquide-menthe-eternelle-720.webp" srcset="assets/produits/eliquide-menthe-eternelle-360.webp 190w, assets/produits/eliquide-menthe-eternelle-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="" aria-hidden="true">
-            </div>
-          </div>
-        </article>
       </div>
 
       <div class="hero__controls">
@@ -150,7 +133,6 @@
         <div class="hero__dots" role="tablist" aria-label="Choisir une diapositive">
           <button type="button" role="tab" aria-selected="true" aria-label="Diapositive 1"><span></span></button>
           <button type="button" role="tab" aria-selected="false" aria-label="Diapositive 2"><span></span></button>
-          <button type="button" role="tab" aria-selected="false" aria-label="Diapositive 3"><span></span></button>
         </div>
         <button class="hero__arrow" type="button" data-dir="1" aria-label="Diapositive suivante">
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -531,49 +513,6 @@
     </section>
 
     <!-- ================================================================
-         Bien choisir — section bleu Klein animée au défilement (vidéo OXVA NeXLIM 2 Mini)
-         ================================================================ -->
-    <section class="spotlight" id="pod">
-      <div class="spotlight__sticky">
-        <div class="spotlight__inner">
-          <div class="spotlight__visual">
-            <div class="spotlight__glow" aria-hidden="true"></div>
-            <figure class="spotlight__media">
-              <video class="spotlight__video" autoplay muted loop playsinline preload="metadata" poster="assets/videos/oxva-nexlim-2-mini-poster.jpg" aria-label="Animation de présentation de l’OXVA NeXLIM 2 Mini">
-                <source src="assets/videos/oxva-nexlim-2-mini.webm" type="video/webm">
-                <source src="assets/videos/oxva-nexlim-2-mini.mp4" type="video/mp4">
-              </video>
-              <figcaption>OXVA NeXLIM 2 Mini</figcaption>
-            </figure>
-          </div>
-          <div class="spotlight__text">
-            <p class="eyebrow eyebrow--light">Bien choisir</p>
-            <h2 class="section__title section__title--light">On vous conseille,<br>pas à pas.</h2>
-            <ol class="feats">
-              <li class="feat is-active">
-                <span class="feat__num">01</span>
-                <div><h3>On fait le point</h3><p>Vos habitudes, vos goûts, le tirage que vous aimez : on part de vous, sans jugement.</p></div>
-              </li>
-              <li class="feat">
-                <span class="feat__num">02</span>
-                <div><h3>Un matériel simple pour débuter</h3><p>Un appareil facile à prendre en main. On vous montre tout, du remplissage à la recharge.</p></div>
-              </li>
-              <li class="feat">
-                <span class="feat__num">03</span>
-                <div><h3>Le bon taux de nicotine</h3><p>Sels de nicotine ou nicotine classique : on vous aide à choisir le taux qui vous convient.</p></div>
-              </li>
-              <li class="feat">
-                <span class="feat__num">04</span>
-                <div><h3>Un suivi dans la durée</h3><p>Revenez nous voir quand vous voulez : on ajuste le matériel, la saveur et le taux de nicotine à votre rythme.</p></div>
-              </li>
-            </ol>
-            <div class="spotlight__bar" aria-hidden="true"><span></span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================================================================
          Avis Google
          Pour afficher de vrais avis : remplir la liste .reviews__list avec des avis copiés
          depuis la fiche Google (prénom + initiale, note, texte) et indiquer la note moyenne.
@@ -721,7 +660,7 @@
       </nav>
       <nav class="footer__col" aria-label="Vapelite">
         <p class="footer__title">Vapelite</p>
-        <a href="#pod">Bien choisir</a>
+        <a href="#top" data-slide="0">Bien choisir</a>
         <a href="#valeurs">Nos valeurs</a>
         <a href="#boutique">La Maison</a>
         <a href="mentions-legales.html">Mentions légales</a>
