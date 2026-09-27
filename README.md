@@ -167,6 +167,26 @@ Puis Settings → Pages : vérifier que « Custom domain » affiche `vapelite.fr
 - À faire côté Maison : Google Search Console (propriété « Domaine » `vapelite.fr`, validée par un
   enregistrement TXT chez IONOS), envoi du sitemap, et lien `https://vapelite.fr` sur la fiche Google.
 
+## Mesure d'audience (Umami)
+
+Statistiques de fréquentation avec **Umami Cloud** (sans cookie, anonymes), script dans le `<head>` des deux
+pages : `data-website-id="ac777a32-f0f9-444d-b4b9-5c043151ec54"`, comptage limité au domaine `vapelite.fr`
+(`data-domains`, les aperçus ne sont pas comptés) et respect de « Do Not Track ». Tableau de bord sur
+https://cloud.umami.is.
+
+Clics suivis (attribut `data-umami-event`, onglet « Événements » d'Umami) :
+
+| Événement | Boutons ou liens |
+|---|---|
+| `Itinéraire Google Maps` | Bouton de la section « La Maison » |
+| `Itinéraire Waze` | Bouton de la section « La Maison » |
+| `Appel` | Bouton « Appeler », numéro des coordonnées et du pied de page (détail `emplacement`) |
+| `E-mail` | Adresse des coordonnées et du pied de page (détail `emplacement`) |
+| `Laisser un avis` | Section « Vos retours » |
+| `Lire les avis Google` | Section « Vos retours » |
+
+Les mentions légales (« Données personnelles ») décrivent cette mesure.
+
 ## Lancer en local
 
 ```bash
