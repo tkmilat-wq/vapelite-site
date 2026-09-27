@@ -153,7 +153,8 @@ python3 -m http.server 8000
 Valeurs provisoires à remplacer :
 
 - Appareils présentés (visuels, coloris) dans la section « Nos produits »
-- Informations légales dans `mentions-legales.html` (forme juridique, SIRET, hébergeur…)
+- Informations légales dans `mentions-legales.html` : forme juridique et capital, directeur·rice de la
+  publication, hébergeur (SIRET 928 252 600 00012 renseigné)
 
 L'e-mail `contact@vapelite-france.fr` et le domaine `vapelite-france.fr` proviennent de la charte.
 
