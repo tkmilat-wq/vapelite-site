@@ -158,6 +158,15 @@ et AAAA « @ » par défaut d'IONOS, garder les enregistrements MX (e-mail) :
 Puis Settings → Pages : vérifier que « Custom domain » affiche `vapelite.fr` et cocher « Enforce HTTPS »
 (le certificat peut prendre jusqu'à 24 h).
 
+## Référencement Google
+
+- `robots.txt` autorise l'exploration et indique le plan du site `sitemap.xml` (accueil + mentions légales ;
+  mettre à jour `lastmod` après une grosse modification).
+- Balises : titre et description de la page, lien canonique, données structurées `Store` (nom, « Vapelite »,
+  adresse, téléphone, horaires, carte).
+- À faire côté Maison : Google Search Console (propriété « Domaine » `vapelite.fr`, validée par un
+  enregistrement TXT chez IONOS), envoi du sitemap, et lien `https://vapelite.fr` sur la fiche Google.
+
 ## Lancer en local
 
 ```bash
