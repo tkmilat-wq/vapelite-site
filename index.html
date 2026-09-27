@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vapelite France — Cigarettes électroniques au Vieux-Port, Marseille</title>
-  <meta name="description" content="Vapelite France, boutique de cigarettes électroniques et e-liquides au Vieux-Port de Marseille. Matériel, e-liquides, DIY, accessoires et conseils personnalisés.">
-  <meta name="theme-color" content="#2c5794">
+  <title>Vapelite France — Maison de la vape au Vieux-Port, Marseille</title>
+  <meta name="description" content="Vapelite France, maison de la vape au Vieux-Port de Marseille : cigarettes électroniques, e-liquides, accessoires et conseils personnalisés.">
+  <meta name="theme-color" content="#002fa7">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://vapelite-france.fr/">
   <meta property="og:title" content="Vapelite France — Vieux-Port, Marseille">
-  <meta property="og:description" content="Boutique de cigarettes électroniques au Vieux-Port. Matériel, e-liquides et conseils.">
+  <meta property="og:description" content="Pods, e-liquides et conseils à la Maison Vapelite, au Vieux-Port.">
   <meta property="og:locale" content="fr_FR">
+  <meta property="og:image" content="https://vapelite-france.fr/assets/og-image.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/fonts/nunito-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 
   <!-- Données structurées : à compléter avec l'adresse, le téléphone et les horaires réels -->
@@ -22,228 +25,645 @@
     "@type": "Store",
     "name": "Vapelite France",
     "url": "https://vapelite-france.fr/",
-    "logo": "https://vapelite-france.fr/assets/logo-vapelite.svg",
+    "logo": "https://vapelite-france.fr/assets/logo-vapelite-klein.svg",
     "email": "contact@vapelite-france.fr",
-    "description": "Boutique de cigarettes électroniques et e-liquides au Vieux-Port de Marseille.",
+    "description": "Maison de la vape au Vieux-Port de Marseille : cigarettes électroniques et e-liquides.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Quai du Port",
-      "postalCode": "13002",
+      "streetAddress": "1 rue Pythéas",
+      "postalCode": "13001",
       "addressLocality": "Marseille",
       "addressCountry": "FR"
     },
-    "telephone": "+33 4 91 00 00 00",
-    "openingHours": ["Mo-Sa 10:00-19:30"]
+    "telephone": "+33 4 91 70 92 97",
+    "openingHours": ["Mo-Sa 10:00-19:30", "Su 11:30-18:30"]
   }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-  <!-- Logo en haut à gauche (charte), menu en rond dans le coin opposé -->
-  <a class="brand" href="#top" aria-label="Vapelite France — accueil">
-    <img src="assets/logo-vapelite.svg" alt="Vapelite France" width="248" height="175">
-  </a>
-  <button class="dot dot--menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
-    <span class="dot__bars" aria-hidden="true"><span></span><span></span><span></span></span>
-  </button>
-
-  <nav class="menu" id="menu" aria-label="Menu principal" hidden>
-    <img class="menu__logo" src="assets/logo-vapelite.svg" alt="" width="248" height="175">
-    <p class="label">Menu</p>
-    <ul class="menu__list">
-      <li><a href="#boutique">La boutique</a></li>
-      <li><a href="#valeurs">Nos valeurs</a></li>
-      <li><a href="#rayons">Au rayon</a></li>
-      <li><a href="#conseil">Conseil</a></li>
-      <li><a href="#acces">Nous trouver</a></li>
-    </ul>
-    <p class="menu__foot">Quai du Port, 13002 Marseille · <a class="link" href="tel:+33491000000">04 91 00 00 00</a></p>
-  </nav>
+  <!-- ==================================================================
+       En-tête
+       ================================================================== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="header__logo" href="#top" aria-label="Vapelite France — accueil">
+        <img src="assets/logo-vapelite-klein.svg" alt="Vapelite France" width="248" height="175">
+      </a>
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav__list">
+          <li><a href="#top">Bien choisir</a></li>
+          <li><a href="#valeurs">Pourquoi nous</a></li>
+          <li><a href="#produits">Produits phares</a></li>
+          <li><a href="#collection">E-liquides</a></li>
+          <li><a href="#avis">Vos retours</a></li>
+          <li><a href="#boutique">La Maison</a></li>
+        </ul>
+        <a class="btn btn--klein nav__cta" href="#boutique">Nous trouver</a>
+      </nav>
+      <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
   <main id="contenu">
 
-    <!-- 00 — Hero -->
-    <section class="hero" id="top">
-      <div class="hero__intro reveal">
-        <p class="label"><span class="nowrap">Cigarettes électroniques</span> · <span class="nowrap">E-liquides</span> · <span class="nowrap">Conseil</span></p>
-        <p class="body">Une boutique de vape à taille humaine, les pieds dans le Vieux-Port. On vous accueille, on vous écoute, on vous oriente.</p>
+    <!-- ================================================================
+         Bannière : Bien choisir, sur la photo de la Pixo Max White Glow
+         ================================================================ -->
+    <section class="hero" id="top" aria-label="À la une">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__rings"><span></span><span></span><span></span></div>
+        <p class="hero__word">Vieux-Port</p>
       </div>
-      <h1 class="hero__title">
-        <span class="visually-hidden">Vapelite France, boutique de vape au</span>
-        <span class="display display--xl reveal">Vieux-Port</span>
-        <span class="display display--xl is-pale reveal">Marseille</span>
-      </h1>
+
+      <div class="slides">
+        <!-- Bien choisir, sur la photo de l'Aspire Pixo Max White Glow -->
+        <article class="slide slide--photo slide--advice is-active">
+          <div class="slide__media slide__media--glow" aria-hidden="true">
+            <picture>
+              <source type="image/webp" srcset="assets/produits/pixo-max-white-glow-900.webp 900w, assets/produits/pixo-max-white-glow-1600.webp 1600w" sizes="100vw">
+              <img src="assets/produits/pixo-max-white-glow-1600.jpg" srcset="assets/produits/pixo-max-white-glow-900.jpg 900w, assets/produits/pixo-max-white-glow-1600.jpg 1600w" sizes="100vw" width="1600" height="1051" alt="">
+            </picture>
+          </div>
+          <div class="slide__text">
+            <p class="kicker">Bien choisir · À la Maison</p>
+            <h1 class="slide__title">On vous conseille,<br><em>pas à pas.</em></h1>
+            <div class="hero-steps">
+              <div class="hero-steps__bars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <ol class="hero-steps__list" aria-label="Nos quatre étapes">
+                <li>On fait le point sur vos goûts</li>
+                <li>Le bon matériel pour vous</li>
+                <li>Le bon taux de nicotine</li>
+                <li>Un suivi dans la durée</li>
+              </ol>
+            </div>
+            <div class="slide__actions">
+              <a class="btn btn--white" href="#produits">Nos produits phares</a>
+              <a class="btn btn--ghost-white" href="#boutique">Venir à la Maison</a>
+            </div>
+          </div>
+          <a class="hero-tag" href="#type-pod">
+            <svg class="heartbeat" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.1 5.2 3 1.6-1.9 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg>
+            <strong>Aspire Pixo Max</strong>
+          </a>
+        </article>
+      </div>
     </section>
 
-    <!-- 01 — La boutique -->
-    <section class="section" id="boutique">
-      <p class="label reveal">01 — La boutique</p>
-      <h2 class="display display--lg reveal">La vape,<br>en confiance.</h2>
-      <div class="split">
-        <div class="split__text reveal">
-          <p class="body">Vapelite France est une boutique spécialisée dans la vape, installée sur le Vieux-Port. Notre mission&nbsp;: accompagner celles et ceux qui veulent tourner la page de la cigarette, avec du matériel de qualité et des solutions adaptées à chacun.</p>
-          <p class="body">Première visite ou vapoteur·se confirmé·e, on prend le temps de comprendre ce que vous cherchez, sans jargon ni vente forcée.</p>
-        </div>
-        <ul class="tags reveal" aria-label="En boutique">
-          <li class="tag">Kits débutants</li>
-          <li class="tag">Pods</li>
-          <li class="tag">E-liquides</li>
-          <li class="tag">Sels de nicotine</li>
-          <li class="tag">DIY</li>
-          <li class="tag">Reconstructible</li>
-          <li class="tag">Entretien &amp; SAV</li>
+    <!-- Ruban défilant : marques partenaires principales
+         Pour afficher un logo : déposer assets/partenaires/<slug>.svg (ou .png)
+         et remplacer le texte du <li> par <img src="assets/partenaires/<slug>.svg" alt="Nom"> -->
+    <div class="marquee marquee--partners" aria-hidden="true">
+      <ul class="marquee__track">
+        <li class="partner" data-slug="geekvape">Geekvape</li><li class="partner" data-slug="voopoo">VOOPOO</li><li class="partner" data-slug="aspire">Aspire</li><li class="partner" data-slug="oxva">OXVA</li><li class="partner" data-slug="vaporesso">Vaporesso</li><li class="partner" data-slug="vaptio">Vaptio</li><li class="partner" data-slug="nevoks">Nevoks</li><li class="partner" data-slug="lostvape">Lost Vape</li><li class="partner" data-slug="dotmod">Dotmod</li><li class="partner" data-slug="kiwi">Kiwi</li><li class="partner" data-slug="smok">SMOK</li><li class="partner" data-slug="elfbar">Elf Bar</li><li class="partner" data-slug="liquideo">Liquideo</li><li class="partner" data-slug="alfaliquid">Alfaliquid</li><li class="partner" data-slug="a-et-l">A&amp;L</li><li class="partner" data-slug="pulp">Pulp</li><li class="partner" data-slug="jnr">JNR</li><li class="partner" data-slug="adalya">Adalya</li><li class="partner" data-slug="al-fakher">Al Fakher</li><li class="partner" data-slug="elfliq">Elfliq</li><li class="partner" data-slug="curieux">Curieux</li>
+        <li class="partner" data-slug="geekvape">Geekvape</li><li class="partner" data-slug="voopoo">VOOPOO</li><li class="partner" data-slug="aspire">Aspire</li><li class="partner" data-slug="oxva">OXVA</li><li class="partner" data-slug="vaporesso">Vaporesso</li><li class="partner" data-slug="vaptio">Vaptio</li><li class="partner" data-slug="nevoks">Nevoks</li><li class="partner" data-slug="lostvape">Lost Vape</li><li class="partner" data-slug="dotmod">Dotmod</li><li class="partner" data-slug="kiwi">Kiwi</li><li class="partner" data-slug="smok">SMOK</li><li class="partner" data-slug="elfbar">Elf Bar</li><li class="partner" data-slug="liquideo">Liquideo</li><li class="partner" data-slug="alfaliquid">Alfaliquid</li><li class="partner" data-slug="a-et-l">A&amp;L</li><li class="partner" data-slug="pulp">Pulp</li><li class="partner" data-slug="jnr">JNR</li><li class="partner" data-slug="adalya">Adalya</li><li class="partner" data-slug="al-fakher">Al Fakher</li><li class="partner" data-slug="elfliq">Elfliq</li><li class="partner" data-slug="curieux">Curieux</li>
+      </ul>
+    </div>
+
+    <!-- Atouts -->
+    <section class="perks" aria-label="Nos engagements">
+      <ul class="perks__list">
+        <li class="perk reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span><strong>Conseil personnalisé</strong>On prend le temps de vous écouter</span>
+        </li>
+        <li class="perk reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><strong>Produits conformes</strong>Normes françaises et européennes</span>
+        </li>
+        <li class="perk reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.1-.4-.4-2.1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span><strong>SAV à la Maison</strong>Réglages, pannes, entretien</span>
+        </li>
+        <li class="perk reveal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span><strong>Au Vieux-Port</strong>Métro 1, à deux pas des quais</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================================================================
+         La Maison : photo de l'intérieur + nos valeurs
+         ================================================================ -->
+    <section class="inside" id="valeurs" aria-labelledby="inside-title">
+      <picture class="inside__photo">
+        <source type="image/webp" srcset="assets/photos/boutique-interieur-800.webp 800w, assets/photos/boutique-interieur-1600.webp 1600w" sizes="100vw">
+        <img src="assets/photos/boutique-interieur-1600.jpg" srcset="assets/photos/boutique-interieur-800.jpg 800w, assets/photos/boutique-interieur-1600.jpg 1600w" sizes="100vw" alt="Intérieur de la Maison Vapelite : vitrines lumineuses de cigarettes électroniques, comptoir au logo Vapelite et mur d’e-liquides" width="1600" height="1200" loading="lazy">
+      </picture>
+      <div class="inside__content">
+        <p class="eyebrow eyebrow--light reveal">Pourquoi nous</p>
+        <h2 class="section__title section__title--light reveal" id="inside-title">Entrez,<br>on vous attend.</h2>
+        <p class="inside__lead reveal">Une maison de confiance, fondée sur quatre valeurs, à votre écoute au cœur du Vieux-Port.</p>
+        <ul class="inside__values">
+          <li class="inside__value reveal"><span>01</span><h3>Intégrité</h3><p>On vous conseille ce qui vous convient, pas ce qui rapporte le plus.</p></li>
+          <li class="inside__value reveal"><span>02</span><h3>Transparence</h3><p>Des produits dont on connaît l’origine, des explications claires, des réponses franches.</p></li>
+          <li class="inside__value reveal"><span>03</span><h3>Confiance</h3><p>Une relation qui dure : vous revenez, on se souvient de vous et de votre matériel.</p></li>
+          <li class="inside__value reveal"><span>04</span><h3>Sérieux</h3><p>Des produits conformes, une équipe formée, un suivi après l’achat.</p></li>
         </ul>
       </div>
-      <p class="display display--md is-pale echo reveal" aria-hidden="true">En confiance.</p>
     </section>
 
-    <!-- 02 — Nos valeurs -->
-    <section class="section" id="valeurs">
-      <p class="label reveal">02 — Nos valeurs</p>
-      <ul class="valeurs">
-        <li class="valeur reveal">
-          <h3 class="display display--lg">Intégrité</h3>
-          <p class="valeur__desc">On vous conseille ce qui vous convient, pas ce qui rapporte le plus.</p>
-        </li>
-        <li class="valeur reveal">
-          <h3 class="display display--lg is-mid">Transparence</h3>
-          <p class="valeur__desc">Des produits dont on connaît l’origine, des prix clairs, des réponses franches.</p>
-        </li>
-        <li class="valeur reveal">
-          <h3 class="display display--lg">Confiance</h3>
-          <p class="valeur__desc">Une relation qui dure&nbsp;: vous revenez, on se souvient de vous et de votre matériel.</p>
-        </li>
-        <li class="valeur reveal">
-          <h3 class="display display--lg is-mid">Sérieux</h3>
-          <p class="valeur__desc">Des produits conformes, une équipe formée, un suivi après l’achat.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- 03 — Au rayon -->
-    <section class="section" id="rayons">
-      <p class="label reveal">03 — Au rayon</p>
-      <ul class="rayons">
-        <li class="rayon reveal">
-          <span class="rayon__num">A</span>
-          <h3 class="display display--md rayon__name">Kits &amp; pods</h3>
-          <p class="rayon__desc">Des kits prêts à l’emploi pour démarrer, des pods compacts pour la poche, des box pour aller plus loin.</p>
-        </li>
-        <li class="rayon reveal">
-          <span class="rayon__num">B</span>
-          <h3 class="display display--md rayon__name">E-liquides</h3>
-          <p class="rayon__desc">Fruités, gourmands, classiques, frais. Plusieurs taux de nicotine et formats, fabrication française en majorité.</p>
-        </li>
-        <li class="rayon reveal">
-          <span class="rayon__num">C</span>
-          <h3 class="display display--md rayon__name">DIY</h3>
-          <p class="rayon__desc">Bases, arômes concentrés, boosters et flacons pour préparer vos recettes vous-même.</p>
-        </li>
-        <li class="rayon reveal">
-          <span class="rayon__num">D</span>
-          <h3 class="display display--md rayon__name">Résistances</h3>
-          <p class="rayon__desc">Résistances et cartouches de rechange pour les principales marques, fil et coton pour le reconstructible.</p>
-        </li>
-        <li class="rayon reveal">
-          <span class="rayon__num">E</span>
-          <h3 class="display display--md rayon__name">Accessoires</h3>
-          <p class="rayon__desc">Accus, chargeurs, drip tips, étuis, cordons&nbsp;: tout ce qui fait durer votre matériel.</p>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Ruban typographique -->
-    <div class="ribbon" aria-hidden="true">
-      <div class="ribbon__track">
-        <span>Fruités</span><span>•</span><span>Gourmands</span><span>•</span><span>Classiques</span><span>•</span><span>Frais</span><span>•</span><span>Sels de nicotine</span><span>•</span>
-        <span>Fruités</span><span>•</span><span>Gourmands</span><span>•</span><span>Classiques</span><span>•</span><span>Frais</span><span>•</span><span>Sels de nicotine</span><span>•</span>
-      </div>
-    </div>
-
-    <!-- 04 — Conseil -->
-    <section class="section" id="conseil">
-      <p class="label reveal">04 — Conseil</p>
-      <h2 class="display display--lg reveal">On prend<br>le temps.</h2>
-      <ol class="steps">
-        <li class="step reveal">
-          <span class="display display--sm is-mid">01</span>
-          <h3 class="step__title">On écoute</h3>
-          <p class="body">Vos habitudes, ce que vous aimez, ce que vous voulez éviter. Le bon matériel dépend de vous, pas de la vitrine.</p>
-        </li>
-        <li class="step reveal">
-          <span class="display display--sm is-mid">02</span>
-          <h3 class="step__title">On vous montre</h3>
-          <p class="body">Prise en main, remplissage, réglages&nbsp;: vous repartez en sachant utiliser votre matériel, pas seulement avec un sac.</p>
-        </li>
-        <li class="step reveal">
-          <span class="display display--sm is-mid">03</span>
-          <h3 class="step__title">On reste là</h3>
-          <p class="body">Une question, une fuite, un réglage qui cloche&nbsp;? Repassez nous voir, on regarde ensemble.</p>
-        </li>
-      </ol>
-    </section>
-
-    <!-- 05 — Nous trouver -->
-    <section class="section section--acces" id="acces">
-      <p class="label reveal">05 — Nous trouver</p>
-      <h2 class="display display--xl reveal">Vieux-<br>Port.</h2>
-      <div class="acces">
-        <div class="acces__block reveal">
-          <p class="label">Adresse</p>
-          <p class="body">Quai du Port<br>13002 Marseille</p>
-          <p class="body-sm">Métro 1 — Vieux-Port</p>
+    <!-- ================================================================
+         Gamme
+         ================================================================ -->
+    <section class="section products" id="produits">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow reveal">Sélection de la Maison</p>
+          <h2 class="section__title reveal">Nos produits phares</h2>
+          <p class="section__lead products__lead reveal">Chaque type de cigarette électronique répond à une façon de vaper. Voici nos coups de cœur dans chaque famille, parmi plus de 60 modèles de pods et de mods à découvrir à la Maison.</p>
+          <ul class="collection__stats products__stats reveal" aria-label="Le matériel à la Maison">
+            <li><strong>60<sup>+</sup></strong><span>modèles de cigarettes électroniques, pods et mods</span></li>
+          </ul>
         </div>
-        <div class="acces__block reveal">
-          <p class="label">Horaires</p>
-          <dl class="hours">
-            <div><dt>Lundi – samedi</dt><dd>10h – 19h30</dd></div>
-            <div><dt>Dimanche</dt><dd>Fermé</dd></div>
+        <nav class="filters reveal" aria-label="Types de cigarettes électroniques">
+          <a class="chip" href="#type-pod-mod">Pod mod</a>
+          <a class="chip" href="#type-pod">Pod</a>
+          <a class="chip" href="#type-box">Box mod</a>
+          <a class="chip" href="#type-tube">Tube / stick</a>
+          <a class="chip" href="#type-puff">Puff rechargeable</a>
+        </nav>
+      </div>
+
+      <ul class="types">
+        <!-- Pod mod : VOOPOO Drag X3 & Drag S3 -->
+        <li class="card type type--wide reveal" id="type-pod-mod">
+          <div class="card__visual card__visual--photo">
+            <span class="badge badge--new">Édition French Riviera</span>
+            <img src="assets/produits/voopoo-drag-french-riviera-1000.webp" srcset="assets/produits/voopoo-drag-french-riviera-600.webp 600w, assets/produits/voopoo-drag-french-riviera-1000.webp 1000w" sizes="(max-width: 700px) 100vw, 480px" alt="VOOPOO Drag S3 Black Lagoon et Drag X3 Grand Cru, édition French Riviera" width="1000" height="1500" loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="type__label">Pod mod</p>
+            <p class="type__desc">Entre le pod et la box : le format d’un pod, avec écran, puissance réglable et résistances interchangeables.</p>
+            <p class="card__cat">VOOPOO · Notre sélection</p>
+            <h3 class="card__name">Drag X3 &amp; Drag S3</h3>
+            <div class="type__duo">
+              <div>
+                <p class="type__model">Drag X3</p>
+                <ul class="specs"><li>Écran tactile couleur 1,66"</li><li>5 – 80 W</li><li>Accu 18650 ou 21700</li></ul>
+              </div>
+              <div>
+                <p class="type__model">Drag S3</p>
+                <ul class="specs"><li>Écran couleur 0,96"</li><li>5 – 60 W</li><li>Batterie intégrée 3000 mAh</li></ul>
+              </div>
+            </div>
+            <p class="card__colors">Pod PnP X 2 ml · modes Smart, RBA, Eco · coloris Grand Cru et Black Lagoon</p>
+          </div>
+        </li>
+
+        <!-- Pod : Aspire Pixo Max -->
+        <li class="card type reveal" id="type-pod" style="--tint:#f1f2f5">
+          <span class="badge badge--heart badge--icon"><svg class="heartbeat" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.1 0 3.6 1.1 5.2 3 1.6-1.9 3.1-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z" fill="currentColor"/></svg></span>
+          <div class="card__visual">
+            <img class="device device--real" src="assets/produits/aspire-pixo-max-white-glow.webp" width="78" height="286" alt="Aspire Pixo Max, coloris White Glow" loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="type__label">Pod</p>
+            <p class="type__desc">Compact et léger, simple à prendre en main, avec une cartouche remplissable.</p>
+            <p class="card__cat">Aspire · Notre sélection</p>
+            <h3 class="card__name">Pixo Max</h3>
+            <ul class="specs"><li>Batterie 2600 mAh · 10 – 35 W</li><li>Modes Eco, Normal, Max</li><li>Double écran LED · pod 2 ml</li></ul>
+            <p class="card__colors">Coloris : <span class="card__color-name">White Glow</span> · 8 coloris</p>
+            <div class="swatches" role="radiogroup" aria-label="Coloris">
+              <button type="button" role="radio" aria-checked="false" aria-label="Brushed Silver" style="--c:linear-gradient(135deg,#d9dce0,#9ea3a9)" data-img="assets/produits/aspire-pixo-max-brushed-silver.webp" data-name="Brushed Silver" data-tint="#efefef"></button>
+              <button type="button" role="radio" aria-checked="true" aria-label="White Glow" style="--c:linear-gradient(135deg,#e3ecfb,#eadbf3 50%,#d3e9f7)" data-img="assets/produits/aspire-pixo-max-white-glow.webp" data-name="White Glow" data-tint="#f1f2f5"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Wood Grain" style="--c:linear-gradient(135deg,#7a5448,#4f342c)" data-img="assets/produits/aspire-pixo-max-wood-grain.webp" data-name="Wood Grain" data-tint="#e9e4e3"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Pink Gradient" style="--c:linear-gradient(135deg,#f6b5cf,#d9588e)" data-img="assets/produits/aspire-pixo-max-pink-gradient.webp" data-name="Pink Gradient" data-tint="#f9ebf1"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Brushed Pink" style="--c:linear-gradient(135deg,#d9b1be,#a77886)" data-img="assets/produits/aspire-pixo-max-brushed-pink.webp" data-name="Brushed Pink" data-tint="#f0ebed"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Glory Black" style="--c:linear-gradient(90deg,#1b1d20 0 26%,#f3f3f3 26% 74%,#1b1d20 74%)" data-img="assets/produits/aspire-pixo-max-glory-black.webp" data-name="Glory Black" data-tint="#fafafa"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Speedy Black" style="--c:linear-gradient(90deg,#1b1d20 0 58%,#3aa0d8 58% 70%,#d8342e 70% 82%,#1b1d20 82%)" data-img="assets/produits/aspire-pixo-max-speedy-black.webp" data-name="Speedy Black" data-tint="#e2e8e9"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Carbon Black" style="--c:#2a2b2d" data-img="assets/produits/aspire-pixo-max-carbon-black.webp" data-name="Carbon Black" data-tint="#e1e1e1"></button>
+            </div>
+          </div>
+        </li>
+
+        <!-- Box mod : Geekvape Legend 5 -->
+        <li class="card type reveal" id="type-box" style="--tint:#eef0fb">
+          <div class="card__visual">
+            <img class="device device--real device--box" src="assets/produits/geekvape-legend-5-aurora-rainbow.webp" width="226" height="600" alt="Geekvape Aegis Legend 5 avec clearomiseur Z, coloris Aurora Rainbow" loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="type__label">Box mod</p>
+            <p class="type__desc">Pour les vapoteurs confirmés : puissance réglable jusqu’à 200&nbsp;W, accus amovibles, grand réservoir et réglages avancés.</p>
+            <p class="card__cat">Geekvape · Notre sélection</p>
+            <h3 class="card__name">Aegis Legend 5</h3>
+            <ul class="specs"><li>5 – 200 W · double accu 18650</li><li>Écran 1,08" · modes Smart, Eco, TC</li><li>Étanche et antichoc IP68 · Z Tank</li></ul>
+            <p class="card__colors">Coloris : <span class="card__color-name">Aurora Rainbow</span> · 8 coloris</p>
+            <div class="swatches" role="radiogroup" aria-label="Coloris">
+              <button type="button" role="radio" aria-checked="true" aria-label="Aurora Rainbow" style="--c:linear-gradient(135deg,#5b8cff,#b04dff 45%,#39d0a0)" data-img="assets/produits/geekvape-legend-5-aurora-rainbow.webp" data-name="Aurora Rainbow" data-tint="#eef0fb"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Carbon Black" style="--c:#2a2b2e" data-img="assets/produits/geekvape-legend-5-carbon-black.webp" data-name="Carbon Black" data-tint="#e9eaec"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Earth Brown" style="--c:linear-gradient(135deg,#8a4f45,#5a2f2a)" data-img="assets/produits/geekvape-legend-5-earth-brown.webp" data-name="Earth Brown" data-tint="#f2e9e7"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Frost Silver" style="--c:linear-gradient(135deg,#f1f2f4,#b9bdc4)" data-img="assets/produits/geekvape-legend-5-frost-silver.webp" data-name="Frost Silver" data-tint="#f3f4f6"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Glacier Green" style="--c:linear-gradient(135deg,#1aa3a8,#0c6b72)" data-img="assets/produits/geekvape-legend-5-glacier-green.webp" data-name="Glacier Green" data-tint="#e3f2f3"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Racing Gold" style="--c:linear-gradient(135deg,#f1d27a,#b98a2e)" data-img="assets/produits/geekvape-legend-5-racing-gold.webp" data-name="Racing Gold" data-tint="#f6efe0"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Turbo Red" style="--c:linear-gradient(135deg,#ff4a3d,#b3120e)" data-img="assets/produits/geekvape-legend-5-turbo-red.webp" data-name="Turbo Red" data-tint="#f6e4e3"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Twilight Blue" style="--c:linear-gradient(135deg,#4a6cff,#1d2fb8)" data-img="assets/produits/geekvape-legend-5-twilight-blue.webp" data-name="Twilight Blue" data-tint="#e6e9fb"></button>
+            </div>
+          </div>
+        </li>
+
+        <!-- Tube / stick : Kiwi 2 -->
+        <li class="card type reveal" id="type-tube" style="--tint:#e8ebed">
+          <span class="badge">Pen + power bank</span>
+          <div class="card__visual">
+            <img class="device device--real device--kiwi" src="assets/produits/kiwi-2-midnight-blue.webp" width="178" height="600" alt="Kiwi 2 de Kiwi Vapor, coloris Midnight Blue" loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="type__label">Tube / stick</p>
+            <p class="type__desc">Format stylo, discret et élégant : il se glisse dans la poche et offre un tirage serré et discret.</p>
+            <p class="card__cat">Kiwi Vapor · Notre sélection</p>
+            <h3 class="card__name">Kiwi 2</h3>
+            <ul class="specs"><li>Pen 400&nbsp;mAh + power bank 1800&nbsp;mAh</li><li>Recharge du pen dans l’étui, <span class="nowrap">USB-C</span></li><li>Pod 1,8&nbsp;ml · 0,8&nbsp;Ω, tirage serré</li></ul>
+            <p class="card__colors">Coloris : <span class="card__color-name">Midnight Blue</span> · 5 coloris</p>
+            <div class="swatches" role="radiogroup" aria-label="Coloris">
+              <button type="button" role="radio" aria-checked="true" aria-label="Midnight Blue" style="--c:linear-gradient(135deg,#5c6b74,#34414a)" data-img="assets/produits/kiwi-2-midnight-blue.webp" data-name="Midnight Blue" data-tint="#e8ebed"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Champagne" style="--c:linear-gradient(135deg,#ece7dd,#c8c1b3)" data-img="assets/produits/kiwi-2-champagne.webp" data-name="Champagne" data-tint="#f6f3ee"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Iron Gate" style="--c:linear-gradient(135deg,#a19d99,#6c6966)" data-img="assets/produits/kiwi-2-iron-gate.webp" data-name="Iron Gate" data-tint="#eeedec"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Nimbus Cloud" style="--c:linear-gradient(135deg,#f0f0ee,#c3c3c1)" data-img="assets/produits/kiwi-2-nimbus-cloud.webp" data-name="Nimbus Cloud" data-tint="#f4f4f3"></button>
+              <button type="button" role="radio" aria-checked="false" aria-label="Red Velvet" style="--c:linear-gradient(135deg,#86444c,#56262c)" data-img="assets/produits/kiwi-2-red-velvet.webp" data-name="Red Velvet" data-tint="#f2e6e7"></button>
+            </div>
+          </div>
+        </li>
+
+        <!-- Puff rechargeable : Dojo 30 000 -->
+        <li class="card type reveal" id="type-puff">
+          <span class="badge">Recharge fournie</span>
+          <div class="card__visual">
+            <img class="device device--real device--dojo" src="assets/produits/dojo-30000.webp" width="447" height="473" alt="Puff rechargeable Dojo 30 000 et sa cartouche de recharge" loading="lazy">
+          </div>
+          <div class="card__body">
+            <p class="type__label">Puff rechargeable</p>
+            <p class="type__desc">La simplicité d’une puff, sans le jetable : batterie rechargeable en <span class="nowrap">USB-C</span> et cartouches à remplacer. Plus de 50 parfums, toutes marques réunies, du tirage aérien façon chicha comme Al Fakher au tirage serré comme JNR.</p>
+            <p class="card__cat">Dojo · Notre sélection</p>
+            <h3 class="card__name">Dojo 30&nbsp;000</h3>
+            <ul class="specs"><li>Recharge supplémentaire fournie</li><li>Formats 1&nbsp;000, 15K, 28K, 30K et 50K puffs</li></ul>
+            <p class="card__cat type__brands-title">Nos marques</p>
+            <ul class="brands__list brands__list--main type__brands"><li>JNR</li><li>Dojo by Vaporesso</li><li>Crown Bar Al Fakher</li><li>Elf Bar</li><li>Lost Mary</li><li>Kiwi Go</li><li>Vuse</li></ul>
+          </div>
+        </li>
+      </ul>
+      <p class="products__note reveal">Caractéristiques des versions européennes (réservoirs limités à 2 ml). Coloris selon arrivages. Ce n’est qu’une sélection : la gamme complète et les nouveautés vous attendent à la Maison.</p>
+    </section>
+
+    <!-- ================================================================
+         La collection d'e-liquides Vapelite
+         ================================================================ -->
+    <section class="collection" id="collection" aria-labelledby="collection-title">
+      <div class="section collection__inner">
+        <div class="section__head">
+          <div>
+            <p class="eyebrow reveal">E-liquides · Fabriqués en France</p>
+            <h2 class="section__title reveal" id="collection-title">La collection<br>Vapelite.</h2>
+          </div>
+          <p class="section__lead reveal">20 saveurs signées Vapelite, fabriquées et conditionnées en France. Flacons de 50&nbsp;ml, 50&nbsp;PG / 50&nbsp;VG, sans nicotine : on y ajoute ensemble le booster adapté à votre taux. Voici une sélection&nbsp;; toute la collection vous attend à la Maison.</p>
+        </div>
+        <ul class="collection__stats reveal" aria-label="Les e-liquides à la Maison">
+          <li><strong>20</strong><span>saveurs signées Vapelite</span></li>
+          <li><strong>700<sup>+</sup></strong><span>saveurs d’e-liquides au total à la Maison</span></li>
+        </ul>
+        <div class="collection__bar reveal">
+          <div class="filters" role="group" aria-label="Filtrer par famille">
+            <button class="chip is-active" type="button" data-fam-filter="all" aria-pressed="true">Toutes</button>
+            <button class="chip" type="button" data-fam-filter="fruites" aria-pressed="false">Fruités</button>
+            <button class="chip" type="button" data-fam-filter="frais" aria-pressed="false">Frais</button>
+            <button class="chip" type="button" data-fam-filter="gourmands" aria-pressed="false">Gourmands</button>
+            <button class="chip" type="button" data-fam-filter="classiques" aria-pressed="false">Classiques</button>
+          </div>
+          <div class="collection__arrows">
+            <button class="round-btn" type="button" data-scroll="-1" aria-label="Parfums précédents"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <button class="round-btn" type="button" data-scroll="1" aria-label="Parfums suivants"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+      </div>
+      <ul class="flavors reveal" aria-label="Parfums de la collection Vapelite">
+        <li class="flavor" data-fam="classiques" style="--c:#9e7b47;--tint:#efe9e1">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-blond-antique-720.webp" srcset="assets/produits/eliquide-blond-antique-360.webp 190w, assets/produits/eliquide-blond-antique-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Blond Antique, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Classique</p>
+          <h3 class="flavor__name">Blond Antique</h3>
+          <p class="flavor__notes">classic blond</p>
+        </li>
+        <li class="flavor" data-fam="fruites" style="--c:#8e6ba1;--tint:#ece7ef">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-dragon-celeste-720.webp" srcset="assets/produits/eliquide-dragon-celeste-360.webp 190w, assets/produits/eliquide-dragon-celeste-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Dragon Céleste, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Fruité</p>
+          <h3 class="flavor__name">Dragon Céleste</h3>
+          <p class="flavor__notes">fruit du dragon</p>
+        </li>
+        <li class="flavor" data-fam="gourmands" style="--c:#9f7548;--tint:#efe8e1">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-douceur-nacre-720.webp" srcset="assets/produits/eliquide-douceur-nacre-360.webp 190w, assets/produits/eliquide-douceur-nacre-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Douceur Nacré, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Gourmand</p>
+          <h3 class="flavor__name">Douceur Nacré</h3>
+          <p class="flavor__notes">biscuit · café · vanille</p>
+        </li>
+        <li class="flavor" data-fam="frais" style="--c:#30744e;--tint:#dde8e2">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-menthe-eternelle-720.webp" srcset="assets/produits/eliquide-menthe-eternelle-360.webp 190w, assets/produits/eliquide-menthe-eternelle-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Menthe Éternelle, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Frais</p>
+          <h3 class="flavor__name">Menthe Éternelle</h3>
+          <p class="flavor__notes">menthe · frais</p>
+        </li>
+        <li class="flavor" data-fam="gourmands" style="--c:#d7ae5e;--tint:#f8f2e5">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-golden-pop-720.webp" srcset="assets/produits/eliquide-golden-pop-360.webp 190w, assets/produits/eliquide-golden-pop-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Golden Pop, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Gourmand</p>
+          <h3 class="flavor__name">Golden Pop</h3>
+          <p class="flavor__notes">pop-corn</p>
+        </li>
+        <li class="flavor" data-fam="fruites" style="--c:#b8486c;--tint:#f3e1e7">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-rubis-ecarlate-720.webp" srcset="assets/produits/eliquide-rubis-ecarlate-360.webp 190w, assets/produits/eliquide-rubis-ecarlate-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Rubis Écarlate, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Fruité</p>
+          <h3 class="flavor__name">Rubis Écarlate</h3>
+          <p class="flavor__notes">cerise · framboise bleue</p>
+        </li>
+        <li class="flavor" data-fam="fruites frais" style="--c:#80354b;--tint:#eadee2">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-rouge-envoutant-720.webp" srcset="assets/produits/eliquide-rouge-envoutant-360.webp 190w, assets/produits/eliquide-rouge-envoutant-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Rouge Envoûtant, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Fruité · Frais</p>
+          <h3 class="flavor__name">Rouge Envoûtant</h3>
+          <p class="flavor__notes">fruits rouges · frais</p>
+        </li>
+        <li class="flavor" data-fam="fruites" style="--c:#a45355;--tint:#f0e3e3">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-souffle-de-fraise-720.webp" srcset="assets/produits/eliquide-souffle-de-fraise-360.webp 190w, assets/produits/eliquide-souffle-de-fraise-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Souffle de Fraise, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Fruité</p>
+          <h3 class="flavor__name">Souffle de Fraise</h3>
+          <p class="flavor__notes">fraise · fruit du dragon</p>
+        </li>
+        <li class="flavor" data-fam="fruites" style="--c:#4a6a4b;--tint:#e2e7e2">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-eclat-tropical-720.webp" srcset="assets/produits/eliquide-eclat-tropical-360.webp 190w, assets/produits/eliquide-eclat-tropical-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Éclat Tropical, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Fruité</p>
+          <h3 class="flavor__name">Éclat Tropical</h3>
+          <p class="flavor__notes">pastèque · kiwi</p>
+        </li>
+        <li class="flavor" data-fam="fruites frais" style="--c:#58497d;--tint:#e4e1ea">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-vigne-boreale-720.webp" srcset="assets/produits/eliquide-vigne-boreale-360.webp 190w, assets/produits/eliquide-vigne-boreale-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Vigne Boréale, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Fruité · Frais</p>
+          <h3 class="flavor__name">Vigne Boréale</h3>
+          <p class="flavor__notes">raisin glacé</p>
+        </li>
+        <li class="flavor" data-fam="fruites" style="--c:#8cb85e;--tint:#ecf3e5">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-melodie-pourpre-720.webp" srcset="assets/produits/eliquide-melodie-pourpre-360.webp 190w, assets/produits/eliquide-melodie-pourpre-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Mélodie Pourpre, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Fruité</p>
+          <h3 class="flavor__name">Mélodie Pourpre</h3>
+          <p class="flavor__notes">ananas · kiwi · fruit du dragon</p>
+        </li>
+        <li class="flavor" data-fam="fruites" style="--c:#cd9847;--tint:#f7eee1">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-nectar-exotique-720.webp" srcset="assets/produits/eliquide-nectar-exotique-360.webp 190w, assets/produits/eliquide-nectar-exotique-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Nectar Exotique, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Fruité</p>
+          <h3 class="flavor__name">Nectar Exotique</h3>
+          <p class="flavor__notes">mangue · pastèque · citron</p>
+        </li>
+        <li class="flavor" data-fam="frais" style="--c:#5a4c4b;--tint:#e4e2e2">
+          <div class="flavor__visual">
+            <img class="flavor__img" src="assets/produits/eliquide-original-coke-720.webp" srcset="assets/produits/eliquide-original-coke-360.webp 190w, assets/produits/eliquide-original-coke-720.webp 380w" sizes="(max-width: 560px) 140px, 200px" width="380" height="720" alt="E-liquide Vapelite Original Coke, flacon de 50 ml" loading="lazy">
+          </div>
+          <p class="flavor__fam">Frais</p>
+          <h3 class="flavor__name">Original Coke</h3>
+          <p class="flavor__notes">cola · frais</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================================================================
+         Marques partenaires
+         ================================================================ -->
+    <section class="section brands" id="marques" aria-labelledby="brands-title">
+      <div class="section__head">
+        <div>
+          <p class="eyebrow reveal">Nos partenaires</p>
+          <h2 class="section__title reveal" id="brands-title">Les marques<br>de la Maison.</h2>
+        </div>
+        <p class="section__lead reveal">Une sélection de fabricants reconnus, choisis pour la fiabilité de leur matériel et la qualité de leurs recettes.</p>
+      </div>
+      <div class="brands__grid">
+        <div class="brands__col reveal">
+          <h3>Cigarettes électroniques</h3>
+          <p class="brands__count">Plus de 60 modèles, pods et mods</p>
+          <ul class="brands__list brands__list--main">
+            <li>Geekvape</li><li>VOOPOO</li><li>Aspire</li><li>OXVA</li><li>Vaporesso</li><li>Vaptio</li><li>Nevoks</li><li>Lost Vape</li><li>Dotmod</li><li>Kiwi</li><li>SMOK</li><li>Elf Bar</li>
+          </ul>
+        </div>
+        <div class="brands__col reveal">
+          <h3>Puffs rechargeables</h3>
+          <ul class="brands__list brands__list--main">
+            <li>JNR</li><li>Dojo by Vaporesso</li><li>Crown Bar Al Fakher</li><li>Elf Bar</li><li>Lost Mary</li><li>Kiwi Go</li><li>Vuse</li>
+          </ul>
+        </div>
+        <div class="brands__col reveal">
+          <h3>E-liquides</h3>
+          <p class="brands__count">Plus de 700 saveurs à la Maison</p>
+          <ul class="brands__list brands__list--main">
+            <li>Liquideo</li><li>Alfaliquid</li><li>A&amp;L</li><li>Pulp</li><li>JNR</li><li>Adalya</li><li>Al Fakher</li><li>Elfliq</li><li>Curieux</li>
+          </ul>
+          <p class="brands__also">Et aussi</p>
+          <ul class="brands__list">
+            <li>Puff Killer</li><li>Le Petit Verger</li><li>Enfer</li><li>E-Tasty</li><li>Dinner Lady</li><li>French Liquid</li><li>Fuel</li><li>Secret Lab</li><li>Petit Nuage</li><li>Vape of Legends</li><li>Six Vape</li><li>Fruizee</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         Avis Google
+         Pour afficher de vrais avis : remplir la liste .reviews__list avec des avis copiés
+         depuis la fiche Google (prénom + initiale, note, texte) et indiquer la note moyenne.
+         ================================================================ -->
+    <section class="reviews" id="avis" aria-labelledby="reviews-title">
+      <div class="reviews__inner">
+        <div class="reviews__intro reveal">
+          <p class="reviews__score" aria-label="Note Google : 5,0 sur 5, 254 avis">
+            <span class="reviews__note">5,0</span>
+            <span class="reviews__stars" aria-hidden="true">★★★★★</span>
+            <span class="reviews__count">254 avis Google</span>
+          </p>
+          <p class="eyebrow eyebrow--light">Vos retours · Avis Google</p>
+          <h2 class="section__title section__title--light" id="reviews-title">5 étoiles,<br>254 fois merci.</h2>
+          <p class="reviews__lead">Accueil, conseils, choix&nbsp;: nos clients nous attribuent la note de 5,0 sur Google. Découvrez leurs avis, et si vous êtes passé nous voir, partagez le vôtre.</p>
+        </div>
+        <div class="reviews__actions reveal">
+          <a class="btn btn--white" href="https://www.google.com/maps/search/?api=1&amp;query=Vapelite+1+rue+Pyth%C3%A9as+13001+Marseille" target="_blank" rel="noopener">
+            <span class="g-mark" aria-hidden="true">G</span>Lire nos avis Google
+          </a>
+          <a class="btn btn--ghost-white" href="https://g.page/r/CQMPkHKr5SAJEBM/review" target="_blank" rel="noopener">Laisser un avis</a>
+        </div>
+      </div>
+      <ul class="reviews__list" aria-label="Avis de nos clients sur Google">
+        <li class="review">
+          <div class="review__head">
+            <span class="review__avatar" style="--av:#8d6e63" aria-hidden="true">C</span>
+            <div><p class="review__name">Christophe S.</p><span class="review__guide">Local Guide</span></div>
+            <span class="review__g g-mark" aria-label="Avis Google">G</span>
+          </div>
+          <p class="review__stars" aria-label="5 étoiles sur 5">★★★★★</p>
+          <blockquote class="review__text"><p>Franchement au top ! Accueil super chaleureux, on sent tout de suite qu’on est bien conseillé. […] Il y a énormément de choix en liquides et en matériels. Que ce soit pour débuter ou pour les connaisseurs, Vapelite c’est clairement une valeur sûre ! Je recommande les yeux fermés 🔥</p></blockquote>
+          <p class="review__visit">Visité en juillet</p>
+        </li>
+        <li class="review">
+          <div class="review__head">
+            <span class="review__avatar" style="--av:#0b5d46" aria-hidden="true">S</span>
+            <div><p class="review__name">Sonia D.</p></div>
+            <span class="review__g g-mark" aria-label="Avis Google">G</span>
+          </div>
+          <p class="review__stars" aria-label="5 étoiles sur 5">★★★★★</p>
+          <blockquote class="review__text"><p>Plusieurs points positifs concernant cette boutique. Elle se distingue par son agencement raffiné et élégant, ce qui en fait un lieu très agréable. Concernant l’accueil, le gérant est souriant et disponible, il prend le temps d’écouter et d’apporter un conseil personnalisé. On sent qu’il connaît parfaitement ses produits et prend plaisir à satisfaire les attentes de ses clients. Enfin à l’utilisation, je suis vraiment contente des produits de cette enseigne […]. Je recommande sans hésitation !</p></blockquote>
+          <p class="review__visit">Visité en août 2024</p>
+        </li>
+        <li class="review">
+          <div class="review__head">
+            <span class="review__avatar" style="--av:#c2185b" aria-hidden="true">D</span>
+            <div><p class="review__name">Djoumoi F.</p></div>
+            <span class="review__g g-mark" aria-label="Avis Google">G</span>
+          </div>
+          <p class="review__stars" aria-label="5 étoiles sur 5">★★★★★</p>
+          <blockquote class="review__text"><p>Accro à cette boutique. De nouveaux goûts chaque semaine, de très bon conseils et un accueil toujours aussi bienveillant.</p></blockquote>
+          <p class="review__visit">Visité en novembre 2024</p>
+        </li>
+        <li class="review">
+          <div class="review__head">
+            <span class="review__avatar" style="--av:#455a64" aria-hidden="true">M</span>
+            <div><p class="review__name">Marvin N.</p></div>
+            <span class="review__g g-mark" aria-label="Avis Google">G</span>
+          </div>
+          <p class="review__stars" aria-label="5 étoiles sur 5">★★★★★</p>
+          <blockquote class="review__text"><p>Une équipe très professionnel ! J’ai été impressionné par le service clientèle attentif et compétent. Les conseils avisés et la large sélection de produits ont rendu mon expérience vraiment agréable. Je recommande vivement pour tous vos besoins.</p></blockquote>
+          <p class="review__visit">Visité en octobre 2024</p>
+        </li>
+        <li class="review">
+          <div class="review__head">
+            <span class="review__avatar" style="--av:#5d4037" aria-hidden="true">B</span>
+            <div><p class="review__name">Botond M.</p><span class="review__guide">Local Guide</span></div>
+            <span class="review__g g-mark" aria-label="Avis Google">G</span>
+          </div>
+          <p class="review__stars" aria-label="5 étoiles sur 5">★★★★★</p>
+          <blockquote class="review__text" lang="en"><p>I was on holiday in Marseille and bought a new device here which I unluckily put next to a damaged bottle suncream in my backpack… The cream flowed into all the holes of the vape, and I knew I’ve just ruined a brand new device and I can throw it out. The other day I went back to the shop, and Tarek, the owner was super helpful and spent 2 hours with me, to help to dissasemble and clean out all the cream from my vape 😀 At the end he managed to save it, and it still works perfectly since then. Professional service, really helpful staff, great products to buy here 👌🙏❤️</p></blockquote>
+          <p class="review__visit">Visité en août 2024</p>
+        </li>
+      </ul>
+      <div class="reviews__footer">
+        <p class="reviews__note-legal">Avis publiés par nos clients sur Google, reproduits tels quels (prénom et initiale).</p>
+        <div class="reviews__arrows">
+          <button class="round-btn round-btn--light" type="button" data-reviews-scroll="-1" aria-label="Avis précédents"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="round-btn round-btn--light" type="button" data-reviews-scroll="1" aria-label="Avis suivants"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         La Maison
+         ================================================================ -->
+    <section class="section shop" id="boutique">
+      <div class="shop__grid">
+        <div class="shop__visual reveal">
+          <div class="shop__video">
+            <!-- Chargée seulement à l'approche de la section (script.js) -->
+            <video muted loop playsinline preload="none" data-lazy-video data-poster="assets/photos/devanture-poster.jpg" aria-label="Vidéo de la devanture bleue de la Maison Vapelite">
+              <source data-src="assets/photos/devanture.webm" type="video/webm">
+              <source data-src="assets/photos/devanture.mp4" type="video/mp4">
+            </video>
+          </div>
+          <picture class="shop__night">
+            <source type="image/webp" srcset="assets/photos/devanture-nuit-600.webp 600w, assets/photos/devanture-nuit-1000.webp 1000w" sizes="(max-width: 900px) 40vw, 240px">
+            <img src="assets/photos/devanture-nuit-600.jpg" alt="La devanture Vapelite éclairée le soir, avec l’enseigne « E-cigarettes E-liquides »" width="600" height="793" loading="lazy">
+          </picture>
+        </div>
+        <div class="shop__info">
+          <p class="eyebrow reveal">La Maison</p>
+          <h2 class="section__title reveal">Venez nous voir<br>au Vieux-Port.</h2>
+          <p class="section__lead reveal">Toute la gamme est à découvrir à la Maison. On vous reçoit, on vous fait essayer, on vous explique.</p>
+          <dl class="info reveal">
+            <div><dt>Adresse</dt><dd>1 rue Pythéas, 13001 Marseille<br><span class="muted">Métro 1 — Vieux-Port</span></dd></div>
+            <div><dt>Horaires</dt><dd>Lundi – samedi : 10h00 – 19h30<br>Dimanche : 11h30 – 18h30</dd></div>
+            <div><dt>Contact</dt><dd><a class="link" href="tel:+33491709297">04 91 70 92 97</a><br><a class="link" href="mailto:contact@vapelite-france.fr">contact@vapelite-france.fr</a></dd></div>
           </dl>
-        </div>
-        <div class="acces__block reveal">
-          <p class="label">Contact</p>
-          <p class="body"><a class="link" href="tel:+33491000000">04 91 00 00 00</a></p>
-          <p class="body"><a class="link" href="mailto:contact@vapelite-france.fr">contact@vapelite-france.fr</a></p>
-          <p class="body"><a class="link" href="https://www.instagram.com/" rel="noopener">Instagram</a></p>
+          <div class="shop__actions reveal">
+            <a class="btn btn--klein" href="https://www.google.com/maps/search/?api=1&amp;query=Vapelite+1+rue+Pyth%C3%A9as+13001+Marseille" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>
+              Itinéraire Google Maps
+            </a>
+            <a class="btn btn--waze" href="https://waze.com/ul?q=Vapelite%201%20rue%20Pyth%C3%A9as%2013001%20Marseille&amp;navigate=yes" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4.5 14.5c-1.2-.4-1.6-1.6-1.3-2.7C4.2 7.5 8 4.5 12.5 4.5c4.6 0 8 3.3 8 7.3 0 3.6-2.8 6.2-6.4 6.8m-3.9.1c-1.6 0-3.2-.4-4.4-1.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="7.8" cy="18.6" r="1.9" fill="currentColor"/><circle cx="15.8" cy="18.6" r="1.9" fill="currentColor"/><circle cx="10" cy="10.5" r="1.1" fill="currentColor"/><circle cx="15" cy="10.5" r="1.1" fill="currentColor"/></svg>
+              Itinéraire Waze
+            </a>
+            <a class="btn btn--outline" href="tel:+33491709297">Appeler</a>
+          </div>
         </div>
       </div>
-      <a class="go reveal" href="https://www.google.com/maps/search/?api=1&amp;query=Vapelite+Vieux-Port+Marseille" rel="noopener" target="_blank">
-        <span class="go__dot" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
-        <span class="go__text">Itinéraire</span>
-      </a>
     </section>
-
-    <!-- Motif de marque -->
-    <div class="motif" aria-hidden="true"></div>
   </main>
 
+  <!-- ==================================================================
+       Pied de page
+       ================================================================== -->
   <footer class="footer">
-    <div class="footer__top">
-      <img class="footer__logo" src="assets/logo-vapelite-blanc.svg" alt="Vapelite France" width="248" height="175">
-      <p class="footer__mission">Une communauté sans tabac, avec intégrité, transparence, confiance et sérieux.</p>
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-vapelite-blanc.svg" alt="Vapelite France" width="248" height="175">
+        <p>Maison de la vape au Vieux-Port de Marseille.</p>
+      </div>
+      <nav class="footer__col" aria-label="Produits">
+        <p class="footer__title">Produits</p>
+        <a href="#type-pod-mod">Pod mod</a>
+        <a href="#type-pod">Pod</a>
+        <a href="#type-box">Box mod</a>
+        <a href="#type-tube">Tube / stick</a>
+        <a href="#type-puff">Puff rechargeable</a>
+        <a href="#collection">E-liquides Vapelite</a>
+        <a href="#marques">Nos marques</a>
+      </nav>
+      <nav class="footer__col" aria-label="Vapelite">
+        <p class="footer__title">Vapelite</p>
+        <a href="#top">Bien choisir</a>
+        <a href="#valeurs">Pourquoi nous</a>
+        <a href="#avis">Vos retours</a>
+        <a href="#boutique">La Maison</a>
+        <a href="mentions-legales.html">Mentions légales</a>
+      </nav>
+      <div class="footer__col">
+        <p class="footer__title">Contact</p>
+        <p>1 rue Pythéas<br>13001 Marseille</p>
+        <a href="tel:+33491709297">04 91 70 92 97</a>
+        <a href="mailto:contact@vapelite-france.fr">contact@vapelite-france.fr</a>
+      </div>
     </div>
-    <div class="footer__grid">
-      <p>Vapelite France — Boutique de cigarettes électroniques<br>Quai du Port, 13002 Marseille<br><a class="link" href="mailto:contact@vapelite-france.fr">contact@vapelite-france.fr</a></p>
-      <p><strong>Vente interdite aux mineurs de moins de 18&nbsp;ans.</strong><br>Les produits du vapotage contenant de la nicotine créent une forte dépendance. Leur utilisation est déconseillée aux non-fumeurs.</p>
-      <p><a class="link" href="mentions-legales.html">Mentions légales</a><br>© <span id="year">2026</span> Vapelite France</p>
+    <div class="footer__legal">
+      <p><strong>Vente interdite aux mineurs de moins de 18&nbsp;ans.</strong> Les produits du vapotage contenant de la nicotine créent une forte dépendance. Leur utilisation est déconseillée aux non-fumeurs.</p>
+      <p>© <span id="year">2026</span> Vapelite France</p>
     </div>
   </footer>
 
   <!-- Vérification de l'âge -->
   <div class="age" id="age" role="dialog" aria-modal="true" aria-labelledby="age-title" hidden>
-    <img class="age__logo" src="assets/logo-vapelite.svg" alt="Vapelite France" width="248" height="175">
-    <div class="age__inner">
-      <p class="label">Accès réservé</p>
-      <h2 class="display display--lg" id="age-title">18 ans<br>et plus&nbsp;?</h2>
-      <p class="body">Ce site présente des produits du vapotage. Leur vente est interdite aux mineurs.</p>
+    <div class="age__card">
+      <img class="age__logo" src="assets/logo-vapelite-klein.svg" alt="Vapelite France" width="248" height="175">
+      <h2 class="age__title" id="age-title">Avez-vous 18 ans ou plus&nbsp;?</h2>
+      <p>Ce site présente des produits du vapotage, dont la vente est interdite aux mineurs.</p>
       <div class="age__actions">
-        <button class="btn btn--solid" type="button" data-age="yes">J’ai 18 ans ou plus</button>
-        <button class="btn btn--ghost" type="button" data-age="no">Non</button>
+        <button class="btn btn--klein" type="button" data-age="yes">Oui, j’ai 18 ans ou plus</button>
+        <button class="btn btn--outline" type="button" data-age="no">Non</button>
       </div>
-      <p class="body-sm age__denied" hidden>Désolé, ce site est réservé aux personnes majeures.</p>
+      <p class="age__denied" hidden>Désolé, ce site est réservé aux personnes majeures.</p>
     </div>
   </div>
 
