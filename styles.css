@@ -769,6 +769,9 @@ button { font: inherit; color: inherit; }
   cursor: pointer;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
+/* Zone tactile agrandie à 28 px sur téléphone (32 px sur ordinateur) sans changer l'aspect des pastilles */
+.swatches button { position: relative; }
+.swatches button::after { content: ""; position: absolute; inset: -5px; border-radius: 50%; }
 .swatches button:hover { transform: scale(1.12); }
 .swatches button { background: var(--c); }
 .swatches button[aria-checked="true"] { box-shadow: 0 0 0 2px var(--ink); }

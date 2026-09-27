@@ -115,8 +115,8 @@ du tabac ou au sevrage** et aucune allégation de santé.
 | Fichier | Utilisation |
 |---|---|
 | `assets/photos/boutique-interieur-{800,1600}.{webp,jpg}` | Section « Entrez, on vous attend » avec nos quatre valeurs (`#valeurs`, plein cadre, zoom au défilement, juste avant « Nos produits phares ») |
-| `assets/photos/devanture.{webm,mp4}` + `devanture-poster.jpg` | Vidéo de la devanture en boucle, section « La boutique » |
-| `assets/photos/devanture-nuit-{600,1000}.{webp,jpg}` | Photo de la devanture le soir, section « La boutique » |
+| `assets/photos/devanture.{webm,mp4}` + `devanture-poster.jpg` | Vidéo de la devanture en boucle, section « La Maison » ; chargée seulement à l'approche de la section (`data-lazy-video`) pour alléger l'ouverture de la page |
+| `assets/photos/devanture-nuit-{600,1000}.webp` + `devanture-nuit-600.jpg` | Photo de la devanture le soir, section « La Maison » |
 | `assets/og-image.jpg` | Image de partage sur les réseaux sociaux (logo sur fond bleu) |
 
 La vidéo d'origine (HDR, 7 Mo) a été convertie en SDR 720p sans son (≈ 0,4–0,5 Mo). Les photos sont
@@ -134,7 +134,8 @@ redimensionnées et compressées en WebP avec repli JPEG.
 | `assets/logo-vapelite.svg` / `logo-vapelite-blanc.svg` | Logotype bleu charte / négatif |
 | `assets/symbole-vapelite.svg` | Symbole « V » seul |
 | `assets/motif.svg` | Motif de marque |
-| `assets/favicon.svg` | Favicon |
+| `assets/favicon.svg` + `favicon-32.png` | Favicon bleu Klein (PNG de secours pour les navigateurs sans SVG) |
+| `assets/apple-touch-icon.png` | Icône 180 px pour l'écran d'accueil de l'iPhone |
 | `assets/fonts/` | Inter variable (SIL Open Font License) |
 
 Aucune ressource externe n'est chargée (pas de Google Fonts, pas de traceur).

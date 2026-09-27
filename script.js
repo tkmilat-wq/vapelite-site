@@ -93,6 +93,26 @@
     }
   }
 
+  /* ---------- Vidéo de la devanture : chargée à l'approche ---------- */
+
+  document.querySelectorAll("[data-lazy-video]").forEach((video) => {
+    const load = () => {
+      video.poster = video.dataset.poster;
+      if (reduceMotion) return; // affiche seulement l'image
+      video.querySelectorAll("source[data-src]").forEach((source) => { source.src = source.dataset.src; });
+      video.load();
+      video.play().catch(() => {});
+    };
+    if (!("IntersectionObserver" in window)) { load(); return; }
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        observer.disconnect();
+        load();
+      }
+    }, { rootMargin: "400px 0px" });
+    observer.observe(video);
+  });
+
   /* ---------- Produits phares : coloris ---------- */
 
   document.querySelectorAll(".swatches").forEach((group) => {

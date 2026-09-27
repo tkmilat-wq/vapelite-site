@@ -13,6 +13,8 @@
   <meta property="og:locale" content="fr_FR">
   <meta property="og:image" content="https://vapelite-france.fr/assets/og-image.jpg">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 
@@ -152,7 +154,7 @@
         <img src="assets/photos/boutique-interieur-1600.jpg" srcset="assets/photos/boutique-interieur-800.jpg 800w, assets/photos/boutique-interieur-1600.jpg 1600w" sizes="100vw" alt="Intérieur de la Maison Vapelite : vitrines lumineuses de cigarettes électroniques, comptoir au logo Vapelite et mur d’e-liquides" width="1600" height="1200" loading="lazy">
       </picture>
       <div class="inside__content">
-        <p class="eyebrow eyebrow--light reveal">La Maison</p>
+        <p class="eyebrow eyebrow--light reveal">Pourquoi nous</p>
         <h2 class="section__title section__title--light reveal" id="inside-title">Entrez,<br>on vous attend.</h2>
         <p class="inside__lead reveal">Une maison de confiance, fondée sur quatre valeurs, à votre écoute au cœur du Vieux-Port.</p>
         <ul class="inside__values">
@@ -575,9 +577,10 @@
       <div class="shop__grid">
         <div class="shop__visual reveal">
           <div class="shop__video">
-            <video autoplay muted loop playsinline preload="metadata" poster="assets/photos/devanture-poster.jpg" aria-label="Vidéo de la devanture bleue de la Maison Vapelite">
-              <source src="assets/photos/devanture.webm" type="video/webm">
-              <source src="assets/photos/devanture.mp4" type="video/mp4">
+            <!-- Chargée seulement à l'approche de la section (script.js) -->
+            <video muted loop playsinline preload="none" data-lazy-video data-poster="assets/photos/devanture-poster.jpg" aria-label="Vidéo de la devanture bleue de la Maison Vapelite">
+              <source data-src="assets/photos/devanture.webm" type="video/webm">
+              <source data-src="assets/photos/devanture.mp4" type="video/mp4">
             </video>
           </div>
           <picture class="shop__night">
@@ -632,7 +635,7 @@
       <nav class="footer__col" aria-label="Vapelite">
         <p class="footer__title">Vapelite</p>
         <a href="#top">Bien choisir</a>
-        <a href="#valeurs">Nos valeurs</a>
+        <a href="#valeurs">Pourquoi nous</a>
         <a href="#boutique">La Maison</a>
         <a href="mentions-legales.html">Mentions légales</a>
       </nav>
