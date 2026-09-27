@@ -59,23 +59,6 @@
     if (event.key === "Escape") setNav(false);
   });
 
-  /* ---------- Bannière ---------- */
-
-  const hero = document.querySelector(".hero");
-
-  // Légère parallaxe des appareils qui suit la souris
-  if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
-    hero.addEventListener("pointermove", (event) => {
-      const rect = hero.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
-      hero.querySelectorAll("[data-parallax]").forEach((stage) => {
-        stage.style.setProperty("--px", `${(x * 24).toFixed(1)}px`);
-        stage.style.setProperty("--py", `${(y * 16).toFixed(1)}px`);
-      });
-    });
-  }
-
   /* ---------- Produits phares : coloris ---------- */
 
   document.querySelectorAll(".swatches").forEach((group) => {
