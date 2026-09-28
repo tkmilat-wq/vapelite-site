@@ -134,7 +134,8 @@ redimensionnées et compressées en WebP avec repli JPEG.
 | `assets/logo-vapelite.svg` / `logo-vapelite-blanc.svg` | Logotype bleu charte / négatif |
 | `assets/symbole-vapelite.svg` | Symbole « V » seul |
 | `assets/motif.svg` | Motif de marque |
-| `assets/favicon.svg` + `favicon-32.png` | Favicon bleu Klein (PNG de secours pour les navigateurs sans SVG) |
+| `favicon.ico` (racine) + `assets/favicon-{48,192}.png` + `assets/favicon.svg` | Favicon bleu Klein ; Google exige un format carré multiple de 48 px pour l'afficher dans ses résultats |
+| `assets/logo-vapelite-512.png` | Logo 512 px sur fond blanc, déclaré dans les données structurées (`logo`) |
 | `assets/apple-touch-icon.png` | Icône 180 px pour l'écran d'accueil de l'iPhone |
 | `assets/fonts/` | Inter variable (SIL Open Font License) |
 
@@ -163,7 +164,7 @@ Puis Settings → Pages : vérifier que « Custom domain » affiche `vapelite.fr
 - `robots.txt` autorise l'exploration et indique le plan du site `sitemap.xml` (accueil + mentions légales ;
   mettre à jour `lastmod` après une grosse modification).
 - Balises : titre et description de la page, lien canonique, données structurées `Store` (nom, « Vapelite »,
-  adresse, téléphone, horaires, carte).
+  adresse, téléphone, horaires, carte, logo PNG) et `WebSite` (nom affiché par Google : « Vapelite France »).
 - À faire côté Maison : Google Search Console (propriété « Domaine » `vapelite.fr`, validée par un
   enregistrement TXT chez IONOS), envoi du sitemap, et lien `https://vapelite.fr` sur la fiche Google.
 
